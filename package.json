@@ -38,6 +38,7 @@
         "yup": "^0.32.11"
     },
     "devDependencies": {
+        "@babel/preset-react": "^7.23.3",
         "eslint": "8.22.0",
         "eslint-config-next": "12.2.5",
         "typescript": "^5.3.3"
