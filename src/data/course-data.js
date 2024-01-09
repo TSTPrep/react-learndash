@@ -21,7 +21,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -90,7 +90,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -159,7 +159,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -228,7 +228,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -297,7 +297,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -366,7 +366,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -437,7 +437,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -508,7 +508,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -579,7 +579,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -649,7 +649,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -719,7 +719,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -789,7 +789,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -859,7 +859,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -931,7 +931,7 @@ const course_data = [
       'Professional Japanese cooking from beginners to experts',
       'Will be able to cook authentic Italian recipes in their own kitchen',
       'Understand the HOW of cooking, before thinking of the WHAT to cook.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1002,7 +1002,7 @@ const course_data = [
       'Prepare a huge variety of simple, delicious, healthy recipes.',
       'Professional Indian cooking from beginners to experts.',
       'Serve delicious and healthy meals for your loved ones.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1073,7 +1073,7 @@ const course_data = [
       'Cook much loved recipes like ravioli, pizza and pesto from scratch',
       'Cook better than restaurant Thai food at home',
       'Keep your food safe from harmful bacteria and disease.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1128,7 +1128,6 @@ const course_data = [
     img: 'course-17.jpg',
     hours: 40,
     level: 'Cooking',
-    level: 'Drawing',
     title: 'Vegan Thai Cooking Classes Popular Vegan Recipes',
     rating: '5',
     rating_count: 35,
@@ -1216,7 +1215,7 @@ const course_data = [
       'Prepare a huge variety of simple, delicious, healthy recipes.',
       'Professional Indian cooking from beginners to experts.',
       'Serve delicious and healthy meals for your loved ones.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1287,7 +1286,7 @@ const course_data = [
       'Cook much loved recipes like ravioli, pizza and pesto from scratch',
       'Cook better than restaurant Thai food at home',
       'Keep your food safe from harmful bacteria and disease.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1357,7 +1356,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1427,7 +1426,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1497,7 +1496,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1567,7 +1566,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1638,7 +1637,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1709,7 +1708,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1756,7 +1755,7 @@ const course_data = [
       {img:'/assets/images/blog/comment-03.jpg',rating:5,name:'Richard Gere',date:'Oct 19, 2021',desc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
     ]
   },
- // kindergarten course 
+ // kindergarten course
   {
     id: 26,
     kindergarten_course:true,
@@ -1782,7 +1781,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1854,7 +1853,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1926,7 +1925,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -1998,7 +1997,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -2070,7 +2069,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
@@ -2142,7 +2141,7 @@ const course_data = [
       'Build fully-fledged websites and web apps for your business.',
       'After the course you will be able to build ANY website you want.',
       'You will master both front and back-end development technologies.'
-    ], 
+    ],
     social_links:[
       {link: 'http://facebook.com', target: '_blank', icon: 'icon-facebook'},
       {link: 'http://twitter.com', target: '_blank', icon: 'icon-twitter'},
