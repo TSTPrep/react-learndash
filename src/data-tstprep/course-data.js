@@ -2,8 +2,9 @@
 const baseUrl = 'https://tstprep.com/wp-json/';
 const baseLD = baseUrl + 'ldlms/v2/';
 
-export const getCourseData = async (id) => {
-    console.log(id);
+const graphqlUrl = 'https://tstprep.platform.test/wp/graphql';
+
+export const getCourseDataRest = async (id) => {
     const response = await fetch(baseLD + `sfwd-courses/${id}`)
     if (!response.ok) throw new Error(response.statusText); // Check if response went through
 
@@ -103,8 +104,58 @@ export const getCourseData = async (id) => {
     };
 }
 
+export const getCourseData = async id => {
+    const query = `
+{
+  posts(where: {id: ${id}) {
+    edges {
+      cursor
+      node {
+        categories {
+          nodes {
+            name
+            link
+          }
+        }
+        content(format: RENDERED)
+        date
+        excerpt(format: RENDERED)
+        slug
+        tags {
+          nodes {
+            name
+            link
+          }
+        }
+        title(format: RENDERED)
+      }
+    }
+  }
+}
+    `;
+
+     const res = await fetch(
+    `${graphqlUrl}?query=${encodeURIComponent(
+      query
+    )}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      next: {
+        revalidate: 0,
+      },
+    }
+  );
+
+  const { data } = await res.json();
+
+  return data.posts.nodes;
+}
+
 // Use fetch to send the GET request
-export const course_data = async () => {
+export const getCourses = async () => {
     const response = await fetch(baseLD + 'sfwd-courses');
     if (!response.ok) throw new Error(response.statusText); // Check if response went through
 

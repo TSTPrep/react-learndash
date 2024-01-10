@@ -4,7 +4,7 @@ const Books = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="19.84" height="17.75" viewBox="0 0 19.84 17.75">
       <defs>
-        <style type="text/css" jsx>
+        <style type="text/css">
           {`.cls-1 {fill: #181818;fill-rule: evenodd;}`}
         </style>
       </defs>

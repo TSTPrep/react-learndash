@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useState} from 'react';
-import {course_data} from '../../data-tstprep/course-data';
+import {getCourses} from '../../data-tstprep/course-data';
 import SortingArea from '../course-filter/sorting-area';
 import CourseTypeOne from '../course/course-type-one';
 
@@ -16,7 +16,7 @@ const CourseArea = () => {
 
     useEffect(() => {
         (async function fetchData() {
-            const results = await course_data();
+            const results = await getCourses();
             setCourses(results)
         })()
     }, []);
@@ -25,7 +25,7 @@ const CourseArea = () => {
     return (
         <div className="edu-course-area course-area-1 gap-tb-text">
             <div className="container">
-                <SortingArea course_items={course_data} num={courses?.slice(0, next)?.length} setCourses={setCourses}
+                <SortingArea course_items={getCourses} num={courses?.slice(0, next)?.length} setCourses={setCourses}
                              courses={courses}/>
 
                 <div className="row g-5">

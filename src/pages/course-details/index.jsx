@@ -2,9 +2,9 @@ import React from 'react';
 import SEO from '../../components/seo';
 import { Wrapper } from '../../layout';
 import CourseDetailsMain from '../../components/course-details';
-import { course_data } from '../../data';
+import { getCourses } from '../../data-tstprep';
 
-const course = course_data[0];
+const course = getCourses[0];
 
 const CourseDetails = () => {
     return (

@@ -3,7 +3,7 @@ import React from 'react';
 import SEO from '../../components/seo';
 import {Wrapper} from '../../layout';
 import CourseDetailsMain from '../../components/course-details';
-import {getCourseData, course_data} from "../../data-tstprep/course-data";
+import {getCourseData, getCourses} from "../../data-tstprep/course-data";
 
 const DynamicCourseDetails = ({course, gigi}) => {
     const router = useRouter();
@@ -20,28 +20,29 @@ const DynamicCourseDetails = ({course, gigi}) => {
 export default DynamicCourseDetails;
 
 export async function getStaticPaths() {
-    const courses = await course_data();
-    // const paths = courses.map((course) => {
-    //     return {
-    //         params: {
-    //             id: `${course.id}`
-    //         }
-    //     }
-    // })
-    const paths = [];
+    const courses = await getCourses();
+
+    const paths = courses.map((course) => {
+        return {
+            params: {
+                id: course.id.toString()
+            }
+        }
+    })
     return {
         paths,
-        fallback: false,
+        fallback: 'blocking',
     }
 }
 
 export async function getStaticProps(context) {
-    const courseId = context.id
+    const courseId = context.params.id
     const course = await getCourseData(courseId)
     return {
         props: {
             course,
             gigi: 'becali'
-        }
+        },
+            revalidate: 1
     }
 }
