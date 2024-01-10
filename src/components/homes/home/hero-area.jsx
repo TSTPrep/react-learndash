@@ -13,8 +13,8 @@ const HeroArea = () => {
                             <h1 className="title" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">Get <span className="color-secondary">2500+</span> <br />Best Online Courses From EduBlink</h1>
                             <p data-sal-delay="200" data-sal="slide-up" data-sal-duration="1000">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p>
                             <div className="banner-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
-                                <Link href="/course-style-1">
-                                    <a className="edu-btn">Find courses <i className="icon-4"></i></a>
+                                <Link href="/course-style-1" className="edu-btn">
+                                    Find courses<i className="icon-4"></i>
                                 </Link>
                             </div>
                             <ul className="shape-group">
@@ -97,7 +97,7 @@ const HeroArea = () => {
                 <img src="/assets/images/about/h-1-shape-01.png" alt="Shape" />
             </div>
         </div>
-    )
+    );
 }
 
 export default HeroArea;

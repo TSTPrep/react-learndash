@@ -22,13 +22,13 @@ const CourseArea = () => {
                     })}
                 </div>
                 <div className="course-view-all" data-sal-delay="150" data-sal="slide-up" data-sal-duration="1200">
-                    <Link href="/course-style-1">
-                        <a className="edu-btn">Browse more courses <i className="icon-4"></i></a>
+                    <Link href="/course-style-1" className="edu-btn">
+                        Browse more courses<i className="icon-4"></i>
                     </Link>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default CourseArea;
