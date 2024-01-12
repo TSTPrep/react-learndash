@@ -45,7 +45,7 @@
     display: flex;
     @media #{$sm-layout} {
         display: block;
-        text-align: center;  
+        text-align: center;
     }
     .left-content {
         flex: 1;
@@ -54,7 +54,7 @@
         margin-bottom: 20px;
         position: relative;
         @media #{$sm-layout} {
-            text-align: center;  
+            text-align: center;
             margin-right: 0;
         }
         &:after {
@@ -91,10 +91,10 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         @media #{$md-layout} {
-            font-size: 50px;  
+            font-size: 50px;
         }
         @media #{$sm-layout} {
-            font-size: 40px;  
+            font-size: 40px;
         }
     }
     .pre-title {

@@ -52,27 +52,27 @@ const CourseDetailsArea = ({ course }) => {
                                         <div className="course-curriculam">
                                             <h3 className="heading-title">Course Curriculum</h3>
                                             <p>{curriculum_desc}</p>
-                                            {course_lessons.map((lesson, i) => (
+                                            {course_lessons?.map((lesson, i) => (
                                                 <div key={i} className="course-lesson">
                                                     <h5 className="title">{lesson?.title}</h5>
                                                     <p>{lesson?.text}</p>
                                                     <ul>
                                                         {lesson?.lessons?.map((list, i) => (
                                                             <li key={i}>
-                                                                {list.title && 
+                                                                {list.title &&
                                                                     <div className="text">
                                                                         <i className="icon-65"></i>
                                                                         {list.title}
                                                                     </div>
                                                                 }
 
-                                                                {!list?.badge_list && 
+                                                                {!list?.badge_list &&
                                                                     <div className="icon">
                                                                         <i className={list?.icon}></i>
                                                                     </div>
                                                                 }
 
-                                                                {list?.badge_list && 
+                                                                {list?.badge_list &&
                                                                     <div className="badge-list">
                                                                         <span className="badge badge-primary">{list?.question} Question</span>
                                                                         <span className="badge badge-secondary">{list?.minutes} Minutes</span>

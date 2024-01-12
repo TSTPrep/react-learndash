@@ -3,12 +3,13 @@ import React from 'react';
 import SEO from '../../components/seo';
 import {Wrapper} from '../../layout';
 import CourseDetailsMain from '../../components/course-details';
-import {getCourseData, getCourses} from "../../data-tstprep/course-data";
+import {getAllCourses, getCourseData} from "../../utils/api";
 
-const DynamicCourseDetails = ({course, gigi}) => {
+
+const DynamicCourseDetails = ({course}) => {
     const router = useRouter();
     const {id} = router.query;
-    console.log({id, course, gigi});
+
     return (
         <Wrapper>
             <SEO pageTitle={'Course Details'}/>
@@ -20,15 +21,10 @@ const DynamicCourseDetails = ({course, gigi}) => {
 export default DynamicCourseDetails;
 
 export async function getStaticPaths() {
-    const courses = await getCourses();
+    const courses = await getAllCourses();
 
-    const paths = courses.map((course) => {
-        return {
-            params: {
-                id: course.id.toString()
-            }
-        }
-    })
+    const paths = courses?.edges?.map(({node}) => `/course-details/${node.courseId}`)
+
     return {
         paths,
         fallback: 'blocking',
@@ -37,12 +33,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const courseId = context.params.id
-    const course = await getCourseData(courseId)
+    let course = await getCourseData(courseId)
+    course = course.nodes[0]
     return {
         props: {
             course,
-            gigi: 'becali'
         },
-            revalidate: 1
+        revalidate: 1
     }
 }

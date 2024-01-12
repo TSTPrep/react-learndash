@@ -1,5 +1,5 @@
 // Define the API endpoint
-const baseUrl = 'https://tstprep.com/wp-json/';
+const baseUrl = 'https://platform.tstprep.com/wp-json/';
 const baseLD = baseUrl + 'ldlms/v2/';
 
 const graphqlUrl = 'https://tstprep.platform.test/wp/graphql';
@@ -102,56 +102,6 @@ export const getCourseDataRest = async (id) => {
         },]
 
     };
-}
-
-export const getCourseData = async id => {
-    const query = `
-{
-  posts(where: {id: ${id}) {
-    edges {
-      cursor
-      node {
-        categories {
-          nodes {
-            name
-            link
-          }
-        }
-        content(format: RENDERED)
-        date
-        excerpt(format: RENDERED)
-        slug
-        tags {
-          nodes {
-            name
-            link
-          }
-        }
-        title(format: RENDERED)
-      }
-    }
-  }
-}
-    `;
-
-     const res = await fetch(
-    `${graphqlUrl}?query=${encodeURIComponent(
-      query
-    )}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      next: {
-        revalidate: 0,
-      },
-    }
-  );
-
-  const { data } = await res.json();
-
-  return data.posts.nodes;
 }
 
 // Use fetch to send the GET request
