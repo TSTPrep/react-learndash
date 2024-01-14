@@ -24,7 +24,7 @@ export async function getStaticPaths() {
     const courses = await getAllCourses();
 
     const paths = courses?.nodes?.map((node) => {
-        return `/course-details/${node.courseId}`
+        return `/course-details/${node.id}`
     })
 
     return {
@@ -34,8 +34,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const courseId = context.params.id
-    let course = await getCourseData(courseId)
+    const course = await getCourseData(context.params.id)
 
     return {
         props: {
