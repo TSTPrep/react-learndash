@@ -23,7 +23,9 @@ export default DynamicCourseDetails;
 export async function getStaticPaths() {
     const courses = await getAllCourses();
 
-    const paths = courses?.edges?.map(({node}) => `/course-details/${node.courseId}`)
+    const paths = courses?.nodes?.map((node) => {
+        return `/course-details/${node.courseId}`
+    })
 
     return {
         paths,
@@ -34,7 +36,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const courseId = context.params.id
     let course = await getCourseData(courseId)
-    course = course.nodes[0]
+
     return {
         props: {
             course,

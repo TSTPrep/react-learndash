@@ -218,13 +218,11 @@ export async function getAllCourses(preview) {
 `
 query AllCourses {
   courses {
-    edges {
-      node {
+    nodes {
         content(format: RENDERED)
         title(format: RENDERED)
         id
         courseId
-      }
     }
   }
 }
@@ -243,24 +241,24 @@ query AllCourses {
 export async function getCourseData(id, preview) {
     const data = await fetchAPI(
 `
-query CourseDetail {
-  courses(where: {id: 211}) {
-    nodes {
-      courseId
-      content(format: RENDERED)
-      title(format: RENDERED)
-    }
+query CourseDetail ($id: ID!) {
+  course(id: $id) {
+    courseId
+    databaseId
+    title(format: RENDERED)
+    content(format: RENDERED)
   }
 }
   `,
         {
             variables: {
+                id: id,
                 onlyEnabled: !preview,
                 preview,
             },
         }
     )
 
-    return data?.courses
+    return data?.course
 }
 
