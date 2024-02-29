@@ -1,5 +1,6 @@
 /node_modules
 /.next
 /.idea
+/out
 
 /**/.DS_Store

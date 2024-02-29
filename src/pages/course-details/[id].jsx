@@ -40,6 +40,6 @@ export async function getStaticProps(context) {
         props: {
             course,
         },
-        revalidate: 1
+        revalidate: false
     }
 }
