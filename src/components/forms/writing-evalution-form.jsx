@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './writing-evaluation-form.module.css';
 
 const WritingEvaluationForm = () => {
     const [essay, setEssay] = useState('');
@@ -13,32 +14,40 @@ const WritingEvaluationForm = () => {
 
         setLoading(true);
 
-        try {
+        console.log(essay, task)
 
-            const response = await fetch('https://Mayanktstprep-tstprep-writing.hf.space/get_passage_html', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: 'Bearer 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'
-                },
-                body: JSON.stringify({
-                    essay,
-                    task
-                })
-            });
+        const response = await fetch('https://Mayanktstprep-tstprep-writing.hf.space/get_passage_html', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer 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'
+            },
+            body: JSON.stringify({
+                essay,
+                task
+            })
+        });
+        if (!response.ok) throw new Error(response.statusText);
 
-            setResponse(response.data);
-            setLoading(false);
 
-            console.log(response.data);
+        const item = await response.json();
 
-        } catch (error) {
-            console.error(error);
-            setError(error.message);
-        } finally {
-            setLoading(false);
-        }
+        console.log(item);
 
+        setResponse(item.passage_html + item.indicator_html);
+        setLoading(false);
+
+        // } catch (error) {
+        //     console.error(error);
+        //     setError(error.message);
+        // } finally {
+        //     setLoading(false);
+        // }
+
+    }
+
+    const toggleSubmenu = (e) => {
+        console.log('clicked', e);
     }
 
     return (
@@ -46,7 +55,9 @@ const WritingEvaluationForm = () => {
         <>
             {loading && <p>Loading...</p>}
 
-            {response && <pre>{JSON.stringify(response, null, 2)}</pre>}
+            {response && <div
+                dangerouslySetInnerHTML={{__html: response}}
+            />}
 
             {error && <p>{error}</p>}
 
@@ -59,9 +70,10 @@ const WritingEvaluationForm = () => {
                         <label htmlFor="essay">Essay</label>
                         <textarea
                             name="essay"
-                            value={essay}
+                            // value={essay}
+                            // value="Recently there has been a debate as to the PEDs. More specifically, in regard to the passages, the author puts forth the idea that this drug should be prohibited."
                             placeholder="Essay"
-                            onChange={(e) => setEssay(e.target.value)}
+                            onBlur={(e) => setEssay(e.target.value)}
                         />
                     </div>
 
@@ -69,9 +81,10 @@ const WritingEvaluationForm = () => {
                         <label htmlFor="task">Task</label>
                         <textarea
                             name="task"
-                            value={task}
+                            // value={task}
+                            // value="Everyone wants to get in better shape, but it usually takes a tremendous amount of time and effort. "
                             placeholder="Task"
-                            onChange={(e) => setTask(e.target.value)}
+                            onBlur={(e) => setTask(e.target.value)}
                         />
                     </div>
 
