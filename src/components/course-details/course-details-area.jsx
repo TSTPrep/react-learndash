@@ -3,9 +3,25 @@ import CourseDetailsSidebar from '../common/sidebar/course-details-sidebar';
 import CommentFormCourse from '../forms/comment-form-course';
 import SingleComment from './single-comment';
 import SingleProgressbar from './single-progressbar';
+import WritingEvaluationForm from "../forms/writing-evalution-form";
 
-const CourseDetailsArea = ({ course }) => {
-  const { course_desc, course_desc_2, learn_list, course_desc_3, curriculum_desc, course_lessons, instructor_img, instructor_title, instructor_desc, social_links, reviews, instructor, rating, rating_count } = course || {};
+const CourseDetailsArea = ({course}) => {
+    const {
+        course_desc,
+        course_desc_2,
+        learn_list,
+        course_desc_3,
+        curriculum_desc,
+        course_lessons,
+        instructor_img,
+        instructor_title,
+        instructor_desc,
+        social_links,
+        reviews,
+        instructor,
+        rating,
+        rating_count
+    } = course || {};
     return (
         <section className="edu-section-gap course-details-area">
             <div className="container">
@@ -14,25 +30,37 @@ const CourseDetailsArea = ({ course }) => {
                         <div className="course-details-content">
                             <ul className="nav nav-tabs" id="myTab" role="tablist">
                                 <li className="nav-item" role="presentation">
-                                    <button className="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview"
-                                    type="button" role="tab" aria-controls="overview" aria-selected="true">Overview</button>
+                                    <button className="nav-link active" id="overview-tab" data-bs-toggle="tab"
+                                            data-bs-target="#overview"
+                                            type="button" role="tab" aria-controls="overview"
+                                            aria-selected="true">Overview
+                                    </button>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <button className="nav-link" id="carriculam-tab" data-bs-toggle="tab" data-bs-target="#carriculam"
-                                    type="button" role="tab" aria-controls="carriculam" aria-selected="false">Carriculam</button>
+                                    <button className="nav-link" id="carriculam-tab" data-bs-toggle="tab"
+                                            data-bs-target="#carriculam"
+                                            type="button" role="tab" aria-controls="carriculam"
+                                            aria-selected="false">Carriculam
+                                    </button>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <button className="nav-link" id="instructor-tab" data-bs-toggle="tab" data-bs-target="#instructor"
-                                    type="button" role="tab" aria-controls="instructor" aria-selected="false">Instructor</button>
+                                    <button className="nav-link" id="instructor-tab" data-bs-toggle="tab"
+                                            data-bs-target="#instructor"
+                                            type="button" role="tab" aria-controls="instructor"
+                                            aria-selected="false">Instructor
+                                    </button>
                                 </li>
                                 <li className="nav-item" role="presentation">
-                                    <button className="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button"
-                                    role="tab" aria-controls="review" aria-selected="false">Reviews</button>
+                                    <button className="nav-link" id="review-tab" data-bs-toggle="tab"
+                                            data-bs-target="#review" type="button"
+                                            role="tab" aria-controls="review" aria-selected="false">Reviews
+                                    </button>
                                 </li>
                             </ul>
 
                             <div className="tab-content" id="myTabContent">
-                                <div className="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                <div className="tab-pane fade show active" id="overview" role="tabpanel"
+                                     aria-labelledby="overview-tab">
                                     <div className="course-tab-content">
                                         <div className="course-overview">
                                             <h3 className="heading-title">Course Description</h3>
@@ -43,11 +71,14 @@ const CourseDetailsArea = ({ course }) => {
                                                 {learn_list?.map((l, i) => <li key={i}>{l}</li>)}
                                             </ul>
                                             <p>{course_desc_3}</p>
+
+                                            <WritingEvaluationForm/>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="tab-pane fade" id="carriculam" role="tabpanel" aria-labelledby="carriculam-tab">
+                                <div className="tab-pane fade" id="carriculam" role="tabpanel"
+                                     aria-labelledby="carriculam-tab">
                                     <div className="course-tab-content">
                                         <div className="course-curriculam">
                                             <h3 className="heading-title">Course Curriculum</h3>
@@ -74,8 +105,10 @@ const CourseDetailsArea = ({ course }) => {
 
                                                                 {list?.badge_list &&
                                                                     <div className="badge-list">
-                                                                        <span className="badge badge-primary">{list?.question} Question</span>
-                                                                        <span className="badge badge-secondary">{list?.minutes} Minutes</span>
+                                                                        <span
+                                                                            className="badge badge-primary">{list?.question} Question</span>
+                                                                        <span
+                                                                            className="badge badge-secondary">{list?.minutes} Minutes</span>
                                                                     </div>
                                                                 }
                                                             </li>
@@ -87,11 +120,13 @@ const CourseDetailsArea = ({ course }) => {
                                     </div>
                                 </div>
 
-                                <div className="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
+                                <div className="tab-pane fade" id="instructor" role="tabpanel"
+                                     aria-labelledby="instructor-tab">
                                     <div className="course-tab-content">
                                         <div className="course-instructor">
                                             <div className="thumbnail">
-                                                <img src={`/assets/images/team/team-02/${instructor_img}`} alt="team images" />
+                                                <img src={`/assets/images/team/team-02/${instructor_img}`}
+                                                     alt="team images"/>
                                             </div>
                                             <div className="author-content">
                                                 <h6 className="title">{instructor}</h6>
@@ -100,7 +135,8 @@ const CourseDetailsArea = ({ course }) => {
                                                 <ul className="social-share">
                                                     {social_links?.map((social, i) => (
                                                         <li key={i}>
-                                                            <a href={social.link} target={social.target ? social.target : ''}>
+                                                            <a href={social.link}
+                                                               target={social.target ? social.target : ''}>
                                                                 <i className={social.icon}></i>
                                                             </a>
                                                         </li>
@@ -132,11 +168,11 @@ const CourseDetailsArea = ({ course }) => {
                                                 </div>
                                                 <div className="col-sm-8">
                                                     <div className="review-wrapper">
-                                                        <SingleProgressbar value={'100'} rating_value={rating_count} />
-                                                        <SingleProgressbar value={'0'} rating_value={'0'} />
-                                                        <SingleProgressbar value={'0'} rating_value={'0'} />
-                                                        <SingleProgressbar value={'0'} rating_value={'0'} />
-                                                        <SingleProgressbar value={'0'} rating_value={'0'} />
+                                                        <SingleProgressbar value={'100'} rating_value={rating_count}/>
+                                                        <SingleProgressbar value={'0'} rating_value={'0'}/>
+                                                        <SingleProgressbar value={'0'} rating_value={'0'}/>
+                                                        <SingleProgressbar value={'0'} rating_value={'0'}/>
+                                                        <SingleProgressbar value={'0'} rating_value={'0'}/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -145,7 +181,7 @@ const CourseDetailsArea = ({ course }) => {
                                                 <h3 className="heading-title">Reviews</h3>
                                                 <div className="comment-list-wrapper">
                                                     {reviews?.map((review, i) => (
-                                                        <SingleComment key={i} review={review} />
+                                                        <SingleComment key={i} review={review}/>
                                                     ))}
                                                 </div>
                                             </div>
@@ -172,7 +208,7 @@ const CourseDetailsArea = ({ course }) => {
                     </div>
 
                     <div className="col-lg-4">
-                        <CourseDetailsSidebar course={course} />
+                        <CourseDetailsSidebar course={course}/>
                     </div>
                 </div>
             </div>
