@@ -23,7 +23,7 @@ const WritingEvaluationForm = () => {
             body: JSON.stringify({
                 essay,
                 task,
-                demo: true
+                // demo: true
             })
         });
         if (!response.ok) throw new Error(response.statusText);
@@ -35,13 +35,6 @@ const WritingEvaluationForm = () => {
 
         setResponse(item.passage_html + item.indicator_html);
         setLoading(false);
-
-        // } catch (error) {
-        //     console.error(error);
-        //     setError(error.message);
-        // } finally {
-        //     setLoading(false);
-        // }
 
     }
 
