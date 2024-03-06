@@ -23,7 +23,7 @@ const WritingEvaluationForm = () => {
             body: JSON.stringify({
                 essay,
                 task,
-                // demo: true
+                demo: false
             })
         });
         if (!response.ok) throw new Error(response.statusText);
