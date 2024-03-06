@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './writing-evaluation-form.module.css';
 
 const WritingEvaluationForm = () => {
     const [essay, setEssay] = useState('');
@@ -14,17 +13,17 @@ const WritingEvaluationForm = () => {
 
         setLoading(true);
 
-        console.log(essay, task)
 
-        const response = await fetch('https://Mayanktstprep-tstprep-writing.hf.space/get_passage_html', {
+        const response = await fetch('https://TSTPrep-tstprep-writing.hf.space/get_passage_html', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: 'Bearer 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'
+                Authorization: 'Bearer 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'
             },
             body: JSON.stringify({
                 essay,
-                task
+                task,
+                demo: true
             })
         });
         if (!response.ok) throw new Error(response.statusText);
@@ -47,7 +46,19 @@ const WritingEvaluationForm = () => {
     }
 
     const toggleSubmenu = (e) => {
-        console.log('clicked', e);
+        e.preventDefault();
+        let el = e.target;
+
+        while (el && el !== e.currentTarget && el.tagName !== "A") {
+            el = el.parentNode;
+        }
+        if (el && el.tagName === "A") {
+            // ...do your state change...
+
+            console.log(el.nextSibling.classList.toggle('active'));
+
+
+        }
     }
 
     return (
@@ -57,6 +68,7 @@ const WritingEvaluationForm = () => {
 
             {response && <div
                 dangerouslySetInnerHTML={{__html: response}}
+                onClick={(e) => toggleSubmenu(e)}
             />}
 
             {error && <p>{error}</p>}
@@ -66,7 +78,7 @@ const WritingEvaluationForm = () => {
                 <form onSubmit={handleSubmit}>
 
 
-                    <div className="form-group">
+                    <div className="form-group waf-textarea">
                         <label htmlFor="essay">Essay</label>
                         <textarea
                             name="essay"
@@ -74,10 +86,13 @@ const WritingEvaluationForm = () => {
                             // value="Recently there has been a debate as to the PEDs. More specifically, in regard to the passages, the author puts forth the idea that this drug should be prohibited."
                             placeholder="Essay"
                             onBlur={(e) => setEssay(e.target.value)}
+                            data-gramm="false"
+                            data-gramm_editor="false"
+                            data-enable-grammarly="false"
                         />
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group waf-textarea">
                         <label htmlFor="task">Task</label>
                         <textarea
                             name="task"
@@ -85,6 +100,9 @@ const WritingEvaluationForm = () => {
                             // value="Everyone wants to get in better shape, but it usually takes a tremendous amount of time and effort. "
                             placeholder="Task"
                             onBlur={(e) => setTask(e.target.value)}
+                            data-gramm="false"
+                            data-gramm_editor="false"
+                            data-enable-grammarly="false"
                         />
                     </div>
 

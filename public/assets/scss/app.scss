@@ -1,22 +1,22 @@
 /*---------------------------------------------
 Template Name: EduBlink - Online Learning React Education Template
-Template URL: 
+Template URL:
 Description: This template is built with React NextJS.
 Author: DevsBlink
 Author URL: https://1.envato.market/YgGJbj
 Version: 1.0.0
 
-===============================================   
+===============================================
 STYLESHEET INDEXING
 |
 |___ Default Styles
 |	|___ Variables
-|	|___ Shortcode 
+|	|___ Shortcode
 |	|___ Reset Styels
 |	|___ Typography
 |	|___ Forms Styles
-|	|___ Common 
-|	|___ Animation 
+|	|___ Common
+|	|___ Animation
 |
 |___ Elements Styles
 |	|___ Accordion Style
@@ -25,11 +25,11 @@ STYLESHEET INDEXING
 |	|___ Button
 |	|___ Countdown
 |	|___ Course Widget
-|	|___ Pagination Styles 
-|	|___ Sal Styels 
+|	|___ Pagination Styles
+|	|___ Sal Styels
 |	|___ Section Title
-|	|___ Slick Styles 
-|	|___ Social Share Style 
+|	|___ Slick Styles
+|	|___ Social Share Style
 |
 |___Template Styles
 |	|___ About Styles
@@ -132,7 +132,7 @@ STYLESHEET INDEXING
 
 
 /*=======================================================================
-4.Blocks Styles 
+4.Blocks Styles
 =========================================================================*/
 @import 'header/header';
 @import 'header/nav';
@@ -143,7 +143,7 @@ STYLESHEET INDEXING
 @import "footer/footer";
 
 /*=======================================================================
-5.Blog Styles 
+5.Blog Styles
 =========================================================================*/
 @import "blog/blog";
 @import "blog/blog-details";
@@ -157,3 +157,6 @@ STYLESHEET INDEXING
 @import "default/react_specific";
 @import "default/dark";
 @import "default/rtl";
+
+
+@import "components/writing-evaluation-form";
