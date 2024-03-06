@@ -35,29 +35,32 @@
 .hovertextp {
   position: relative;
   display: inline-block;
+
+  .hovertext {
+    &:before {
+      content: "Feedback: " attr(data-hover);
+      visibility: hidden;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0; /* Position the tooltip */
+      position: absolute;
+      display: block;
+      z-index: 9999;
+      top: auto; /* Reset the top property */
+      overflow: visible;
+      width: max-content;
+      max-width: 200px;
+    }
+
+    &:hover:before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
-.hovertextp .hovertext:before {
-  content: "Feedback: " attr(data-hover);
-  visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0; /* Position the tooltip */
-  position: absolute;
-  display: block;
-  z-index: 9999;
-  top: auto; /* Reset the top property */
-  overflow: visible;
-  width: max-content;
-  max-width: 200px;
-}
-
-.hovertextp .hovertext:hover:before {
-  opacity: 1;
-  visibility: visible;
-}
 
 .nopaque {
   opacity: 0.2;
@@ -65,14 +68,26 @@
 
 .opaque {
   opacity: 1.0;
+  background: #fff;
 }
 
 
 .waf-menu.waf-menu {
 
   li {
+    padding-top: 10px;
+
+    &:after {
+      content: '';
+    }
+
     &:hover {
       background-color: #f0f0f0;
+    }
+
+    li {
+      padding-top: 0;
+      margin-top: 0;
     }
   }
 
@@ -82,10 +97,15 @@
     padding: 5px;
   }
 
-  .waf-submenu {
+  ul {
     display: none;
     list-style-type: none;
-    padding: 0 0 20px 20px;
+    padding: 0 0 15px;
+    margin: 0;
+
+    ul {
+      padding: 0 0 5px;
+    }
 
     &.active {
       display: block;
@@ -93,11 +113,6 @@
   }
 }
 
-
-
-.sentences {
-  display: none;
-}
 
 .waf-textarea {
   textarea {

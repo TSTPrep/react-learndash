@@ -23,7 +23,7 @@ const WritingEvaluationForm = () => {
             body: JSON.stringify({
                 essay,
                 task,
-                demo: true
+                // demo: true
             })
         });
         if (!response.ok) throw new Error(response.statusText);
@@ -36,13 +36,6 @@ const WritingEvaluationForm = () => {
         setResponse(item.passage_html + item.indicator_html);
         setLoading(false);
 
-        // } catch (error) {
-        //     console.error(error);
-        //     setError(error.message);
-        // } finally {
-        //     setLoading(false);
-        // }
-
     }
 
     const toggleSubmenu = (e) => {
@@ -53,11 +46,43 @@ const WritingEvaluationForm = () => {
             el = el.parentNode;
         }
         if (el && el.tagName === "A") {
-            // ...do your state change...
 
-            console.log(el.nextSibling.classList.toggle('active'));
+            /**
+             * Show the UL next to the A tag
+             */
+            let siblingUl = el.nextSibling;
+            if (siblingUl) {
+
+                el.nextSibling.classList.toggle('active');
 
 
+                /**
+                 * Show the sentences for the current A tag
+                 */
+                if (el.classList.contains('waf-trigger-level1')) {
+
+                    let triggers = siblingUl.querySelectorAll('a.waf-trigger-sentence'),
+                        targets = document.querySelectorAll(`.content-box.hovertextp span`);
+
+
+                    triggers.forEach((trigger) => {
+
+                        trigger.addEventListener('click', (e) => {
+                            e.preventDefault();
+
+                            targets.forEach((target) => {
+                                target.classList.remove('opaque');
+                            });
+
+                            let target = document.querySelector(`.content-box.hovertextp span.${trigger.dataset.sentence}`);
+                            target.classList.add('opaque');
+
+                            console.log(target)
+                        })
+
+                    });
+                }
+            }
         }
     }
 
@@ -89,7 +114,10 @@ const WritingEvaluationForm = () => {
                             data-gramm="false"
                             data-gramm_editor="false"
                             data-enable-grammarly="false"
-                            spellcheck="false"
+                            spellCheck="false"
+                            autoComplete="off"
+                            autoCorrect="off"
+                            autoCapitalize="off"
                         />
                     </div>
 
@@ -104,10 +132,10 @@ const WritingEvaluationForm = () => {
                             data-gramm="false"
                             data-gramm_editor="false"
                             data-enable-grammarly="false"
-                            spellcheck="false"
-                            autocomplete="off"
-                            autocorrect="off"
-                            autocapitalize="off"
+                            spellCheck="false"
+                            autoComplete="off"
+                            autoCorrect="off"
+                            autoCapitalize="off"
                         />
                     </div>
 
