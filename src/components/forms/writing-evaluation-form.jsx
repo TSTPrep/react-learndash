@@ -89,6 +89,7 @@ const WritingEvaluationForm = () => {
                             data-gramm="false"
                             data-gramm_editor="false"
                             data-enable-grammarly="false"
+                            spellcheck="false"
                         />
                     </div>
 
@@ -103,6 +104,10 @@ const WritingEvaluationForm = () => {
                             data-gramm="false"
                             data-gramm_editor="false"
                             data-enable-grammarly="false"
+                            spellcheck="false"
+                            autocomplete="off"
+                            autocorrect="off"
+                            autocapitalize="off"
                         />
                     </div>
 
