@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './writing-evaluation-form.module.css';
 
 const WritingEvaluationForm = () => {
     const [essay, setEssay] = useState('');
@@ -14,7 +13,6 @@ const WritingEvaluationForm = () => {
 
         setLoading(true);
 
-        console.log(essay, task)
 
         const response = await fetch('https://Mayanktstprep-tstprep-writing.hf.space/get_passage_html', {
             method: 'POST',
