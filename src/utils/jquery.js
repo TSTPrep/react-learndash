@@ -1,91 +1,86 @@
 if (typeof window !== 'undefined') {
-
+    // Ensure jQuery is available globally in the window object, a necessary step if jQuery is being used in a React project.
     window.$ = window.jQuery = require('jquery');
 
-
     $(document).ready(function() {
-
-
         setTimeout(function() {  
-
-
-            // PART 1 - edits on form content
-                    
-            // Change the h5 text
+            // PART 1 - Edits on form content
+            // Feature: Update the heading to provide a clear title for the demo.
+            // For React: This could be done by storing the title in a state variable and using it directly in the render method or JSX return statement.
             $('h5').text("TST Prep's Writing Evaluation Demo 1");
 
-            // Change placeholder text for textarea elements
+            // Feature: Update placeholder text in textarea fields to guide the user on what to input.
+            // For React: Control the placeholder text using state or props, allowing dynamic updates based on user interaction or other conditions.
             $('textarea[name="task"]').attr('placeholder', 'Paste your TOEFL integrated writing task here').css('margin-bottom', '30px');
             $('textarea[name="essay"]').attr('placeholder', 'Paste or write your essay here');
 
-
-
-            // Part 2 - Behavior after form submission
-
+            // PART 2 - Behavior after form submission
+            // Setup to observe changes in the form container, allowing dynamic response to form submission and other events.
             var targetNode = document.querySelector('.course-details-content');
-    var config = { childList: true, subtree: true, characterData: true, attributes: true };
+            var config = { childList: true, subtree: true, characterData: true, attributes: true };
 
-    // Timer functionality encapsulated within startTimer function
-    function startTimer() {
-        var seconds = 0; // Initialize seconds to 0
-        // Update the timer every second
-        return setInterval(function() {
-            seconds++;
-            $('#timer').text(seconds + ' seconds'); // Dynamically update the text
-        }, 1000); // Set interval to 1 second
-    }
+            // Timer functionality to provide feedback to the user after form submission.
+            // For React: Use the useState hook for the seconds counter and useEffect for starting the interval. Ensure to clear the interval on component unmount.
+            function startTimer() {
+                var seconds = 0; // Initialize seconds to 0
+                return setInterval(function() {
+                    seconds++;
+                    $('#timer').text(seconds + ' seconds'); // Dynamically update the text
+                }, 1000); // Set interval to 1 second
+            }
 
-    var timerInterval = null; // Declare outside to make it accessible
+            var timerInterval = null; // Declare outside to make it accessible
 
-    // Callback function to execute when mutations are observed
-    var callback = function(mutationsList, observer) {
-        mutationsList.forEach(function(mutation) {
-            if (mutation.type === 'childList') {
-                mutation.addedNodes.forEach(function(node) {
-                    if (node.nodeType === 1 && $(node).find('#timer').length) {
-                        // Timer exists, indicating form submission occurred and timer was set
-                        if (timerInterval) clearInterval(timerInterval);
-                        timerInterval = startTimer(); // Start or restart the timer
+            // Observe DOM mutations to dynamically adjust UI based on form interaction.
+            var callback = function(mutationsList, observer) {
+                mutationsList.forEach(function(mutation) {
+                    if (mutation.type === 'childList') {
+                        mutation.addedNodes.forEach(function(node) {
+                            // Response to form submission: If the timer element is found, clear any existing timer and start a new one.
+                            if (node.nodeType === 1 && $(node).find('#timer').length) {
+                                if (timerInterval) clearInterval(timerInterval);
+                                timerInterval = startTimer(); // Start or restart the timer
+                            }
+                        });
+
+                        // Cleanup upon form or page change: If the submit button is no longer present, stop the timer and remove added content.
+                        if (!$(mutation.target).closest('.course-details-content').find('.edu-btn').length) {
+                            clearInterval(timerInterval);
+                            $('#elapsedTime, #waitingTime').remove();
+                        }
                     }
                 });
+            };
 
-                if (!$(mutation.target).closest('.course-details-content').find('.edu-btn').length) {
-                    // If the submit button disappears, clear the timer and remove additional content
-                    clearInterval(timerInterval);
-                    $('#elapsedTime, #waitingTime').remove();
+            var observer = new MutationObserver(callback);
+            observer.observe(targetNode, config);
+
+            // Handle form submission to disable inputs, show a loading state, and start a timer.
+            // For React: Implement form submission handling using event handlers. Manage form and button states with useState, and show feedback using state-driven UI updates.
+            $('.course-details-content form').on('submit', function(event) {
+                event.preventDefault(); // Prevent the actual form submission for demonstration; adjust as needed
+
+                // Disable inputs and show a visual cue to the user that the form is processing.
+                $('textarea[name="task"], textarea[name="essay"]').prop('disabled', true).css({
+                    'background-color': '#f0f0f0',
+                    'cursor': 'not-allowed'
+                });
+                
+                // Change the button text to "Loading..." to indicate processing state.
+                var submitButton = $(this).find('.edu-btn').prop('disabled', true).text('Loading...')
+                    .css({'pointer-events': 'none', 'filter': 'saturate(30%)'});
+
+                // Add visual feedback about the elapsed time since form submission and expected wait time.
+                if (!$('#elapsedTime').length) {
+                    $('<p id="elapsedTime" style="margin-bottom: 0;">Elapsed time: <span id="timer">0 seconds</span></p>').insertBefore(submitButton);
+                    $('<p id="waitingTime" style="margin-bottom: 0;">Depending on the length of your essay and the amount of mistakes, <br>the waiting time can vary between 15s and 120s</p>').insertBefore(submitButton);
                 }
-            }
-        });
-    };
 
-    var observer = new MutationObserver(callback);
-    observer.observe(targetNode, config);
+                // Start or reset the timer to give live feedback to the user.
+                if (timerInterval) clearInterval(timerInterval); // Clear any existing timer
+                timerInterval = startTimer(); // Start the timer
+            });
 
-    // Handle form submission
-    $('.course-details-content form').on('submit', function(event) {
-        event.preventDefault(); // Prevent the actual form submission for demonstration; adjust as needed
-
-        // Initialize or reset UI elements and timer upon form submission
-        $('textarea[name="task"], textarea[name="essay"]').prop('disabled', true).css({
-            'background-color': '#f0f0f0',
-            'cursor': 'not-allowed'
-        });
-        
-        var submitButton = $(this).find('.edu-btn').prop('disabled', true).text('Loading...')
-            .css({'pointer-events': 'none', 'filter': 'saturate(30%)'});
-
-        if (!$('#elapsedTime').length) {
-            $('<p id="elapsedTime" style="margin-bottom: 0;">Elapsed time: <span id="timer">0 seconds</span></p>').insertBefore(submitButton);
-            $('<p id="waitingTime" style="margin-bottom: 0;">Depending on the length of your essay and the amount of mistakes, <br>the waiting time can vary between 15s and 120s</p>').insertBefore(submitButton);
-        }
-
-        if (timerInterval) clearInterval(timerInterval); // Clear any existing timer
-        timerInterval = startTimer(); // Start the timer
+        }, 700); // Delay to ensure jQuery manipulations occur after React component render.
     });
-
-
-        }, 700);
-    });
-
-
 }
