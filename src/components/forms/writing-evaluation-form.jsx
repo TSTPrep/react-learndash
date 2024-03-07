@@ -13,6 +13,7 @@ const WritingEvaluationForm = () => {
 
         setLoading(true);
 
+        const demo = false;
 
         const response = await fetch('https://TSTPrep-tstprep-writing.hf.space/get_passage_html', {
             method: 'POST',
@@ -23,7 +24,7 @@ const WritingEvaluationForm = () => {
             body: JSON.stringify({
                 essay,
                 task,
-                demo: false
+                demo
             })
         });
         if (!response.ok) throw new Error(response.statusText);
