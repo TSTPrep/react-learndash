@@ -7,7 +7,7 @@ if (typeof window !== 'undefined') {
             // PART 1 - Edits on form content
             // Feature: Update the heading to provide a clear title for the demo.
             // For React: This could be done by storing the title in a state variable and using it directly in the render method or JSX return statement.
-            $('h5').text("TST Prep's Writing Evaluation Demo 1");
+            $('h5').text("TST Prep's Writing Evaluation Demo 1.6");
 
             // Feature: Update placeholder text in textarea fields to guide the user on what to input.
             // For React: Control the placeholder text using state or props, allowing dynamic updates based on user interaction or other conditions.
