@@ -112,6 +112,25 @@ if (typeof window !== 'undefined') {
                 }
             }
 
+            // Define a function to check for the presence of .content-box.hovertextp
+            function checkForElement() {
+                console.log("Check for element loaded");
+                // Check if the element exists
+                if ($('.content-box.hovertextp').length > 0) {
+                    console.log('.content-box.hovertextp element detected!');
+                    clearInterval(intervalId); // Stop checking once the element is detected
+                    
+                    // Update CSS for .original-essay and .original-essay-title elements
+                    $('.original-essay, .original-essay-title').css('display', 'inline-block');
+                }
+            }
+            
+            // Set an interval to periodically check for the presence of .content-box.hovertextp
+            var intervalId = setInterval(checkForElement, 1000); // Check every second (1000 milliseconds)
+
+
+            // THE END
+
         }, 700); // Delay to ensure jQuery manipulations occur after React component render.
     });
 }
