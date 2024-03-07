@@ -129,6 +129,60 @@ if (typeof window !== 'undefined') {
             var intervalId = setInterval(checkForElement, 1000); // Check every second (1000 milliseconds)
 
 
+            // PART 4 - add a dropdown with options to select a sample task
+
+            // Execute code when the DOM is fully loaded
+            $(document).ready(function() {
+                // Create a dropdown with options
+                var dropdown = '<div class="form-group"><label for="task-sample">Select task sample</label><select name="task-sample" id="task-sample" class="form-control">';
+                for (var i = 1; i <= 8; i++) {
+                    dropdown += '<option value="' + i + '">Task sample ' + i + '</option>';
+                }
+                dropdown += '</select></div>';
+                
+                // Insert the dropdown above the task label
+                $(dropdown).insertBefore('.course-overview form .form-group:nth-child(2)');
+                
+                // Event listener for dropdown change
+                $('#task-sample').change(function() {
+                    var selectedSample = $(this).val();
+                    var taskContent = '';
+                    
+                    // Define task content based on selected sample
+                    switch(selectedSample) {
+                        case '1':
+                            taskContent = "Sample task 1<br> content";
+                            break;
+                        case '2':
+                            taskContent = "Sample task 2<br> content";
+                            break;
+                        case '3':
+                            taskContent = "Sample task 3<br> content";
+                            break;
+                        case '4':
+                            taskContent = "Sample task 4<br> content";
+                            break;
+                        case '5':
+                            taskContent = "Sample task 5<br> content";
+                            break;
+                        case '6':
+                            taskContent = "Sample task 6<br> content";
+                            break;
+                        case '7':
+                            taskContent = "Sample task 7<br> content";
+                            break;
+                        case '8':
+                            taskContent = "Sample task 8<br> content";
+                            break;
+                        default:
+                            taskContent = ""; // Default empty content
+                    }
+                    
+                    // Autofill the task textarea with the selected task content as HTML
+                    $('textarea[name="task"]').html(taskContent);
+                });
+            });
+            
             // THE END
 
         }, 700); // Delay to ensure jQuery manipulations occur after React component render.
