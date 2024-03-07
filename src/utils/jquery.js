@@ -7,7 +7,7 @@ if (typeof window !== 'undefined') {
             // PART 1 - Edits on form content
             // Feature: Update the heading to provide a clear title for the demo.
             // For React: This could be done by storing the title in a state variable and using it directly in the render method or JSX return statement.
-            $('h5').text("TST Prep's Writing Evaluation Demo v1.0.7b");
+            $('h5').text("TST Prep's Writing Evaluation Demo v1.0.6b");
 
             // Feature: Update placeholder text in textarea fields to guide the user on what to input.
             // For React: Control the placeholder text using state or props, allowing dynamic updates based on user interaction or other conditions.
@@ -93,32 +93,24 @@ if (typeof window !== 'undefined') {
             
             // Function to check for Screen 2 and display the essay content
             function checkAndDisplayEssayContent() {
-            console.log("Step 2: Inside checkAndDisplayEssayContent function");
-            var screen2Detected = $('.course-details-content h5').text().includes("TST Prep's Writing Evaluation Demo 1");
-            if (screen2Detected) {
-                var essayContent = localStorage.getItem('essayContent');
-                if (essayContent) {
-                    // Create a paragraph element with the essay content, add class and insert after h5 title
-                    var $essayParagraph = $('<p></p>').text(essayContent).addClass('original-essay').css('margin-bottom', '0px');
-                    $essayParagraph.insertAfter('.course-details-content h5');
-                    
-                    // Create a bolded title and insert before the paragraph
-                    var $title = $('<p></p>').text('Original Essay').addClass('original-essay-title').css('font-size', '16px').css('font-weight', 'bold').css('margin-bottom', '0px');
-                    $title.insertBefore($essayParagraph);
-                    
-                    localStorage.removeItem('essayContent'); // Optional: Clear the localStorage
-                    console.log("Step 3: Original essay content displayed");
+                console.log("Step 2: Inside checkAndDisplayEssayContent function");
+                var screen2Detected = $('.course-details-content h5').text().includes("TST Prep's Writing Evaluation Demo 1");
+                if (screen2Detected) {
+                    var essayContent = localStorage.getItem('essayContent');
+                    if (essayContent) {
+                        // Create a paragraph element with the essay content, add class and insert after h5 title
+                        var $essayParagraph = $('<p></p>').text(essayContent).addClass('original-essay').css('margin-bottom', '0px');
+                        $essayParagraph.insertAfter('.course-details-content h5');
+                        
+                        // Create a bolded title and insert before the paragraph
+                        var $title = $('<p></p>').text('Original Essay').addClass('original-essay-title').css('font-size', '16px').css('font-weight', 'bold').css('margin-bottom', '0px');
+                        $title.insertBefore($essayParagraph);
+                        
+                        localStorage.removeItem('essayContent'); // Optional: Clear the localStorage
+                        console.log("Step 3: Original essay content displayed");
+                    }
                 }
             }
-            console.log("Ready to insert buttons");
-            insertButtons(); // Call the new function here
-        }
-        
-        // Define the new function somewhere else in the file
-        function insertButtons() {
-            console.log("Inserting buttons now...");
-            // Your button insertion logic here
-        }
 
             // Define a function to check for the presence of .content-box.hovertextp
             function checkForElement() {
