@@ -81,6 +81,37 @@ if (typeof window !== 'undefined') {
                 timerInterval = startTimer(); // Start the timer
             });
 
+            // PART 3 - display the original content after submission
+            // Attach an event handler to the form submission on Screen 1
+            $('.course-details-content form').submit(function() {
+                var essayContent = $('textarea[name="essay"]').val();
+                localStorage.setItem('essayContent', essayContent);
+                console.log("Step 1: Form submitted on Screen 1");
+                // After form submission, immediately check and display essay content
+                checkAndDisplayEssayContent();
+            });
+            
+            // Function to check for Screen 2 and display the essay content
+            function checkAndDisplayEssayContent() {
+                console.log("Step 2: Inside checkAndDisplayEssayContent function");
+                var screen2Detected = $('.course-details-content h5').text().includes("TST Prep's Writing Evaluation Demo 1");
+                if (screen2Detected) {
+                    var essayContent = localStorage.getItem('essayContent');
+                    if (essayContent) {
+                        // Create a paragraph element with the essay content, add class and insert after h5 title
+                        var $essayParagraph = $('<p></p>').text(essayContent).addClass('original-essay').css('margin-bottom', '0px');
+                        $essayParagraph.insertAfter('.course-details-content h5');
+                        
+                        // Create a bolded title and insert before the paragraph
+                        var $title = $('<p></p>').text('Original Essay').addClass('original-essay-title').css('font-size', '16px').css('font-weight', 'bold').css('margin-bottom', '0px');
+                        $title.insertBefore($essayParagraph);
+                        
+                        localStorage.removeItem('essayContent'); // Optional: Clear the localStorage
+                        console.log("Step 3: Original essay content displayed");
+                    }
+                }
+            }
+
         }, 700); // Delay to ensure jQuery manipulations occur after React component render.
     });
 }
