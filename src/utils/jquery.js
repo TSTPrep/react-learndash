@@ -4,17 +4,17 @@ if (typeof window !== 'undefined') {
 
     $(document).ready(function() {
         setTimeout(function() {  
-            // PART 1 - Edits on form content
+            // PART 1 - Edits on form content --------------------------------------------------------------------------------------------------------------------------------------------------------
             // Feature: Update the heading to provide a clear title for the demo.
             // For React: This could be done by storing the title in a state variable and using it directly in the render method or JSX return statement.
-            $('h5').text("TST Prep's Writing Evaluation Demo v1.0.7");
+            $('h5').text("TST Prep's Writing Evaluation Demo v1.0.8");
 
             // Feature: Update placeholder text in textarea fields to guide the user on what to input.
             // For React: Control the placeholder text using state or props, allowing dynamic updates based on user interaction or other conditions.
             $('textarea[name="task"]').attr('placeholder', 'Paste your TOEFL integrated writing task here').css('margin-bottom', '30px');
             $('textarea[name="essay"]').attr('placeholder', 'Paste or write your essay here');
 
-            // PART 2 - Behavior after form submission
+            // PART 2 - Behavior after form submission --------------------------------------------------------------------------------------------------------------------------------------------------------
             // Setup to observe changes in the form container, allowing dynamic response to form submission and other events.
             var targetNode = document.querySelector('.course-details-content');
             var config = { childList: true, subtree: true, characterData: true, attributes: true };
@@ -81,7 +81,7 @@ if (typeof window !== 'undefined') {
                 timerInterval = startTimer(); // Start the timer
             });
 
-            // PART 3 - display the original content after submission
+            // PART 3 - display the original content after submission --------------------------------------------------------------------------------------------------------------------------------------------------------
             // Attach an event handler to the form submission on Screen 1
             $('.course-details-content form').submit(function() {
                 var essayContent = $('textarea[name="essay"]').val();
@@ -93,32 +93,26 @@ if (typeof window !== 'undefined') {
             
             // Function to check for Screen 2 and display the essay content
             function checkAndDisplayEssayContent() {
-            console.log("Step 2: Inside checkAndDisplayEssayContent function");
-            var screen2Detected = $('.course-details-content h5').text().includes("TST Prep's Writing Evaluation Demo 1");
-            if (screen2Detected) {
-                var essayContent = localStorage.getItem('essayContent');
-                if (essayContent) {
-                    // Create a paragraph element with the essay content, add class and insert after h5 title
-                    var $essayParagraph = $('<p></p>').text(essayContent).addClass('original-essay').css('margin-bottom', '0px');
-                    $essayParagraph.insertAfter('.course-details-content h5');
-                    
-                    // Create a bolded title and insert before the paragraph
-                    var $title = $('<p></p>').text('Original Essay').addClass('original-essay-title').css('font-size', '16px').css('font-weight', 'bold').css('margin-bottom', '0px');
-                    $title.insertBefore($essayParagraph);
-                    
-                    localStorage.removeItem('essayContent'); // Optional: Clear the localStorage
-                    console.log("Step 3: Original essay content displayed");
+                console.log("Step 2: Inside checkAndDisplayEssayContent function");
+                var screen2Detected = $('.course-details-content h5').text().includes("TST Prep's Writing Evaluation Demo 1");
+                if (screen2Detected) {
+                    var essayContent = localStorage.getItem('essayContent');
+                    if (essayContent) {
+                        // Create a paragraph element with the essay content, add class and insert after h5 title
+                        var $essayParagraph = $('<p></p>').text(essayContent).addClass('original-essay').css('margin-bottom', '0px');
+                        $essayParagraph.insertAfter('.course-details-content h5');
+                        
+                        // Create a bolded title and insert before the paragraph
+                        var $title = $('<p></p>').text('Original Essay').addClass('original-essay-title').css('font-size', '16px').css('font-weight', 'bold').css('margin-bottom', '0px');
+                        $title.insertBefore($essayParagraph);
+                        
+                        localStorage.removeItem('essayContent'); // Optional: Clear the localStorage
+                        console.log("Step 3: Original essay content displayed");
+                    }
                 }
+                console.log("Ready to insert buttons");
+                insertButtons(); // Call the new function here
             }
-            console.log("Ready to insert buttons");
-            insertButtons(); // Call the new function here
-        }
-        
-        // Define the new function somewhere else in the file
-        function insertButtons() {
-            console.log("Inserting buttons now...");
-            // Your button insertion logic here
-        }
 
             // Define a function to check for the presence of .content-box.hovertextp
             function checkForElement() {
@@ -137,7 +131,7 @@ if (typeof window !== 'undefined') {
             var intervalId = setInterval(checkForElement, 1000); // Check every second (1000 milliseconds)
 
 
-            // PART 4 - add a dropdown with options to select a sample task
+            // PART 4 - add a dropdown with options to select a sample task --------------------------------------------------------------------------------------------------------------------------------------------------------
 
             // Execute code when the DOM is fully loaded
             $(document).ready(function() {
@@ -190,6 +184,27 @@ if (typeof window !== 'undefined') {
                     $('textarea[name="task"]').html(taskContent);
                 });
             });
+
+            // PART 5 - 3-way view behavior --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+            function insertButtons() {
+                console.log("Inserting buttons now...");
+                // Create a div element and add the 'buttons-container' class to it
+                var $buttonsContainer = $('<div></div>').addClass('buttons-container');
+                
+                // Create buttons with the specified labels
+                var $buttonOriginalEssay = $('<button></button>').text('Original Essay').addClass('btn-original-essay');
+                var $buttonInlineCorrections = $('<button></button>').text('Inline Corrections').addClass('btn-inline-corrections');
+                var $buttonCorrectedEssay = $('<button></button>').text('Corrected Essay').addClass('btn-corrected-essay');
+                
+                // Append the buttons to the buttons-container div
+                $buttonsContainer.append($buttonOriginalEssay, $buttonInlineCorrections, $buttonCorrectedEssay);
+                
+                // Find the .content-box.hovertextp element and insert the buttons container above it
+                $buttonsContainer.insertBefore('.content-box.hovertextp');
+            
+                console.log("Buttons container and buttons inserted.");
+            }
             
             // THE END
 
