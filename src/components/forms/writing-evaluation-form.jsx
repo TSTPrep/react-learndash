@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import '../../utils/jquery';
 
 const WritingEvaluationForm = () => {
     const [essay, setEssay] = useState('');
