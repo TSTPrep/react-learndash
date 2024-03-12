@@ -14,8 +14,10 @@
 }
 
 .garbled{
-  text-decoration: underline;
-  text-decoration-style: wavy !important;
+  // text-decoration: underline;
+  // text-decoration-style: wavy !important;
+  // text-decoration-thickness: 1px;
+  text-decoration-line: grammar-error;
   color: #d5baba;
 }
 
