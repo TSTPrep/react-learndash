@@ -8,7 +8,7 @@
 
 .incorrect, .delete {
   text-decoration: line-through;
-  border-bottom: 2px solid #c38181;
+  border-bottom: 1px solid #c38181;
   color: #d5bbbb !important;
   padding: 0 3px;
 }
@@ -20,7 +20,7 @@
 }
 
 .corrected {
-  border-bottom: 2px solid #9ec59e;
+  border-bottom: 1px solid #9ec59e;
   padding-left: 3px;
   font-weight: 600;
 }
