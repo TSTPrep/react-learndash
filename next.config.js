@@ -7,7 +7,7 @@ const nextConfig = {
    * Added for GitHub Pages deployment.
    */
   basePath: "/react-learndash",
-  output: "export",
+  ...(!process.env.DEPLOY_TO_GITHUB_PAGES ? {output: 'export'} : {})
 }
 
 module.exports = nextConfig
