@@ -208,7 +208,7 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
     return data;
 }
 
-export async function getAllCourses(preview) {
+export async function getAllCourses(preview?) {
     const data = await fetchAPI(
         `
 query AllCourses {
@@ -233,7 +233,7 @@ query AllCourses {
     return data?.courses;
 }
 
-export async function getCourseData(id, preview) {
+export async function getCourseData(id, preview?) {
     const data = await fetchAPI(
         `
 query CourseDetail ($id: ID!) {
