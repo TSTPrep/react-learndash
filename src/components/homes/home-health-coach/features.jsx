@@ -84,10 +84,12 @@ const features = () => {
                     >
                         <div className='categorie-grid categorie-style-5 color-tertiary'>
                             <div className='icon'>
-                                <img
-                                    src='/assets/images/svg-icons/icon-04.svg'
-                                    alt='Image Svg'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/svg-icons/icon-04.svg'
+                                        alt='Image Svg'
+                                    />
+                                </picture>
                             </div>
                             <div className='content'>
                                 <h5 className='title'>Improving Health</h5>
@@ -106,10 +108,12 @@ const features = () => {
                     >
                         <div className='categorie-grid categorie-style-5 color-extra02'>
                             <div className='icon'>
-                                <img
-                                    src='/assets/images/svg-icons/icon-05.svg'
-                                    alt='Image Svg'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/svg-icons/icon-05.svg'
+                                        alt='Image Svg'
+                                    />
+                                </picture>
                             </div>
                             <div className='content'>
                                 <h5 className='title'>Immune System</h5>

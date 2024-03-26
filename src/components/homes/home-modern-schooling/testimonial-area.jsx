@@ -90,7 +90,9 @@ const TestimonialArea = () => {
                                     <div className='content'>
                                         <div className='author-info'>
                                             <div className='thumb'>
-                                                <img src={img} alt='Testimonial' />
+                                                <picture>
+                                                    <img src={img} alt='Testimonial' />
+                                                </picture>
                                             </div>
                                         </div>
                                         <p>{desc}</p>
@@ -118,16 +120,20 @@ const TestimonialArea = () => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img
-                        className='d-block-shape-light'
-                        src='/assets/images/others/map-shape-3.png'
-                        alt='Shape'
-                    />
-                    <img
-                        className='d-none-shape-dark'
-                        src='/assets/images/others/dark-map-2-shape-3.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='d-block-shape-light'
+                            src='/assets/images/others/map-shape-3.png'
+                            alt='Shape'
+                        />
+                    </picture>
+                    <picture>
+                        <img
+                            className='d-none-shape-dark'
+                            src='/assets/images/others/dark-map-2-shape-3.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
             </ul>
         </div>

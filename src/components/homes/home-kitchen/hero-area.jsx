@@ -47,10 +47,12 @@ const HeroArea = () => {
                                 data-sal='slide-left'
                                 data-sal-duration='1000'
                             >
-                                <img
-                                    src='/assets/images/banner/couple-cooking.webp'
-                                    alt='Couple Image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/banner/couple-cooking.webp'
+                                        alt='Couple Image'
+                                    />
+                                </picture>
                             </div>
                             <ul className='shape-group'>
                                 <li
@@ -59,10 +61,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-26.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-26.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <li
                                     className='shape-2'
@@ -70,10 +74,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-15.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-15.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <li
                                     className='shape-3'
@@ -81,10 +87,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <li
                                     className='shape-4'
@@ -92,10 +100,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/counterup/shape-02.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/counterup/shape-02.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                             </ul>
                         </div>
@@ -113,7 +123,9 @@ const HeroArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-05.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-05.png' alt='Shape' />
+                    </picture>
                 </motion.li>
 
                 <motion.li
@@ -126,7 +138,9 @@ const HeroArea = () => {
                         y: mouseDirection(50).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-04.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-04.png' alt='Shape' />
+                    </picture>
                 </motion.li>
 
                 <motion.li
@@ -139,7 +153,9 @@ const HeroArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-03.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-03.png' alt='Shape' />
+                    </picture>
                 </motion.li>
 
                 <motion.li
@@ -152,7 +168,9 @@ const HeroArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-02.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-02.png' alt='Shape' />
+                    </picture>
                 </motion.li>
 
                 <motion.li
@@ -165,7 +183,9 @@ const HeroArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-01.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-01.png' alt='Shape' />
+                    </picture>
                 </motion.li>
             </ul>
         </div>

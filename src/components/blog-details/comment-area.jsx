@@ -7,10 +7,12 @@ const CommentArea = () => {
             <div className='comment-list-wrapper'>
                 <div className='comment'>
                     <div className='thumbnail'>
-                        <img
-                            src='/assets/images/blog/comment-01.jpg'
-                            alt='Comment Images'
-                        />
+                        <picture>
+                            <img
+                                src='/assets/images/blog/comment-01.jpg'
+                                alt='Comment Images'
+                            />
+                        </picture>
                     </div>
                     <div className='comment-content'>
                         <h5 className='title'>Haley Bennet</h5>
@@ -29,10 +31,12 @@ const CommentArea = () => {
 
                 <div className='comment comment-reply'>
                     <div className='thumbnail'>
-                        <img
-                            src='/assets/images/blog/comment-02.jpg'
-                            alt='Comment Images'
-                        />
+                        <picture>
+                            <img
+                                src='/assets/images/blog/comment-02.jpg'
+                                alt='Comment Images'
+                            />
+                        </picture>
                     </div>
                     <div className='comment-content'>
                         <h5 className='title'>Simon Baker</h5>
@@ -51,10 +55,12 @@ const CommentArea = () => {
 
                 <div className='comment'>
                     <div className='thumbnail'>
-                        <img
-                            src='/assets/images/blog/comment-03.jpg'
-                            alt='Comment Images'
-                        />
+                        <picture>
+                            <img
+                                src='/assets/images/blog/comment-03.jpg'
+                                alt='Comment Images'
+                            />
+                        </picture>
                     </div>
                     <div className='comment-content'>
                         <h6 className='title'>Richard Gere</h6>

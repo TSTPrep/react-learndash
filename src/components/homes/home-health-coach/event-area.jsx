@@ -65,11 +65,13 @@ const EventArea = ({ event_2 }) => {
                         data-sal='fade'
                         data-sal-duration='200'
                     >
-                        <img
-                            className='rotateit'
-                            src='/assets/images/about/shape-13.png'
-                            alt='Shape'
-                        />
+                        <picture>
+                            <img
+                                className='rotateit'
+                                src='/assets/images/about/shape-13.png'
+                                alt='Shape'
+                            />
+                        </picture>
                     </li>
                     <motion.li
                         className='shape-2 scene'

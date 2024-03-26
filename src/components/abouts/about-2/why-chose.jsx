@@ -77,7 +77,9 @@ const WhyChose = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/shape-13.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-13.png' alt='shape' />
+                    </picture>
                 </motion.li>
                 <li className='shape-3'>
                     <motion.img

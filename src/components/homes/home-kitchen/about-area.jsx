@@ -23,19 +23,23 @@ const AboutArea = () => {
                                 data-sal='slide-right'
                                 data-sal-duration='800'
                             >
-                                <img
-                                    src='/assets/images/about/about-06.webp'
-                                    alt='About Image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/about/about-06.webp'
+                                        alt='About Image'
+                                    />
+                                </picture>
                             </div>
-                            <img
-                                className='main-img-2'
-                                src='/assets/images/about/about-07.webp'
-                                alt='About Image'
-                                data-sal-delay='60'
-                                data-sal='slide-up'
-                                data-sal-duration='900'
-                            />
+                            <picture>
+                                <img
+                                    className='main-img-2'
+                                    src='/assets/images/about/about-07.webp'
+                                    alt='About Image'
+                                    data-sal-delay='60'
+                                    data-sal='slide-up'
+                                    data-sal-duration='900'
+                                />
+                            </picture>
                             <ul className='shape-group'>
                                 <motion.li
                                     className='shape-1 scene'
@@ -47,10 +51,12 @@ const AboutArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-2 scene'
@@ -62,10 +68,12 @@ const AboutArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-39.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-39.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-3 scene'
@@ -77,10 +85,12 @@ const AboutArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-07.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-07.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <li
                                     className='shape-4'

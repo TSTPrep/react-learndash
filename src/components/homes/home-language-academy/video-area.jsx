@@ -12,10 +12,12 @@ const VideoArea = () => {
                         <div className='col-lg-6'>
                             <div className='video-gallery'>
                                 <div className='thumbnail'>
-                                    <img
-                                        src='/assets/images/others/video-5.webp'
-                                        alt='Thumb'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/video-5.webp'
+                                            alt='Thumb'
+                                        />
+                                    </picture>
                                     <button
                                         onClick={() => setIsVideoOpen(true)}
                                         className='video-play-btn video-popup-activation'
@@ -28,10 +30,12 @@ const VideoArea = () => {
                         <div className='col-lg-6'>
                             <div className='video-gallery'>
                                 <div className='thumbnail thumbnail-2'>
-                                    <img
-                                        src='/assets/images/others/video-6.webp'
-                                        alt='Thumb'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/video-6.webp'
+                                            alt='Thumb'
+                                        />
+                                    </picture>
                                     <button
                                         onClick={() => setIsVideoOpen(true)}
                                         className='video-play-btn video-popup-activation'

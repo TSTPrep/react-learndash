@@ -83,7 +83,9 @@ const CounterArea = ({ about_p_3 }) => {
                             y: mouseDirection(40).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-27.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-27.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                 </ul>
             </div>

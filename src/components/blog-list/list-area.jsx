@@ -25,7 +25,9 @@ const ListArea = () => {
                                     <div className='inner'>
                                         <div className='thumbnail'>
                                             <Link href={`/blog-details/${id}`}>
-                                                <img src={img} alt='Blog Images' />
+                                                <picture>
+                                                    <img src={img} alt='Blog Images' />
+                                                </picture>
                                             </Link>
                                         </div>
                                         <div className='content'>

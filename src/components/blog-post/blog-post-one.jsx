@@ -7,7 +7,9 @@ const BlogPostOne = ({ param }) => {
             <div className='inner'>
                 <div className='thumbnail'>
                     <Link href={`/blog-details/${param.id}`}>
-                        <img src={param.img} alt='Blog Images' />
+                        <picture>
+                            <img src={param.img} alt='Blog Images' />
+                        </picture>
                     </Link>
                 </div>
                 <div className='content position-top'>

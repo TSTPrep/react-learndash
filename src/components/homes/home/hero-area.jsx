@@ -48,10 +48,12 @@ const HeroArea = () => {
                                         y: mouseReverse(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>
@@ -64,10 +66,12 @@ const HeroArea = () => {
                                 data-sal='slide-left'
                                 data-sal-duration='1000'
                             >
-                                <img
-                                    src='/assets/images/banner/girl-1.webp'
-                                    alt='Girl Image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/banner/girl-1.webp'
+                                        alt='Girl Image'
+                                    />
+                                </picture>
                             </div>
                             <div
                                 className='instructor-info'
@@ -79,10 +83,12 @@ const HeroArea = () => {
                                     <h5 className='title'>Instructor</h5>
                                     <div className='media'>
                                         <div className='thumb'>
-                                            <img
-                                                src='/assets/images/banner/author-1.png'
-                                                alt='Images'
-                                            />
+                                            <picture>
+                                                <img
+                                                    src='/assets/images/banner/author-1.png'
+                                                    alt='Images'
+                                                />
+                                            </picture>
                                         </div>
                                         <div className='content'>
                                             <span>200+</span> Instructors
@@ -97,10 +103,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-15.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-15.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <motion.li
                                     className='shape-2 scene'
@@ -112,10 +120,12 @@ const HeroArea = () => {
                                         y: mouseDirection(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-16.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-16.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <motion.li
@@ -137,10 +147,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/counterup/shape-02.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/counterup/shape-02.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <motion.li
                                     className='shape-5 scene'
@@ -152,10 +164,12 @@ const HeroArea = () => {
                                         y: mouseReverse(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-6 scene'
@@ -167,10 +181,12 @@ const HeroArea = () => {
                                         y: mouseDirection(20).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-18.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-18.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>
@@ -178,7 +194,9 @@ const HeroArea = () => {
                 </div>
             </div>
             <div className='shape-7'>
-                <img src='/assets/images/about/h-1-shape-01.png' alt='Shape' />
+                <picture>
+                    <img src='/assets/images/about/h-1-shape-01.png' alt='Shape' />
+                </picture>
             </div>
         </div>
     );

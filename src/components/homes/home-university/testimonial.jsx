@@ -110,7 +110,9 @@ const Testimonial = ({ about_p_2 }) => {
                                 <div className='testimonial-slide'>
                                     <div className='content'>
                                         <div className='logo'>
-                                            <img src={logo} alt='Logo' />
+                                            <picture>
+                                                <img src={logo} alt='Logo' />
+                                            </picture>
                                         </div>
                                         <p>{desc}</p>
                                         <div className='rating-icon'>
@@ -121,7 +123,9 @@ const Testimonial = ({ about_p_2 }) => {
                                     </div>
                                     <div className='author-info'>
                                         <div className='thumb'>
-                                            <img src={img} alt='Testimonial' />
+                                            <picture>
+                                                <img src={img} alt='Testimonial' />
+                                            </picture>
                                         </div>
                                         <div className='info'>
                                             <h5 className='title'>{name}</h5>
@@ -146,7 +150,9 @@ const Testimonial = ({ about_p_2 }) => {
                             y: mouseReverse(25).y,
                         }}
                     >
-                        <img src='/assets/images/about/shape-30.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/about/shape-30.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                     <motion.li
                         className='shape-2 scene'
@@ -158,7 +164,9 @@ const Testimonial = ({ about_p_2 }) => {
                             y: mouseDirection(25).y,
                         }}
                     >
-                        <img src='/assets/images/about/shape-25.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/about/shape-25.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                 </ul>
             </div>
@@ -169,16 +177,20 @@ const Testimonial = ({ about_p_2 }) => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img
-                        className='d-block-shape-light'
-                        src='/assets/images/others/map-shape-3.png'
-                        alt='Shape'
-                    />
-                    <img
-                        className='d-none-shape-dark'
-                        src='/assets/images/others/dark-map-2-shape-3.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='d-block-shape-light'
+                            src='/assets/images/others/map-shape-3.png'
+                            alt='Shape'
+                        />
+                    </picture>
+                    <picture>
+                        <img
+                            className='d-none-shape-dark'
+                            src='/assets/images/others/dark-map-2-shape-3.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
             </ul>
         </div>

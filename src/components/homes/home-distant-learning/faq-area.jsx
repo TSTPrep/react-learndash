@@ -39,10 +39,12 @@ const FaqArea = () => {
                                     data-sal-duration='800'
                                 >
                                     <div className='faq-thumbnail thumbnail-1'>
-                                        <img
-                                            src='/assets/images/faq/faq-01.jpg'
-                                            alt='Faq Images'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/faq/faq-01.jpg'
+                                                alt='Faq Images'
+                                            />
+                                        </picture>
                                     </div>
                                 </div>
                                 <div
@@ -52,10 +54,12 @@ const FaqArea = () => {
                                     data-sal-duration='800'
                                 >
                                     <div className='faq-thumbnail thumbnail-2'>
-                                        <img
-                                            src='/assets/images/faq/faq-02.jpg'
-                                            alt='Faq Images'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/faq/faq-02.jpg'
+                                                alt='Faq Images'
+                                            />
+                                        </picture>
                                     </div>
                                 </div>
                                 <div
@@ -65,10 +69,12 @@ const FaqArea = () => {
                                     data-sal-duration='800'
                                 >
                                     <div className='faq-thumbnail thumbnail-3'>
-                                        <img
-                                            src='/assets/images/faq/faq-03.jpg'
-                                            alt='Faq Images'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/faq/faq-03.jpg'
+                                                alt='Faq Images'
+                                            />
+                                        </picture>
                                     </div>
                                 </div>
                                 <div
@@ -78,10 +84,12 @@ const FaqArea = () => {
                                     data-sal-duration='800'
                                 >
                                     <div className='faq-thumbnail thumbnail-4'>
-                                        <img
-                                            src='/assets/images/faq/faq-04.webp'
-                                            alt='Faq Images'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/faq/faq-04.webp'
+                                                alt='Faq Images'
+                                            />
+                                        </picture>
                                     </div>
                                 </div>
                             </div>
@@ -97,10 +105,12 @@ const FaqArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/shape-02.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-02.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-1 scene shape-dark'
@@ -112,10 +122,12 @@ const FaqArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/dark-shape-02.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/dark-shape-02.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-2 scene'
@@ -127,10 +139,12 @@ const FaqArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/shape-03.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-03.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-3 scene'
@@ -142,10 +156,12 @@ const FaqArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/shape-04.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-04.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-4 scene'
@@ -157,10 +173,12 @@ const FaqArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/shape-05.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-05.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>
@@ -234,10 +252,12 @@ const FaqArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-02.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-02.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-2 scene'

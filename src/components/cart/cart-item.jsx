@@ -23,7 +23,9 @@ const CartItem = ({ item }) => {
 
             <td className='product-thumbnail'>
                 <Link href={`/course-details/${item.id}`}>
-                    <img src={item.img} alt='Books' />
+                    <picture>
+                        <img src={item.img} alt='Books' />
+                    </picture>
                 </Link>
             </td>
 

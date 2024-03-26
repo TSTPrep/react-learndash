@@ -22,7 +22,9 @@ const Cart = () => {
                             <li key={index} className='each-item'>
                                 <div className='thumb'>
                                     <Link href={`/course-details/${item.id}`}>
-                                        <img src={item.img} alt='course-thumb' />
+                                        <picture>
+                                            <img src={item.img} alt='course-thumb' />
+                                        </picture>
                                     </Link>
                                 </div>
                                 <div className='content'>

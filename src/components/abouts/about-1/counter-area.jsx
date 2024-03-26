@@ -80,12 +80,14 @@ const CounterArea = ({ about_p_3 }) => {
                     data-sal='fade'
                     data-sal-duration='200'
                 >
-                    <img
-                        src={`/assets/images/others/${
-                            about_p_3 ? 'shape-27.png' : 'map-shape-3.png'
-                        }`}
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            src={`/assets/images/others/${
+                                about_p_3 ? 'shape-27.png' : 'map-shape-3.png'
+                            }`}
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
             </ul>
         </div>

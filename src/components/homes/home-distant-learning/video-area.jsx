@@ -15,10 +15,12 @@ const VideoArea = ({ about_p_2 }) => {
                         <div className='col-lg-9'>
                             <div className='video-gallery'>
                                 <div className='thumbnail'>
-                                    <img
-                                        src='/assets/images/others/video-01.jpg'
-                                        alt='Thumb'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/video-01.jpg'
+                                            alt='Thumb'
+                                        />
+                                    </picture>
                                     <button
                                         onClick={() => setIsVideoOpen(true)}
                                         className='video-play-btn video-popup-activation'
@@ -28,17 +30,21 @@ const VideoArea = ({ about_p_2 }) => {
                                 </div>
                                 <ul className='shape-group'>
                                     <li className='shape-1 scene'>
-                                        <img
-                                            className='rotateit'
-                                            src='/assets/images/about/shape-37.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                className='rotateit'
+                                                src='/assets/images/about/shape-37.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </li>
                                     <li className='shape-2 scene'>
-                                        <img
-                                            src='/assets/images/faq/shape-04.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/faq/shape-04.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </li>
                                     <motion.li
                                         className='shape-3 scene shape-light'
@@ -47,10 +53,12 @@ const VideoArea = ({ about_p_2 }) => {
                                             y: mouseReverse(25).y,
                                         }}
                                     >
-                                        <img
-                                            src='/assets/images/faq/shape-14.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/faq/shape-14.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </motion.li>
                                     <motion.li
                                         className='shape-3 scene shape-dark'
@@ -59,10 +67,12 @@ const VideoArea = ({ about_p_2 }) => {
                                             y: mouseReverse(25).y,
                                         }}
                                     >
-                                        <img
-                                            src='/assets/images/faq/dark-shape-14.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/faq/dark-shape-14.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </motion.li>
                                 </ul>
                             </div>

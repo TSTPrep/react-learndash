@@ -14,10 +14,12 @@ const ContactMeArea = () => {
                             <div className='inner'>
                                 <div className='thumbnail'>
                                     <div className='thumb'>
-                                        <img
-                                            src='/assets/images/others/contact-me.jpg'
-                                            alt='Contact Me'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/others/contact-me.jpg'
+                                                alt='Contact Me'
+                                            />
+                                        </picture>
                                     </div>
                                     <ul className='shape-group'>
                                         <motion.li
@@ -27,10 +29,12 @@ const ContactMeArea = () => {
                                                 y: mouseReverse(30).y,
                                             }}
                                         >
-                                            <img
-                                                src='/assets/images/about/shape-13.png'
-                                                alt='Shape'
-                                            />
+                                            <picture>
+                                                <img
+                                                    src='/assets/images/about/shape-13.png'
+                                                    alt='Shape'
+                                                />
+                                            </picture>
                                         </motion.li>
                                         <motion.li
                                             className='shape-2 scene'
@@ -39,16 +43,20 @@ const ContactMeArea = () => {
                                                 y: mouseDirection(30).y,
                                             }}
                                         >
-                                            <img
-                                                src='/assets/images/counterup/shape-02.png'
-                                                alt='Shape'
-                                            />
+                                            <picture>
+                                                <img
+                                                    src='/assets/images/counterup/shape-02.png'
+                                                    alt='Shape'
+                                                />
+                                            </picture>
                                         </motion.li>
                                         <li className='shape-3'>
-                                            <img
-                                                src='/assets/images/about/shape-07.png'
-                                                alt='Shape'
-                                            />
+                                            <picture>
+                                                <img
+                                                    src='/assets/images/about/shape-07.png'
+                                                    alt='Shape'
+                                                />
+                                            </picture>
                                         </li>
                                     </ul>
                                 </div>

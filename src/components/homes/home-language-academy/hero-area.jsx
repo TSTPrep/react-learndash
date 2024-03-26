@@ -73,10 +73,12 @@ const HeroArea = () => {
                                 data-sal='slide-left'
                                 data-sal-duration='1000'
                             >
-                                <img
-                                    src='/assets/images/banner/flag-boy.webp'
-                                    alt='flag-boy Image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/banner/flag-boy.webp'
+                                        alt='flag-boy Image'
+                                    />
+                                </picture>
                             </div>
                             <div
                                 className='instructor-info'
@@ -119,10 +121,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-15.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-15.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
 
                                 <motion.li
@@ -135,10 +139,12 @@ const HeroArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/counterup/shape-05.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/counterup/shape-05.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <li
@@ -147,10 +153,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/svg-icons/circle-big.svg'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/svg-icons/circle-big.svg'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
 
                                 <li
@@ -159,10 +167,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/svg-icons/circle-small.svg'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/svg-icons/circle-small.svg'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
 
                                 <motion.li
@@ -175,10 +185,12 @@ const HeroArea = () => {
                                         y: mouseReverse(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>
@@ -187,7 +199,9 @@ const HeroArea = () => {
             </div>
             <ul className='shape-group'>
                 <li className='shape-8'>
-                    <img src='/assets/images/about/h-1-shape-01.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/about/h-1-shape-01.png' alt='Shape' />
+                    </picture>
                 </li>
             </ul>
         </div>

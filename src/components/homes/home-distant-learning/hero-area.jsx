@@ -48,10 +48,12 @@ const HeroArea = () => {
                                 data-sal='slide-up'
                                 data-sal-duration='1000'
                             >
-                                <img
-                                    src='/assets/images/banner/girl-2.webp'
-                                    alt='Girl Image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/banner/girl-2.webp'
+                                        alt='Girl Image'
+                                    />
+                                </picture>
                             </div>
                             <div
                                 className='thumbnail thumbnail-2'
@@ -59,10 +61,12 @@ const HeroArea = () => {
                                 data-sal='slide-down'
                                 data-sal-duration='1000'
                             >
-                                <img
-                                    src='/assets/images/banner/man-1.webp'
-                                    alt='Man Image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/banner/man-1.webp'
+                                        alt='Man Image'
+                                    />
+                                </picture>
                             </div>
                             <div
                                 className='online-support'
@@ -93,10 +97,12 @@ const HeroArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <motion.li
@@ -109,10 +115,12 @@ const HeroArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/dark-shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/dark-shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <motion.li
@@ -125,10 +133,12 @@ const HeroArea = () => {
                                         y: mouseDirection(50).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/shape-12.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-12.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <motion.li
@@ -141,10 +151,12 @@ const HeroArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/shape-09.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-09.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <motion.li
@@ -157,10 +169,12 @@ const HeroArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/dark-shape-09.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/dark-shape-09.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <motion.li
@@ -173,10 +187,12 @@ const HeroArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/cta/shape-04.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/cta/shape-04.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>

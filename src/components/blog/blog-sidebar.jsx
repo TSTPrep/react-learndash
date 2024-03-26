@@ -29,7 +29,9 @@ const BlogSidebar = () => {
                             <div key={blog.id} className='latest-post'>
                                 <div className='thumbnail'>
                                     <Link href={`/blog-details/${blog.id}`}>
-                                        <img src={blog.img} alt='Blog Images' />
+                                        <picture>
+                                            <img src={blog.img} alt='Blog Images' />
+                                        </picture>
                                     </Link>
                                 </div>
                                 <div className='post-content'>

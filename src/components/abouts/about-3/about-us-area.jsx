@@ -79,10 +79,12 @@ const AboutUsArea = () => {
                                         data-sal='slide-down'
                                         data-sal-duration='1000'
                                     >
-                                        <img
-                                            src='/assets/images/about/about-13.webp'
-                                            alt='About Images'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/about-13.webp'
+                                                alt='About Images'
+                                            />
+                                        </picture>
                                     </div>
 
                                     <div
@@ -91,10 +93,12 @@ const AboutUsArea = () => {
                                         data-sal='slide-up'
                                         data-sal-duration='1000'
                                     >
-                                        <img
-                                            src='/assets/images/about/about-15.webp'
-                                            alt='About Images'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/about-15.webp'
+                                                alt='About Images'
+                                            />
+                                        </picture>
                                     </div>
                                 </div>
                                 <div className='col-6 masonry-item'>
@@ -104,10 +108,12 @@ const AboutUsArea = () => {
                                         data-sal='slide-down'
                                         data-sal-duration='1000'
                                     >
-                                        <img
-                                            src='/assets/images/about/about-14.webp'
-                                            alt='About Images'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/about-14.webp'
+                                                alt='About Images'
+                                            />
+                                        </picture>
                                     </div>
                                     <div
                                         className='thumbnail thumbnail-3'
@@ -115,10 +121,12 @@ const AboutUsArea = () => {
                                         data-sal='slide-up'
                                         data-sal-duration='1000'
                                     >
-                                        <img
-                                            src='/assets/images/about/about-16.webp'
-                                            alt='About Images'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/about-16.webp'
+                                                alt='About Images'
+                                            />
+                                        </picture>
                                     </div>
                                 </div>
                             </div>
@@ -133,10 +141,12 @@ const AboutUsArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-33.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-33.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-2 scene'
@@ -148,10 +158,12 @@ const AboutUsArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-25.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-25.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-3 scene'
@@ -163,10 +175,12 @@ const AboutUsArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-4 scene'

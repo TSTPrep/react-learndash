@@ -40,7 +40,9 @@ const InnerPagesDemo = () => {
                         y: mouseReverse(35).y,
                     }}
                 >
-                    <img src='/assets/images/counterup/shape-03.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/counterup/shape-03.png' alt='shape' />
+                    </picture>
                 </motion.li>
 
                 <motion.li
@@ -53,7 +55,9 @@ const InnerPagesDemo = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/counterup/shape-02.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/counterup/shape-02.png' alt='shape' />
+                    </picture>
                 </motion.li>
 
                 <motion.li

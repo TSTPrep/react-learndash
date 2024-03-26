@@ -59,10 +59,12 @@ const CourseTypeFive = ({ data, classes }) => {
             <div className='inner'>
                 <div className='thumbnail'>
                     <Link href={`/course-details/${data.id}`}>
-                        <img
-                            src={`/assets/images/course/course-06/${data.img}`}
-                            alt='Course Thumb'
-                        />
+                        <picture>
+                            <img
+                                src={`/assets/images/course/course-06/${data.img}`}
+                                alt='Course Thumb'
+                            />
+                        </picture>
                     </Link>
                     <div className='time-top'>
                         <span className='duration'>

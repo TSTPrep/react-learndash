@@ -44,7 +44,9 @@ const ShopArea = () => {
                                     <div className='inner'>
                                         <div className='thumbnail'>
                                             <Link href={`/product-details/${id}`}>
-                                                <img src={img} alt='Shop Images' />
+                                                <picture>
+                                                    <img src={img} alt='Shop Images' />
+                                                </picture>
                                             </Link>
                                             <div className='product-hover-info'>
                                                 <ul>

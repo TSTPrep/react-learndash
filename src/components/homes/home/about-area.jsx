@@ -15,11 +15,13 @@ const AboutArea = () => {
                     <div className='row g-5 align-items-center'>
                         <div className='col-lg-6'>
                             <div className='about-image-gallery'>
-                                <img
-                                    className='main-img-1'
-                                    src='/assets/images/about/about-01.webp'
-                                    alt='About Image'
-                                />
+                                <picture>
+                                    <img
+                                        className='main-img-1'
+                                        src='/assets/images/about/about-01.webp'
+                                        alt='About Image'
+                                    />
+                                </picture>
                                 <div
                                     className='video-box'
                                     data-sal-delay='150'
@@ -28,10 +30,12 @@ const AboutArea = () => {
                                 >
                                     <div className='inner'>
                                         <div className='thumb'>
-                                            <img
-                                                src='/assets/images/about/about-02.webp'
-                                                alt='About Image'
-                                            />
+                                            <picture>
+                                                <img
+                                                    src='/assets/images/about/about-02.webp'
+                                                    alt='About Image'
+                                                />
+                                            </picture>
                                             <button
                                                 onClick={() => setIsVideoOpen(true)}
                                                 className='popup-icon video-popup-activation border-0'
@@ -69,10 +73,12 @@ const AboutArea = () => {
                                             y: mouseReverse(25).y,
                                         }}
                                     >
-                                        <img
-                                            src='/assets/images/about/shape-36.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/shape-36.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </motion.li>
                                     <motion.li
                                         className='shape-2 scene'
@@ -84,10 +90,12 @@ const AboutArea = () => {
                                             y: mouseDirection(25).y,
                                         }}
                                     >
-                                        <img
-                                            src='/assets/images/about/shape-37.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/shape-37.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </motion.li>
                                     <motion.li
                                         className='shape-3 scene'
@@ -99,10 +107,12 @@ const AboutArea = () => {
                                             y: mouseReverse(25).y,
                                         }}
                                     >
-                                        <img
-                                            src='/assets/images/about/shape-02.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/shape-02.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </motion.li>
                                 </ul>
                             </div>

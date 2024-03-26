@@ -100,7 +100,9 @@ const TestimonialArea = () => {
                                     <SwiperSlide key={i}>
                                         <div className='testimonial-grid testimonial-style-3'>
                                             <div className='thumbnail'>
-                                                <img src={img} alt='Testimonial' />
+                                                <picture>
+                                                    <img src={img} alt='Testimonial' />
+                                                </picture>
                                             </div>
                                             <div className='content'>
                                                 <p>{desc}</p>
@@ -131,10 +133,14 @@ const TestimonialArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-18.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-18.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <li>
-                    <img src='/assets/images/others/map-shape-3.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/map-shape-3.png' alt='Shape' />
+                    </picture>
                 </li>
             </ul>
         </div>

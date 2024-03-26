@@ -69,7 +69,9 @@ const ComingSoon = () => {
                             y: mouseReverse(40).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-22.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-22.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                     <motion.li
                         className='shape-2 scene'
@@ -78,14 +80,18 @@ const ComingSoon = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-23.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-23.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                     <li className='shape-3'>
-                        <img
-                            className='rotateit'
-                            src='/assets/images/others/shape-24.png'
-                            alt='Shape'
-                        />
+                        <picture>
+                            <img
+                                className='rotateit'
+                                src='/assets/images/others/shape-24.png'
+                                alt='Shape'
+                            />
+                        </picture>
                     </li>
                     <li className='shape-4'></li>
                 </ul>

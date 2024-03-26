@@ -20,11 +20,13 @@ const features = () => {
                 <div className='features-grid-wrap'>
                     <div className='features-box features-style-6 '>
                         <div className='icon icon-course'>
-                            <img
-                                className='svgInject'
-                                src='/assets/images/svg-icons/online-class.svg'
-                                alt='animated icon'
-                            />
+                            <picture>
+                                <img
+                                    className='svgInject'
+                                    src='/assets/images/svg-icons/online-class.svg'
+                                    alt='animated icon'
+                                />
+                            </picture>
                         </div>
                         <div className='content'>
                             <h5 className='title'>80+ Online Courses</h5>
@@ -33,11 +35,13 @@ const features = () => {
                     </div>
                     <div className='features-box features-style-6 '>
                         <div className='icon icon-tag'>
-                            <img
-                                className='svgInject'
-                                src='/assets/images/svg-icons/instructor.svg'
-                                alt='animated icon'
-                            />
+                            <picture>
+                                <img
+                                    className='svgInject'
+                                    src='/assets/images/svg-icons/instructor.svg'
+                                    alt='animated icon'
+                                />
+                            </picture>
                         </div>
                         <div className='content'>
                             <h5 className='title'>Top Instructors</h5>
@@ -46,11 +50,13 @@ const features = () => {
                     </div>
                     <div className='features-box features-style-6  feature-wrapper'>
                         <div className='icon certificate icon-certificate'>
-                            <img
-                                className='svgInject'
-                                src='/assets/images/svg-icons/certificate.svg'
-                                alt='animated icon'
-                            />
+                            <picture>
+                                <img
+                                    className='svgInject'
+                                    src='/assets/images/svg-icons/certificate.svg'
+                                    alt='animated icon'
+                                />
+                            </picture>
                         </div>
                         <div className='content'>
                             <h5 className='title'>Online Certificates</h5>
@@ -59,11 +65,13 @@ const features = () => {
                     </div>
                     <div className='features-box features-style-6 feature-wrapper'>
                         <div className='icon icon-member'>
-                            <img
-                                className='svgInject'
-                                src='/assets/images/svg-icons/user.svg'
-                                alt='animated icon'
-                            />
+                            <picture>
+                                <img
+                                    className='svgInject'
+                                    src='/assets/images/svg-icons/user.svg'
+                                    alt='animated icon'
+                                />
+                            </picture>
                         </div>
                         <div className='content'>
                             <h5 className='title'>6000k+ Members</h5>
@@ -79,11 +87,13 @@ const features = () => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img
-                        className='rotateit'
-                        src='/assets/images/about/shape-37.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='rotateit'
+                            src='/assets/images/about/shape-37.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
                 <li
                     className='shape-2 scene'
@@ -91,7 +101,9 @@ const features = () => {
                     data-sal='fade'
                     data-sal-duration='200'
                 >
-                    <img src='/assets/images/others/shape-41.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-41.png' alt='Shape' />
+                    </picture>
                 </li>
             </ul>
         </div>

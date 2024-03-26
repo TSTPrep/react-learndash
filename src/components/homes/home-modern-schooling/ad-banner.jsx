@@ -12,10 +12,12 @@ const AdBanner = () => {
                     <div className='row justify-content-center'>
                         <div className='col-lg-6'>
                             <div className='thumbnail'>
-                                <img
-                                    src='/assets/images/cta/cta-girl-bg.webp'
-                                    alt='girl image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/cta/cta-girl-bg.webp'
+                                        alt='girl image'
+                                    />
+                                </picture>
                             </div>
                             <ul className='shape-group'>
                                 <motion.li
@@ -25,16 +27,20 @@ const AdBanner = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/cta/shape-43.png'
-                                        alt='shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/cta/shape-43.png'
+                                            alt='shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <li className='shape-02'>
-                                    <img
-                                        src='/assets/images/cta/shape-42.png'
-                                        alt='shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/cta/shape-42.png'
+                                            alt='shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <motion.li
                                     className='shape-03 scene'
@@ -43,10 +49,12 @@ const AdBanner = () => {
                                         y: mouseDirection(40).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/cta/shape-40.png'
-                                        alt='shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/cta/shape-40.png'
+                                            alt='shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-04 scene'
@@ -55,10 +63,12 @@ const AdBanner = () => {
                                         y: mouseReverse(35).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/cta/shape-38.png'
-                                        alt='shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/cta/shape-38.png'
+                                            alt='shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>
@@ -90,10 +100,14 @@ const AdBanner = () => {
                                 y: mouseReverse(40).y,
                             }}
                         >
-                            <img src='/assets/images/cta/shape-39.png' alt='shape' />
+                            <picture>
+                                <img src='/assets/images/cta/shape-39.png' alt='shape' />
+                            </picture>
                         </motion.li>
                         <li className='shape-06'>
-                            <img src='/assets/images/cta/cta-round.svg' alt='shape' />
+                            <picture>
+                                <img src='/assets/images/cta/cta-round.svg' alt='shape' />
+                            </picture>
                         </li>
                     </ul>
                 </div>

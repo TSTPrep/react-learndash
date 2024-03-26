@@ -60,7 +60,9 @@ const Courses = () => {
                             y: mouseDirection(25).y,
                         }}
                     >
-                        <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                     <motion.li
                         className='shape-2 scene'

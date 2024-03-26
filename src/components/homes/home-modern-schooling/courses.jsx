@@ -65,7 +65,9 @@ const Courses = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                     <li className='shape-2'>
                         <span></span>
@@ -80,7 +82,9 @@ const Courses = () => {
                             y: mouseReverse(30).y,
                         }}
                     >
-                        <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                     <li
                         className='shape-4 sal-animate'
@@ -88,7 +92,12 @@ const Courses = () => {
                         data-sal='fade'
                         data-sal-duration='1000'
                     >
-                        <img src='/assets/images/counterup/shape-02.png' alt='Shape' />
+                        <picture>
+                            <img
+                                src='/assets/images/counterup/shape-02.png'
+                                alt='Shape'
+                            />
+                        </picture>
                     </li>
                 </ul>
             </div>

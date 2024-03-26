@@ -27,7 +27,9 @@ const ContactMeFormArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/shape-15.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-15.png' alt='shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-2 scene'
@@ -36,7 +38,9 @@ const ContactMeFormArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/cta/shape-04.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/cta/shape-04.png' alt='shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-3 scene'
@@ -54,7 +58,9 @@ const ContactMeFormArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/shape-13.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-13.png' alt='shape' />
+                    </picture>
                 </motion.li>
             </ul>
         </section>

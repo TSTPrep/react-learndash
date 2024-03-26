@@ -100,10 +100,12 @@ const TestimonialArea = () => {
                                                     <p>{desc}</p>
                                                     <div className='author-info'>
                                                         <div className='thumb'>
-                                                            <img
-                                                                src={author}
-                                                                alt='Testimonial'
-                                                            />
+                                                            <picture>
+                                                                <img
+                                                                    src={author}
+                                                                    alt='Testimonial'
+                                                                />
+                                                            </picture>
                                                         </div>
                                                         <div className='info'>
                                                             <h5 className='title'>
@@ -131,10 +133,12 @@ const TestimonialArea = () => {
                                 data-sal-duration='800'
                             >
                                 <div className='thumbnail'>
-                                    <img
-                                        src='/assets/images/others/video-03.webp'
-                                        alt='Thumb'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/video-03.webp'
+                                            alt='Thumb'
+                                        />
+                                    </picture>
                                     <button
                                         onClick={() => setIsVideoOpen(true)}
                                         className='video-play-btn video-popup-activation'
@@ -159,7 +163,12 @@ const TestimonialArea = () => {
                                 y: mouseReverse(30).y,
                             }}
                         >
-                            <img src='/assets/images/about/shape-25.png' alt='Shape' />
+                            <picture>
+                                <img
+                                    src='/assets/images/about/shape-25.png'
+                                    alt='Shape'
+                                />
+                            </picture>
                         </motion.li>
                         <motion.li
                             className='shape-3 scene'
@@ -182,11 +191,13 @@ const TestimonialArea = () => {
                         data-sal='fade'
                         data-sal-duration='1000'
                     >
-                        <img
-                            className='rotateit'
-                            src='/assets/images/about/shape-13.png'
-                            alt='Shape'
-                        />
+                        <picture>
+                            <img
+                                className='rotateit'
+                                src='/assets/images/about/shape-13.png'
+                                alt='Shape'
+                            />
+                        </picture>
                     </li>
                 </ul>
             </section>

@@ -39,10 +39,12 @@ const CourseDetailsThree = () => {
                                     </ul>
 
                                     <div className='thumbnail'>
-                                        <img
-                                            src='/assets/images/course/course-main/course-45.jpg'
-                                            alt='Course'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/course/course-main/course-45.jpg'
+                                                alt='Course'
+                                            />
+                                        </picture>
                                         <a
                                             onClick={() => setIsVideoOpen(true)}
                                             style={{ cursor: 'pointer' }}

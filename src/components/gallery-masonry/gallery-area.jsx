@@ -46,11 +46,13 @@ const GalleryArea = () => {
                                             style={{ cursor: 'pointer' }}
                                         >
                                             <div className='thumbnail'>
-                                                <img
-                                                    className='w-100'
-                                                    src={img}
-                                                    alt='Gallery Image'
-                                                />
+                                                <picture>
+                                                    <img
+                                                        className='w-100'
+                                                        src={img}
+                                                        alt='Gallery Image'
+                                                    />
+                                                </picture>
                                             </div>
                                             <div className='zoom-icon'>
                                                 <i className='icon-69'></i>

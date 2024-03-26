@@ -18,16 +18,20 @@ const ResponsiveMenu = ({ isOpen, setIsOpen }) => {
                     <div className='header-top'>
                         <div className='logo'>
                             <Link href='/'>
-                                <img
-                                    className='logo-light'
-                                    src='/assets/images/logo/logo-dark.png'
-                                    alt='logo'
-                                />
-                                <img
-                                    className='logo-dark'
-                                    src='/assets/images/logo/logo-white.png'
-                                    alt='logo'
-                                />
+                                <picture>
+                                    <img
+                                        className='logo-light'
+                                        src='/assets/images/logo/logo-dark.png'
+                                        alt='logo'
+                                    />
+                                </picture>
+                                <picture>
+                                    <img
+                                        className='logo-dark'
+                                        src='/assets/images/logo/logo-white.png'
+                                        alt='logo'
+                                    />
+                                </picture>
                             </Link>
                         </div>
 

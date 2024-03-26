@@ -55,11 +55,13 @@ const Testimonial = () => {
                         </div>
                     </div>
                     <div className='col-lg-5 bg-thumbnail edublink-animated-shape'>
-                        <img
-                            className='health-bg-thumbnail'
-                            src='/assets/images/bg/bg-image-34.webp'
-                            alt='images'
-                        />
+                        <picture>
+                            <img
+                                className='health-bg-thumbnail'
+                                src='/assets/images/bg/bg-image-34.webp'
+                                alt='images'
+                            />
+                        </picture>
                         <ul className='shape-group'>
                             <motion.li
                                 className='shape-3 scene'
@@ -71,10 +73,12 @@ const Testimonial = () => {
                                     y: mouseReverse(30).y,
                                 }}
                             >
-                                <img
-                                    src='/assets/images/others/shape-38.png'
-                                    alt='Shape'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/others/shape-38.png'
+                                        alt='Shape'
+                                    />
+                                </picture>
                             </motion.li>
                             <motion.li
                                 className='shape-4 scene'
@@ -86,10 +90,12 @@ const Testimonial = () => {
                                     y: mouseDirection(30).y,
                                 }}
                             >
-                                <img
-                                    src='/assets/images/others/shape-37.png'
-                                    alt='Shape'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/others/shape-37.png'
+                                        alt='Shape'
+                                    />
+                                </picture>
                             </motion.li>
                             <li
                                 className='shape-5'
@@ -97,10 +103,12 @@ const Testimonial = () => {
                                 data-sal='fade'
                                 data-sal-duration='1000'
                             >
-                                <img
-                                    src='/assets/images/counterup/shape-02.png'
-                                    alt='Shape'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/counterup/shape-02.png'
+                                        alt='Shape'
+                                    />
+                                </picture>
                             </li>
                         </ul>
                     </div>
@@ -126,7 +134,12 @@ const Testimonial = () => {
                                 <SwiperSlide key={i}>
                                     <div className='testimonial-grid'>
                                         <div className='thumbnail'>
-                                            <img src={item.imgSrc} alt='Testimonial' />
+                                            <picture>
+                                                <img
+                                                    src={item.imgSrc}
+                                                    alt='Testimonial'
+                                                />
+                                            </picture>
                                         </div>
                                         <div className='content'>
                                             <p>{item.desc}</p>
@@ -146,19 +159,23 @@ const Testimonial = () => {
                                     className='swiper-slide-controls swiper-btn-prv'
                                     role='button'
                                 >
-                                    <img
-                                        src='/assets/images/svg-icons/icon-left.svg'
-                                        alt='images left'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/svg-icons/icon-left.svg'
+                                            alt='images left'
+                                        />
+                                    </picture>
                                 </div>
                                 <div
                                     className='swiper-slide-controls swiper-btn-nxt'
                                     role='button'
                                 >
-                                    <img
-                                        src='/assets/images/svg-icons/icon-right.svg'
-                                        alt='images right'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/svg-icons/icon-right.svg'
+                                            alt='images right'
+                                        />
+                                    </picture>
                                 </div>
                             </div>
                         </Swiper>
@@ -175,7 +192,9 @@ const Testimonial = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-35.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-35.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                     <li
                         className='shape-2'
@@ -183,7 +202,9 @@ const Testimonial = () => {
                         data-sal='fade'
                         data-sal-duration='1000'
                     >
-                        <img src='/assets/images/others/shape-36.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-36.png' alt='Shape' />
+                        </picture>
                     </li>
                 </ul>
             </div>

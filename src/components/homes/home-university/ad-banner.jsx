@@ -43,7 +43,9 @@ const AdBanner = ({ home_4 }) => {
                                 y: mouseDirection(25).y,
                             }}
                         >
-                            <img src='/assets/images/cta/shape-10.png' alt='shape' />
+                            <picture>
+                                <img src='/assets/images/cta/shape-10.png' alt='shape' />
+                            </picture>
                         </motion.li>
                         <motion.li
                             className='shape-02 scene'
@@ -52,7 +54,9 @@ const AdBanner = ({ home_4 }) => {
                                 y: mouseReverse(25).y,
                             }}
                         >
-                            <img src='/assets/images/cta/shape-09.png' alt='shape' />
+                            <picture>
+                                <img src='/assets/images/cta/shape-09.png' alt='shape' />
+                            </picture>
                         </motion.li>
                         <motion.li
                             className='shape-03 scene'
@@ -61,7 +65,9 @@ const AdBanner = ({ home_4 }) => {
                                 y: mouseReverse(25).y,
                             }}
                         >
-                            <img src='/assets/images/cta/shape-08.png' alt='shape' />
+                            <picture>
+                                <img src='/assets/images/cta/shape-08.png' alt='shape' />
+                            </picture>
                         </motion.li>
                         <motion.li
                             className='shape-04 scene'
@@ -70,7 +76,12 @@ const AdBanner = ({ home_4 }) => {
                                 y: mouseDirection(25).y,
                             }}
                         >
-                            <img src='/assets/images/about/shape-13.png' alt='shape' />
+                            <picture>
+                                <img
+                                    src='/assets/images/about/shape-13.png'
+                                    alt='shape'
+                                />
+                            </picture>
                         </motion.li>
                     </ul>
                 </div>

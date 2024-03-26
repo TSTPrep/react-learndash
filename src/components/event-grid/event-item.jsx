@@ -7,7 +7,9 @@ const EventItem = ({ item }) => {
         <div className='inner'>
             <div className='thumbnail'>
                 <Link href={`/event-details/${id}`}>
-                    <img src={img} alt='Blog Images' />
+                    <picture>
+                        <img src={img} alt='Blog Images' />
+                    </picture>
                 </Link>
                 <div className='event-time'>
                     <span>

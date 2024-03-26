@@ -10,16 +10,20 @@ const About = () => {
                 <div className='row g-5 align-items-center'>
                     <div className='col-lg-6'>
                         <div className='about-image-gallery'>
-                            <img
-                                className='main-img-1'
-                                src='/assets/images/about/about-17.webp'
-                                alt='About Image'
-                            />
-                            <div className='author-box'>
+                            <picture>
                                 <img
-                                    src='/assets/images/about/about-18.webp'
-                                    alt='About Images'
+                                    className='main-img-1'
+                                    src='/assets/images/about/about-17.webp'
+                                    alt='About Image'
                                 />
+                            </picture>
+                            <div className='author-box'>
+                                <picture>
+                                    <img
+                                        src='/assets/images/about/about-18.webp'
+                                        alt='About Images'
+                                    />
+                                </picture>
                             </div>
                             <ul className='shape-group'>
                                 <motion.li
@@ -32,10 +36,12 @@ const About = () => {
                                         y: mouseReverse(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-36.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-36.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <motion.li
@@ -48,10 +54,12 @@ const About = () => {
                                         y: mouseDirection(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/others/shape-34.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/shape-34.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <li
                                     className='shape-3 circle'
@@ -114,7 +122,9 @@ const About = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-33.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-33.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                 </ul>
             </div>

@@ -52,7 +52,9 @@ const HeroArea = () => {
                     data-sal='slide-down'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/preview/banner-thumb1.jpg' alt='demo' />
+                    <picture>
+                        <img src='/assets/images/preview/banner-thumb1.jpg' alt='demo' />
+                    </picture>
                 </div>
                 <div
                     className='thumbnail thumbnail-2'
@@ -60,7 +62,9 @@ const HeroArea = () => {
                     data-sal='slide-up'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/preview/banner-thumb2.jpg' alt='demo' />
+                    <picture>
+                        <img src='/assets/images/preview/banner-thumb2.jpg' alt='demo' />
+                    </picture>
                 </div>
                 <div
                     className='thumbnail thumbnail-3'
@@ -68,7 +72,9 @@ const HeroArea = () => {
                     data-sal='slide-down'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/preview/banner-thumb3.jpg' alt='demo' />
+                    <picture>
+                        <img src='/assets/images/preview/banner-thumb3.jpg' alt='demo' />
+                    </picture>
                 </div>
                 <div
                     className='thumbnail thumbnail-4'
@@ -76,7 +82,9 @@ const HeroArea = () => {
                     data-sal='slide-up'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/preview/banner-thumb4.jpg' alt='demo' />
+                    <picture>
+                        <img src='/assets/images/preview/banner-thumb4.jpg' alt='demo' />
+                    </picture>
                 </div>
                 <div
                     className='thumbnail thumbnail-5'
@@ -84,7 +92,9 @@ const HeroArea = () => {
                     data-sal='slide-up'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/preview/banner-thumb5.jpg' alt='demo' />
+                    <picture>
+                        <img src='/assets/images/preview/banner-thumb5.jpg' alt='demo' />
+                    </picture>
                 </div>
             </div>
             <ul className='shape-group'>
@@ -98,7 +108,9 @@ const HeroArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-2 scene'
@@ -110,7 +122,9 @@ const HeroArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/counterup/shape-02.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/counterup/shape-02.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-3 scene'
@@ -122,7 +136,9 @@ const HeroArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/shape-25.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-25.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-4 scene'

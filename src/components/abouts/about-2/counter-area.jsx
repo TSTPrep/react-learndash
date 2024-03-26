@@ -45,17 +45,21 @@ const CounterArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <li className='shape-2'>
-                                    <img
-                                        className='rotateit'
-                                        src='/assets/images/counterup/shape-02.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='rotateit'
+                                            src='/assets/images/counterup/shape-02.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <motion.li
                                     className='shape-3 scene'
@@ -64,10 +68,12 @@ const CounterArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/counterup/shape-04.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/counterup/shape-04.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-4 scene'
@@ -76,10 +82,12 @@ const CounterArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/counterup/shape-05.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/counterup/shape-05.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>

@@ -8,7 +8,9 @@ function Brand({ img }) {
             data-sal='slide-up'
             data-sal-duration='1000'
         >
-            <img src={`/assets/images/brand/brand-${img}.png`} alt='Brand Logo' />
+            <picture>
+                <img src={`/assets/images/brand/brand-${img}.png`} alt='Brand Logo' />
+            </picture>
         </div>
     );
 }

@@ -8,10 +8,12 @@ const TeamTwo = ({ instructor, image_location_path = '02' }) => {
                 <div className='thumbnail-wrap'>
                     <div className='thumbnail'>
                         <Link href={`/team-details/${instructor.id}`}>
-                            <img
-                                src={`/assets/images/team/team-${image_location_path}/${instructor.img}`}
-                                alt='team images'
-                            />
+                            <picture>
+                                <img
+                                    src={`/assets/images/team/team-${image_location_path}/${instructor.img}`}
+                                    alt='team images'
+                                />
+                            </picture>
                         </Link>
                     </div>
                     <ul className='team-share-info'>

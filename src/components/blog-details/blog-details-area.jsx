@@ -23,10 +23,12 @@ const BlogDetailsArea = ({ blog }) => {
                                     </li>
                                 </ul>
                                 <div className='thumbnail'>
-                                    <img
-                                        src='/assets/images/blog/blog-large-1.jpg'
-                                        alt='Blog Image'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/blog/blog-large-1.jpg'
+                                            alt='Blog Image'
+                                        />
+                                    </picture>
                                 </div>
                             </div>
 
@@ -73,18 +75,22 @@ const BlogDetailsArea = ({ blog }) => {
                                 <div className='row g-md-5'>
                                     <div className='col-6'>
                                         <div className='thumb'>
-                                            <img
-                                                src='/assets/images/blog/features-1.jpg'
-                                                alt='Features Images'
-                                            />
+                                            <picture>
+                                                <img
+                                                    src='/assets/images/blog/features-1.jpg'
+                                                    alt='Features Images'
+                                                />
+                                            </picture>
                                         </div>
                                     </div>
                                     <div className='col-6'>
                                         <div className='thumb'>
-                                            <img
-                                                src='/assets/images/blog/features-2.jpg'
-                                                alt='Features Images'
-                                            />
+                                            <picture>
+                                                <img
+                                                    src='/assets/images/blog/features-2.jpg'
+                                                    alt='Features Images'
+                                                />
+                                            </picture>
                                         </div>
                                     </div>
                                 </div>
@@ -163,10 +169,12 @@ const BlogDetailsArea = ({ blog }) => {
 
                         <div className='blog-author'>
                             <div className='thumbnail'>
-                                <img
-                                    src='/assets/images/blog/author-01.jpg'
-                                    alt='Author Images'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/blog/author-01.jpg'
+                                        alt='Author Images'
+                                    />
+                                </picture>
                             </div>
                             <div className='author-content'>
                                 <h5 className='title'>Edward Norton</h5>

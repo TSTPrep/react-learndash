@@ -12,10 +12,12 @@ function FeatureBox({ img, color, title, icon, text }) {
         >
             <div className={`why-choose-box-3 features-box ${color}`}>
                 <div className='thumbnail'>
-                    <img
-                        src={`/assets/images/others/why-choose-${img}.jpg`}
-                        alt='why choose image'
-                    />
+                    <picture>
+                        <img
+                            src={`/assets/images/others/why-choose-${img}.jpg`}
+                            alt='why choose image'
+                        />
+                    </picture>
                 </div>
                 <div className='content'>
                     <div className='icon'>
@@ -81,11 +83,13 @@ const WhyChose = () => {
                         data-sal='fade'
                         data-sal-duration='200'
                     >
-                        <img
-                            className='rotateit'
-                            src='/assets/images/about/shape-13.png'
-                            alt='shape'
-                        />
+                        <picture>
+                            <img
+                                className='rotateit'
+                                src='/assets/images/about/shape-13.png'
+                                alt='shape'
+                            />
+                        </picture>
                     </li>
                     <motion.li
                         className='shape-2 scene'

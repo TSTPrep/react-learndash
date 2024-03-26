@@ -77,19 +77,23 @@ const WhyChose = () => {
                         <div className='why-choose-gallery'>
                             <div className='gallery-thumbnail'>
                                 <div className='thumbnail thumbnail-1'>
-                                    <img
-                                        src='/assets/images/others/why-choose-01.webp'
-                                        alt='Why Choose'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/why-choose-01.webp'
+                                            alt='Why Choose'
+                                        />
+                                    </picture>
                                 </div>
                                 <motion.div
                                     className='thumbnail thumbnail-2'
                                     style={{ y }}
                                 >
-                                    <img
-                                        src='/assets/images/others/why-choose-02.webp'
-                                        alt='Why Choose'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/why-choose-02.webp'
+                                            alt='Why Choose'
+                                        />
+                                    </picture>
                                 </motion.div>
                             </div>
                             <ul className='shape-group'>
@@ -99,10 +103,12 @@ const WhyChose = () => {
                                     data-sal='fade'
                                     data-sal-duration='200'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-14.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-14.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </li>
                                 <li
                                     className='shape-2'
@@ -110,10 +116,12 @@ const WhyChose = () => {
                                     data-sal='fade'
                                     data-sal-duration='200'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-10.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-10.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </li>
                             </ul>
                         </div>

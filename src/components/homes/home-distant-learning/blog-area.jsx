@@ -38,7 +38,9 @@ const BlogArea = ({ style_2 }) => {
             </div>
             <ul className='shape-group'>
                 <li className='shape-1 scene'>
-                    <img src='/assets/images/about/shape-25.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-25.png' alt='Shape' />
+                    </picture>
                 </li>
             </ul>
         </div>

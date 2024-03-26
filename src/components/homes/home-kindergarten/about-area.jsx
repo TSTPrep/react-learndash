@@ -12,29 +12,37 @@ const AboutArea = () => {
                     <div className='col-lg-6'>
                         <div className='about-image-gallery'>
                             <div className='main-img-1'>
-                                <img
-                                    src='/assets/images/about/about-09.png'
-                                    alt='About Image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/about/about-09.png'
+                                        alt='About Image'
+                                    />
+                                </picture>
                             </div>
                             <div className='main-img-2 bounce-slide'>
-                                <img
-                                    src='/assets/images/about/about-10.png'
-                                    alt='About Image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/about/about-10.png'
+                                        alt='About Image'
+                                    />
+                                </picture>
                             </div>
                             <ul className='shape-group'>
                                 <li className='shape-1'>
-                                    <img
-                                        src='/assets/images/about/shape-11.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-11.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <li className='shape-2'>
-                                    <img
-                                        src='/assets/images/about/shape-12.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-12.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <motion.li
                                     className='shape-3 scene'
@@ -43,10 +51,12 @@ const AboutArea = () => {
                                         y: mouseReverse(40).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>

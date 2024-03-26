@@ -47,19 +47,23 @@ const AboutArea = () => {
                     </div>
                     <div className='col-lg-7'>
                         <div className='about-image-gallery'>
-                            <img
-                                className='main-img-1'
-                                src='/assets/images/about/about-11.webp'
-                                alt='About Image'
-                            />
-                            <img
-                                className='main-img-2'
-                                src='/assets/images/about/about-12.webp'
-                                data-sal-delay='150'
-                                data-sal='slide-down'
-                                data-sal-duration='800'
-                                alt='About Image'
-                            />
+                            <picture>
+                                <img
+                                    className='main-img-1'
+                                    src='/assets/images/about/about-11.webp'
+                                    alt='About Image'
+                                />
+                            </picture>
+                            <picture>
+                                <img
+                                    className='main-img-2'
+                                    src='/assets/images/about/about-12.webp'
+                                    data-sal-delay='150'
+                                    data-sal='slide-down'
+                                    data-sal-duration='800'
+                                    alt='About Image'
+                                />
+                            </picture>
                             <ul className='shape-group'>
                                 <motion.li
                                     className='shape-1 scene'
@@ -71,10 +75,12 @@ const AboutArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-38.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-38.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-2 scene'
@@ -86,10 +92,12 @@ const AboutArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-37.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-37.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-3 scene'
@@ -101,10 +109,12 @@ const AboutArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-04.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-04.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <li
                                     className='shape-4 scene'
@@ -112,10 +122,12 @@ const AboutArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='200'
                                 >
-                                    <img
-                                        src='/assets/images/counterup/shape-02.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/counterup/shape-02.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                             </ul>
                         </div>

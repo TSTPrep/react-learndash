@@ -136,7 +136,9 @@ const FooterTwo = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-06.png' alt='shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-06.png' alt='shape' />
+                        </picture>
                     </motion.li>
                     <motion.li
                         className='shape-2 scene'
@@ -145,10 +147,14 @@ const FooterTwo = () => {
                             y: mouseReverse(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-07.png' alt='shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-07.png' alt='shape' />
+                        </picture>
                     </motion.li>
                     <li className='shape-3'>
-                        <img src='/assets/images/about/shape-10.png' alt='shape' />
+                        <picture>
+                            <img src='/assets/images/about/shape-10.png' alt='shape' />
+                        </picture>
                     </li>
                     <motion.li
                         className='shape-4 scene'
@@ -157,7 +163,9 @@ const FooterTwo = () => {
                             y: mouseReverse(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-08.png' alt='shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-08.png' alt='shape' />
+                        </picture>
                     </motion.li>
                     <motion.li
                         className='shape-5 scene'
@@ -166,7 +174,9 @@ const FooterTwo = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-09.png' alt='shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-09.png' alt='shape' />
+                        </picture>
                     </motion.li>
                 </ul>
             </div>

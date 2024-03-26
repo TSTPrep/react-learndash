@@ -47,7 +47,9 @@ const CourseDemo = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-2 scene'
@@ -59,7 +61,9 @@ const CourseDemo = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/shape-36.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-36.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-3 scene'
@@ -71,7 +75,9 @@ const CourseDemo = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/counterup/shape-02.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/counterup/shape-02.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <li
                     className='shape-4'
@@ -79,7 +85,9 @@ const CourseDemo = () => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/about/shape-15.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-15.png' alt='Shape' />
+                    </picture>
                 </li>
                 <motion.li
                     className='shape-5 scene'

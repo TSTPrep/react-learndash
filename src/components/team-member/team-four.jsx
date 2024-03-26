@@ -7,10 +7,12 @@ const TeamFour = ({ instructor }) => {
                 <div className='thumbnail-wrap'>
                     <div className='thumbnail'>
                         <a>
-                            <img
-                                src={`/assets/images/team/yoga-instructor/${instructor.img}`}
-                                alt='team images'
-                            />
+                            <picture>
+                                <img
+                                    src={`/assets/images/team/yoga-instructor/${instructor.img}`}
+                                    alt='team images'
+                                />
+                            </picture>
                         </a>
                     </div>
                     <ul className='team-share-info'>

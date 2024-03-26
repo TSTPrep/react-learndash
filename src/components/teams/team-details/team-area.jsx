@@ -8,10 +8,12 @@ const TeamArea = ({ team }) => {
                     <div className='col-lg-4'>
                         <div className='team-details-thumb'>
                             <div className='thumbnail'>
-                                <img
-                                    src={`/assets/images/team/team-02/${team.img}`}
-                                    alt='team images'
-                                />
+                                <picture>
+                                    <img
+                                        src={`/assets/images/team/team-02/${team.img}`}
+                                        alt='team images'
+                                    />
+                                </picture>
                             </div>
 
                             <ul className='social-share'>

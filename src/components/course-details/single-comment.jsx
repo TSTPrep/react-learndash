@@ -4,7 +4,9 @@ const SingleComment = ({ review }) => {
     return (
         <div className='comment'>
             <div className='thumbnail'>
-                <img src={review?.img} alt='Comment Images' />
+                <picture>
+                    <img src={review?.img} alt='Comment Images' />
+                </picture>
             </div>
             <div className='comment-content'>
                 <div className='rating'>

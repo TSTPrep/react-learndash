@@ -55,22 +55,26 @@ const OnlineCourse = () => {
                         </div>
                         <div className='col-xl-7 col-lg-6'>
                             <div className='course-thumbnail'>
-                                <img
-                                    src='/assets/images/preview/course-details.png'
-                                    className='course-details-main'
-                                    data-sal-delay='200'
-                                    data-sal='fade'
-                                    data-sal-duration='800'
-                                    alt='Course Details'
-                                />
-                                <img
-                                    src='/assets/images/preview/instructor.png'
-                                    className='course-instructor'
-                                    data-sal-delay='500'
-                                    data-sal='slide-right'
-                                    data-sal-duration='1000'
-                                    alt='Course Instructor'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/preview/course-details.png'
+                                        className='course-details-main'
+                                        data-sal-delay='200'
+                                        data-sal='fade'
+                                        data-sal-duration='800'
+                                        alt='Course Details'
+                                    />
+                                </picture>
+                                <picture>
+                                    <img
+                                        src='/assets/images/preview/instructor.png'
+                                        className='course-instructor'
+                                        data-sal-delay='500'
+                                        data-sal='slide-right'
+                                        data-sal-duration='1000'
+                                        alt='Course Instructor'
+                                    />
+                                </picture>
                                 <ul className='shape-group'>
                                     <motion.li
                                         className='shape-1 scene'
@@ -82,10 +86,12 @@ const OnlineCourse = () => {
                                             y: mouseDirection(30).y,
                                         }}
                                     >
-                                        <img
-                                            src='/assets/images/about/shape-13.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/shape-13.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </motion.li>
                                     <li
                                         className='shape-2'
@@ -93,11 +99,13 @@ const OnlineCourse = () => {
                                         data-sal='fade'
                                         data-sal-duration='1000'
                                     >
-                                        <img
-                                            className='rotateit'
-                                            src='/assets/images/counterup/shape-02.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                className='rotateit'
+                                                src='/assets/images/counterup/shape-02.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </li>
                                     <motion.li
                                         className='shape-3 scene'
@@ -109,10 +117,12 @@ const OnlineCourse = () => {
                                             y: mouseReverse(40).y,
                                         }}
                                     >
-                                        <img
-                                            src='/assets/images/counterup/shape-04.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/counterup/shape-04.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </motion.li>
                                     <motion.li
                                         className='shape-4 scene'
@@ -124,10 +134,12 @@ const OnlineCourse = () => {
                                             y: mouseDirection(40).y,
                                         }}
                                     >
-                                        <img
-                                            src='/assets/images/counterup/shape-05.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/counterup/shape-05.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </motion.li>
                                 </ul>
                             </div>

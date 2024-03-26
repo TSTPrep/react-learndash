@@ -38,10 +38,12 @@ const CollegeCampus = () => {
                         <div className='campus-image-gallery'>
                             <div className='campus-thumbnail'>
                                 <div className='thumbnail'>
-                                    <img
-                                        src='/assets/images/others/campus-01.webp'
-                                        alt='Campus'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/campus-01.webp'
+                                            alt='Campus'
+                                        />
+                                    </picture>
                                 </div>
                             </div>
                             <ul className='shape-group'>
@@ -61,10 +63,12 @@ const CollegeCampus = () => {
                                         y: mouseReverse(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-21.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-21.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-3 scene'
@@ -73,10 +77,12 @@ const CollegeCampus = () => {
                                         y: mouseDirection(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>
@@ -142,10 +148,12 @@ const CollegeCampus = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-25.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-25.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>

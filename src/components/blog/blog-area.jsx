@@ -50,10 +50,12 @@ const BlogArea = () => {
                                             <div className='thumbnail'>
                                                 {!slider && (
                                                     <Link href={`/blog-details/${id}`}>
-                                                        <img
-                                                            src={img}
-                                                            alt='Blog Images'
-                                                        />
+                                                        <picture>
+                                                            <img
+                                                                src={img}
+                                                                alt='Blog Images'
+                                                            />
+                                                        </picture>
                                                     </Link>
                                                 )}
 
@@ -91,10 +93,12 @@ const BlogArea = () => {
                                                                 <Link
                                                                     href={`/blog-details/${id}`}
                                                                 >
-                                                                    <img
-                                                                        src={img}
-                                                                        alt='Blog Images'
-                                                                    />
+                                                                    <picture>
+                                                                        <img
+                                                                            src={img}
+                                                                            alt='Blog Images'
+                                                                        />
+                                                                    </picture>
                                                                 </Link>
                                                             </SwiperSlide>
                                                         ))}

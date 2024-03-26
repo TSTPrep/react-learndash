@@ -47,10 +47,12 @@ const HeroArea = () => {
                                 data-sal='slide-up'
                                 data-sal-duration='1000'
                             >
-                                <img
-                                    src='/assets/images/banner/girl-3.webp'
-                                    alt='Yoga Image'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/banner/girl-3.webp'
+                                        alt='Yoga Image'
+                                    />
+                                </picture>
                             </div>
                             <ul className='shape-group'>
                                 <li
@@ -59,10 +61,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-27.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-27.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <li
                                     className='shape-2'
@@ -70,11 +74,13 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        className='rotateit'
-                                        src='/assets/images/about/shape-28.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='rotateit'
+                                            src='/assets/images/about/shape-28.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <li
                                     className='shape-3'
@@ -82,11 +88,13 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        className='rotateit'
-                                        src='/assets/images/about/shape-10.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='rotateit'
+                                            src='/assets/images/about/shape-10.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <li
                                     className='shape-4'
@@ -94,10 +102,12 @@ const HeroArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-29.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-29.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                             </ul>
                         </div>
@@ -115,7 +125,9 @@ const HeroArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-12.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-12.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-2 scene'
@@ -127,7 +139,9 @@ const HeroArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-13.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-13.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-3 scene'
@@ -139,7 +153,9 @@ const HeroArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-14.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-14.png' alt='Shape' />
+                    </picture>
                 </motion.li>
             </ul>
         </div>

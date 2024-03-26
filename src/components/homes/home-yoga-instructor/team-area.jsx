@@ -47,7 +47,9 @@ const TeamArea = () => {
                     }}
                 >
                     <span>
-                        <img src='/assets/images/others/shape-14.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-14.png' alt='Shape' />
+                        </picture>
                     </span>
                 </motion.li>
                 <motion.li
@@ -61,7 +63,9 @@ const TeamArea = () => {
                     }}
                 >
                     <span>
-                        <img src='/assets/images/others/shape-13.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/others/shape-13.png' alt='Shape' />
+                        </picture>
                     </span>
                 </motion.li>
                 <motion.li
@@ -74,7 +78,9 @@ const TeamArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-12.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-12.png' alt='Shape' />
+                    </picture>
                 </motion.li>
             </ul>
         </div>

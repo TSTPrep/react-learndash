@@ -36,13 +36,19 @@ const TeamArea = () => {
 
             <ul className='shape-group'>
                 <li className='shape-1'>
-                    <img src='/assets/images/others/map-shape-3.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/map-shape-3.png' alt='Shape' />
+                    </picture>
                 </li>
                 <li className='shape-2'>
-                    <img src='/assets/images/others/map-shape-3.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/map-shape-3.png' alt='Shape' />
+                    </picture>
                 </li>
                 <li className='shape-3'>
-                    <img src='/assets/images/others/map-shape-3.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/map-shape-3.png' alt='Shape' />
+                    </picture>
                 </li>
             </ul>
         </div>

@@ -60,32 +60,38 @@ const ShopSupport = () => {
                         <div className='col-lg-7 order-lg-1'>
                             <div className='shop-thumbnail'>
                                 <div className='shop-thumbnail-images'>
-                                    <img
-                                        className='shop-demo-main'
-                                        src='/assets/images/preview/shop-demo-main.png'
-                                        data-sal-delay='200'
-                                        data-sal='fade'
-                                        data-sal-duration='800'
-                                        alt='Shop Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='shop-demo-main'
+                                            src='/assets/images/preview/shop-demo-main.png'
+                                            data-sal-delay='200'
+                                            data-sal='fade'
+                                            data-sal-duration='800'
+                                            alt='Shop Images'
+                                        />
+                                    </picture>
 
-                                    <img
-                                        className='shop-demo-left'
-                                        src='/assets/images/preview/shop-demo-left.png'
-                                        data-sal-delay='500'
-                                        data-sal='slide-right'
-                                        data-sal-duration='1000'
-                                        alt='Shop Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='shop-demo-left'
+                                            src='/assets/images/preview/shop-demo-left.png'
+                                            data-sal-delay='500'
+                                            data-sal='slide-right'
+                                            data-sal-duration='1000'
+                                            alt='Shop Images'
+                                        />
+                                    </picture>
 
-                                    <img
-                                        className='shop-demo-right'
-                                        src='/assets/images/preview/shop-demo-right.png'
-                                        data-sal-delay='500'
-                                        data-sal='slide-left'
-                                        data-sal-duration='1000'
-                                        alt='Shop Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='shop-demo-right'
+                                            src='/assets/images/preview/shop-demo-right.png'
+                                            data-sal-delay='500'
+                                            data-sal='slide-left'
+                                            data-sal-duration='1000'
+                                            alt='Shop Images'
+                                        />
+                                    </picture>
 
                                     <ul className='shape-group'>
                                         <motion.li
@@ -98,10 +104,12 @@ const ShopSupport = () => {
                                                 y: mouseReverse(35).y,
                                             }}
                                         >
-                                            <img
-                                                src='/assets/images/about/shape-13.png'
-                                                alt='shape'
-                                            />
+                                            <picture>
+                                                <img
+                                                    src='/assets/images/about/shape-13.png'
+                                                    alt='shape'
+                                                />
+                                            </picture>
                                         </motion.li>
 
                                         <motion.li
@@ -114,10 +122,12 @@ const ShopSupport = () => {
                                                 y: mouseReverse(35).y,
                                             }}
                                         >
-                                            <img
-                                                src='/assets/images/about/shape-25.png'
-                                                alt='shape'
-                                            />
+                                            <picture>
+                                                <img
+                                                    src='/assets/images/about/shape-25.png'
+                                                    alt='shape'
+                                                />
+                                            </picture>
                                         </motion.li>
 
                                         <motion.li

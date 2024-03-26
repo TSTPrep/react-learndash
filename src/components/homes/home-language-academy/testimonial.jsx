@@ -111,7 +111,9 @@ const Testimonial = () => {
                             <div className='nav-thumb swiper-slide'>
                                 <div className='clint-thumb'>
                                     <p>{item.title}</p>
-                                    <img src={item.img} alt='Testimonial' />
+                                    <picture>
+                                        <img src={item.img} alt='Testimonial' />
+                                    </picture>
                                 </div>
                             </div>
                         </SwiperSlide>

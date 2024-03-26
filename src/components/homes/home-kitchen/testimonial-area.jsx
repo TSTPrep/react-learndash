@@ -87,7 +87,9 @@ const TestimonialArea = () => {
                                         <p>{desc}</p>
                                         <div className='author-info'>
                                             <div className='thumb'>
-                                                <img src={img} alt='Testimonial' />
+                                                <picture>
+                                                    <img src={img} alt='Testimonial' />
+                                                </picture>
                                             </div>
                                             <div className='info'>
                                                 <h5 className='title'>{name}</h5>
@@ -113,7 +115,9 @@ const TestimonialArea = () => {
                         y: mouseReverse(25).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-03.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-03.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-2 scene'
@@ -125,7 +129,9 @@ const TestimonialArea = () => {
                         y: mouseDirection(25).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-04.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-04.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-3 scene'
@@ -137,7 +143,9 @@ const TestimonialArea = () => {
                         y: mouseReverse(25).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-02.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-02.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-4 scene'
@@ -149,7 +157,9 @@ const TestimonialArea = () => {
                         y: mouseDirection(25).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-01.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-01.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <li
                     className='shape-5'
@@ -157,16 +167,20 @@ const TestimonialArea = () => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img
-                        className='d-block-shape-light'
-                        src='/assets/images/others/map-shape-3.png'
-                        alt='Shape'
-                    />
-                    <img
-                        className='d-none-shape-dark'
-                        src='/assets/images/others/dark-map-2.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='d-block-shape-light'
+                            src='/assets/images/others/map-shape-3.png'
+                            alt='Shape'
+                        />
+                    </picture>
+                    <picture>
+                        <img
+                            className='d-none-shape-dark'
+                            src='/assets/images/others/dark-map-2.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
             </ul>
         </div>

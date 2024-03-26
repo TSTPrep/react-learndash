@@ -78,10 +78,12 @@ const ProductDescription = ({ item }) => {
                                     <div className='comment-list-wrapper'>
                                         <div className='comment'>
                                             <div className='thumbnail'>
-                                                <img
-                                                    src='/assets/images/blog/comment-03.jpg'
-                                                    alt='Comment Images'
-                                                />
+                                                <picture>
+                                                    <img
+                                                        src='/assets/images/blog/comment-03.jpg'
+                                                        alt='Comment Images'
+                                                    />
+                                                </picture>
                                             </div>
 
                                             <div className='comment-content'>

@@ -47,7 +47,9 @@ const AdBanner = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/banner/kid-1.webp' alt='shape' />
+                        <picture>
+                            <img src='/assets/images/banner/kid-1.webp' alt='shape' />
+                        </picture>
                     </motion.li>
 
                     <motion.li
@@ -57,14 +59,20 @@ const AdBanner = () => {
                             y: mouseReverse(30).y,
                         }}
                     >
-                        <img src='/assets/images/banner/kid-2.webp' alt='shape' />
+                        <picture>
+                            <img src='/assets/images/banner/kid-2.webp' alt='shape' />
+                        </picture>
                     </motion.li>
 
                     <li className='shape-3'>
-                        <img src='/assets/images/banner/icon-1.png' alt='shape' />
+                        <picture>
+                            <img src='/assets/images/banner/icon-1.png' alt='shape' />
+                        </picture>
                     </li>
                     <li className='shape-4'>
-                        <img src='/assets/images/banner/icon-2.png' alt='shape' />
+                        <picture>
+                            <img src='/assets/images/banner/icon-2.png' alt='shape' />
+                        </picture>
                     </li>
                 </ul>
             </div>

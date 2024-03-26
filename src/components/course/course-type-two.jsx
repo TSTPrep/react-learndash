@@ -7,10 +7,12 @@ const CourseTypeTwo = ({ data, classes }) => {
             <div className='inner'>
                 <div className='thumbnail'>
                     <Link href={`/course-details/${data.id}`}>
-                        <img
-                            src={`/assets/images/course/course-05/${data.img}`}
-                            alt='Course Thumb'
-                        />
+                        <picture>
+                            <img
+                                src={`/assets/images/course/course-05/${data.img}`}
+                                alt='Course Thumb'
+                            />
+                        </picture>
                     </Link>
                     <div className='course-price price-round'>
                         ${Math.trunc(data.course_price)}

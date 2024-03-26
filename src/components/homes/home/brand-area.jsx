@@ -42,7 +42,9 @@ const BrandArea = () => {
                         <div className='brand-grid-wrap'>
                             {brands.map((b, i) => (
                                 <div key={i} className='brand-grid'>
-                                    <img src={b} alt='Brand Logo' />
+                                    <picture>
+                                        <img src={b} alt='Brand Logo' />
+                                    </picture>
                                 </div>
                             ))}
                         </div>

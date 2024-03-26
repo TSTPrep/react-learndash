@@ -48,10 +48,12 @@ const CoursesArea = () => {
                                     <div className='inner'>
                                         <div className='thumbnail'>
                                             <Link href={`/course-details/${id}`}>
-                                                <img
-                                                    src={`/assets/images/course/course-04/${img}`}
-                                                    alt='Course Meta'
-                                                />
+                                                <picture>
+                                                    <img
+                                                        src={`/assets/images/course/course-04/${img}`}
+                                                        alt='Course Meta'
+                                                    />
+                                                </picture>
                                             </Link>
                                             <div className='course-price price-round'>
                                                 ${Math.trunc(course_price)}
@@ -91,7 +93,9 @@ const CoursesArea = () => {
                             y: mouseReverse(30).y,
                         }}
                     >
-                        <img src='/assets/images/banner/icon-3.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/banner/icon-3.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                     <motion.li
                         className='shape-2 scene'
@@ -100,7 +104,9 @@ const CoursesArea = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/banner/icon-2.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/banner/icon-2.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                 </ul>
             </div>
@@ -112,7 +118,9 @@ const CoursesArea = () => {
                         y: mouseReverse(40).y,
                     }}
                 >
-                    <img src='/assets/images/banner/icon-4.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/banner/icon-4.png' alt='Shape' />
+                    </picture>
                 </motion.li>
             </ul>
         </div>

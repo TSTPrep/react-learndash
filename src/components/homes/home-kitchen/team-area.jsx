@@ -52,7 +52,9 @@ const TeamArea = ({ about_p_2, about_p_3 }) => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-26.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-26.png' alt='shape' />
+                    </picture>
                 </motion.li>
             </ul>
         </div>

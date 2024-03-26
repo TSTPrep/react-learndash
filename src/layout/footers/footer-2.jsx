@@ -137,7 +137,12 @@ const FooterTwo = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-01-01.png' alt='shape' />
+                        <picture>
+                            <img
+                                src='/assets/images/others/shape-01-01.png'
+                                alt='shape'
+                            />
+                        </picture>
                     </motion.li>
                     <motion.li
                         className='shape-2 scene'
@@ -149,7 +154,12 @@ const FooterTwo = () => {
                             y: mouseReverse(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-02-01.png' alt='shape' />
+                        <picture>
+                            <img
+                                src='/assets/images/others/shape-02-01.png'
+                                alt='shape'
+                            />
+                        </picture>
                     </motion.li>
                     <li
                         className='shape-3'
@@ -157,7 +167,12 @@ const FooterTwo = () => {
                         data-sal='fade'
                         data-sal-duration='1000'
                     >
-                        <img src='/assets/images/others/shape-03-01.png' alt='shape' />
+                        <picture>
+                            <img
+                                src='/assets/images/others/shape-03-01.png'
+                                alt='shape'
+                            />
+                        </picture>
                     </li>
                     <motion.li
                         className='shape-4 scene'
@@ -169,7 +184,12 @@ const FooterTwo = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-04-01.png' alt='shape' />
+                        <picture>
+                            <img
+                                src='/assets/images/others/shape-04-01.png'
+                                alt='shape'
+                            />
+                        </picture>
                     </motion.li>
                     <motion.li
                         className='shape-5 scene'
@@ -181,7 +201,12 @@ const FooterTwo = () => {
                             y: mouseReverse(30).y,
                         }}
                     >
-                        <img src='/assets/images/others/shape-05-01.png' alt='shape' />
+                        <picture>
+                            <img
+                                src='/assets/images/others/shape-05-01.png'
+                                alt='shape'
+                            />
+                        </picture>
                     </motion.li>
                 </ul>
             </div>

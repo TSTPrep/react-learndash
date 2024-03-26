@@ -26,10 +26,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-14.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-14.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Bootstrap 5 <br /> Framework
@@ -41,10 +43,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-15.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-15.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     W3C <br /> Validation
@@ -56,10 +60,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-16.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-16.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Swiper <br /> Touch Slider
@@ -71,10 +77,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-20.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-20.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Speed <br /> Performance
@@ -86,10 +94,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-17.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-17.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Mouse-Move <br /> Effect
@@ -101,10 +111,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-18.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-18.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Google Web <br /> Fonts
@@ -116,10 +128,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-19.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-19.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Fully Responsive <br /> Layouts
@@ -131,10 +145,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-21.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-21.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Well <br /> Documented
@@ -146,10 +162,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-22.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-22.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Magnific <br /> Popup
@@ -161,10 +179,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-23.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-23.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Translation <br /> Ready
@@ -176,10 +196,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-24.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-24.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Fast 5 Star <br /> Support
@@ -191,10 +213,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-26.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-26.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Lifetime <br /> Update
@@ -206,10 +230,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-27.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-27.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Browser <br /> Compatibility
@@ -221,10 +247,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-28.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-28.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Parallax <br /> Effect
@@ -236,10 +264,12 @@ const Features = () => {
                         <div className='demo-feature'>
                             <div className='inner'>
                                 <div className='icon'>
-                                    <img
-                                        src='/assets/images/preview/icon-29.png'
-                                        alt='Preview Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/preview/icon-29.png'
+                                            alt='Preview Images'
+                                        />
+                                    </picture>
                                 </div>
                                 <h6 className='title'>
                                     Developer <br /> Friendly

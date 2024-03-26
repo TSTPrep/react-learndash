@@ -96,10 +96,12 @@ const FaqArea = () => {
                                 data-sal='slide-left'
                                 data-sal-duration='800'
                             >
-                                <img
-                                    src='/assets/images/others/faq-6.webp'
-                                    alt='Faq Images'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/others/faq-6.webp'
+                                        alt='Faq Images'
+                                    />
+                                </picture>
                             </div>
                             <ul className='shape-group'>
                                 <li
@@ -128,10 +130,12 @@ const FaqArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <li
                                     className='shape-4'
@@ -139,11 +143,13 @@ const FaqArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='200'
                                 >
-                                    <img
-                                        className='rotateit'
-                                        src='/assets/images/faq/shape-04.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='rotateit'
+                                            src='/assets/images/faq/shape-04.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </li>
                                 <li
                                     className='shape-5 sal-animate'
@@ -151,10 +157,12 @@ const FaqArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='1000'
                                 >
-                                    <img
-                                        src='/assets/images/others/shape-39.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/shape-39.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                             </ul>
                         </div>

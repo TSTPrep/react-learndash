@@ -50,7 +50,9 @@ const Service = () => {
                             >
                                 <div className={`features-box ${color}`}>
                                     <div className='icon'>
-                                        <img src={imgSrc} alt='images svg' />
+                                        <picture>
+                                            <img src={imgSrc} alt='images svg' />
+                                        </picture>
                                     </div>
                                     <div className='content'>
                                         <h5 className='title'>{title}</h5>

@@ -16,16 +16,20 @@ const Header = () => {
                             <div className='header-brand'>
                                 <div className='logo'>
                                     <Link href='/'>
-                                        <img
-                                            className='logo-light'
-                                            src='/assets/images/logo/logo-dark.png'
-                                            alt='Corporate Logo'
-                                        />
-                                        <img
-                                            className='logo-dark'
-                                            src='/assets/images/logo/logo-white.png'
-                                            alt='Corporate Logo'
-                                        />
+                                        <picture>
+                                            <img
+                                                className='logo-light'
+                                                src='/assets/images/logo/logo-dark.png'
+                                                alt='Corporate Logo'
+                                            />
+                                        </picture>
+                                        <picture>
+                                            <img
+                                                className='logo-dark'
+                                                src='/assets/images/logo/logo-white.png'
+                                                alt='Corporate Logo'
+                                            />
+                                        </picture>
                                     </Link>
                                 </div>
                             </div>
@@ -87,16 +91,20 @@ const Header = () => {
                         <div className='header-top'>
                             <div className='logo'>
                                 <Link href='/'>
-                                    <img
-                                        className='logo-light'
-                                        src='/assets/images/logo/logo-dark.png'
-                                        alt='Corporate Logo'
-                                    />
-                                    <img
-                                        className='logo-dark'
-                                        src='/assets/images/logo/logo-white.png'
-                                        alt='Corporate Logo'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='logo-light'
+                                            src='/assets/images/logo/logo-dark.png'
+                                            alt='Corporate Logo'
+                                        />
+                                    </picture>
+                                    <picture>
+                                        <img
+                                            className='logo-dark'
+                                            src='/assets/images/logo/logo-white.png'
+                                            alt='Corporate Logo'
+                                        />
+                                    </picture>
                                 </Link>
                             </div>
                             <div className='close-menu'>

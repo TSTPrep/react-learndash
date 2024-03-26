@@ -11,18 +11,22 @@ const AboutArea = () => {
                 <div className='row g-5 align-items-center'>
                     <div className='col-lg-7'>
                         <div className='about-image-gallery'>
-                            <img
-                                className='main-img-1'
-                                src='/assets/images/about/about-03.webp'
-                                alt='About Image'
-                            />
+                            <picture>
+                                <img
+                                    className='main-img-1'
+                                    src='/assets/images/about/about-03.webp'
+                                    alt='About Image'
+                                />
+                            </picture>
                             <div className='author-box'>
                                 <div className='inner'>
                                     <div className='thumb'>
-                                        <img
-                                            src='/assets/images/about/shape-03.png'
-                                            alt='Shape Image'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/shape-03.png'
+                                                alt='Shape Image'
+                                            />
+                                        </picture>
                                     </div>
                                     <div className='content'>
                                         <h4 className='title'>Ray Sanchez</h4>
@@ -54,10 +58,12 @@ const AboutArea = () => {
                                         y: mouseReverse(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-38.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-38.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <motion.li
@@ -70,10 +76,12 @@ const AboutArea = () => {
                                         y: mouseDirection(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-37.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-37.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
 
                                 <motion.li
@@ -86,10 +94,12 @@ const AboutArea = () => {
                                         y: mouseReverse(25).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-04.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-04.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                             </ul>
                         </div>

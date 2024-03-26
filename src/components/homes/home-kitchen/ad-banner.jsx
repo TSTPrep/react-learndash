@@ -41,7 +41,9 @@ const AdBanner = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-05.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-05.png' alt='shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-2 scene'
@@ -53,7 +55,9 @@ const AdBanner = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-04.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-04.png' alt='shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-3 scene'
@@ -65,7 +69,9 @@ const AdBanner = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-02.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-02.png' alt='shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-4 scene'
@@ -77,7 +83,9 @@ const AdBanner = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-01.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-01.png' alt='shape' />
+                    </picture>
                 </motion.li>
                 <li
                     className='shape-5 shape-light'
@@ -85,7 +93,9 @@ const AdBanner = () => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/others/map-shape-3.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/others/map-shape-3.png' alt='shape' />
+                    </picture>
                 </li>
                 <li
                     className='shape-5 shape-dark'
@@ -93,7 +103,9 @@ const AdBanner = () => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/others/dark-map-shape.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/others/dark-map-shape.png' alt='shape' />
+                    </picture>
                 </li>
             </ul>
         </div>

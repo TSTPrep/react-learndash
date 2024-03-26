@@ -9,7 +9,9 @@ const EventDetailsArea = ({ event }) => {
             <div className='container'>
                 <div className='event-details'>
                     <div className='main-thumbnail'>
-                        <img src='/assets/images/event/event-21.jpg' alt='Event' />
+                        <picture>
+                            <img src='/assets/images/event/event-21.jpg' alt='Event' />
+                        </picture>
                     </div>
                     <div className='row row--30'>
                         <div className='col-lg-8'>

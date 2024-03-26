@@ -8,7 +8,13 @@ const ProductDetailsArea = ({ item }) => {
                 <div className='row g-5 row--25'>
                     <div className='col-lg-6'>
                         <div className='thumbnail'>
-                            <img src={item?.img} alt='Product Images' className='w-100' />
+                            <picture>
+                                <img
+                                    src={item?.img}
+                                    alt='Product Images'
+                                    className='w-100'
+                                />
+                            </picture>
                         </div>
                     </div>
 

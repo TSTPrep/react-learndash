@@ -106,10 +106,12 @@ const HomeDemos = () => {
                                                 className='thumbnail-link'
                                                 target='_blank'
                                             >
-                                                <img
-                                                    src={`/assets/images/preview/${demo.imgSrc}`}
-                                                    alt='Preview Images'
-                                                />
+                                                <picture>
+                                                    <img
+                                                        src={`/assets/images/preview/${demo.imgSrc}`}
+                                                        alt='Preview Images'
+                                                    />
+                                                </picture>
                                             </Link>
                                             <div className='hover-action'>
                                                 <Link
@@ -145,10 +147,12 @@ const HomeDemos = () => {
                                     <div className='inner'>
                                         <div className='thumbnail'>
                                             <a className='thumbnail-link' href='#'>
-                                                <img
-                                                    src='/assets/images/preview/coming-soon.png'
-                                                    alt='Preview Images'
-                                                />
+                                                <picture>
+                                                    <img
+                                                        src='/assets/images/preview/coming-soon.png'
+                                                        alt='Preview Images'
+                                                    />
+                                                </picture>
                                             </a>
                                         </div>
                                         <h5 className='title'>

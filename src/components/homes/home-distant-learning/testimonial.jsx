@@ -102,7 +102,9 @@ const Testimonial = () => {
                                 <SwiperSlide key={i}>
                                     <div className='testimonial-grid'>
                                         <div className='thumbnail'>
-                                            <img src={item.img} alt='Testimonial' />
+                                            <picture>
+                                                <img src={item.img} alt='Testimonial' />
+                                            </picture>
                                             <span className='qoute-icon'>
                                                 <i className='icon-26'></i>
                                             </span>

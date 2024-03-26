@@ -19,7 +19,9 @@ const BrandArea = () => {
                 <div className='brand-grid-wrap brand-style-2'>
                     {brand_images.map((img, i) => (
                         <div key={i} className='brand-grid'>
-                            <img src={img} alt='Brand Logo' />
+                            <picture>
+                                <img src={img} alt='Brand Logo' />
+                            </picture>
                         </div>
                     ))}
                 </div>
@@ -34,7 +36,9 @@ const BrandArea = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/about/shape-37.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/about/shape-37.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                 </ul>
             </div>
@@ -49,7 +53,9 @@ const BrandArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/shape-41.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-41.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-2 scene shape-dark'
@@ -61,7 +67,9 @@ const BrandArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/dark-shape-41.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/about/dark-shape-41.png' alt='Shape' />
+                    </picture>
                 </motion.li>
             </ul>
         </div>

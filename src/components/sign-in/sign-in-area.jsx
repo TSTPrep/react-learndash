@@ -30,13 +30,22 @@ const SignInArea = () => {
 
                 <ul className='shape-group'>
                     <li className='shape-1 scene'>
-                        <img src='/assets/images/about/shape-07.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/about/shape-07.png' alt='Shape' />
+                        </picture>
                     </li>
                     <li className='shape-2 scene'>
-                        <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/about/shape-13.png' alt='Shape' />
+                        </picture>
                     </li>
                     <li className='shape-3 scene'>
-                        <img src='/assets/images/counterup/shape-02.png' alt='Shape' />
+                        <picture>
+                            <img
+                                src='/assets/images/counterup/shape-02.png'
+                                alt='Shape'
+                            />
+                        </picture>
                     </li>
                 </ul>
             </div>

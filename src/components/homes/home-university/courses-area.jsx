@@ -76,28 +76,36 @@ const CoursesArea = () => {
 
             <ul className='shape-group'>
                 <li className='shape-1'>
-                    <img
-                        className='d-block-shape-light'
-                        src='/assets/images/others/map-shape-3.png'
-                        alt='Shape'
-                    />
-                    <img
-                        className='d-none-shape-dark'
-                        src='/assets/images/others/3-Home-1.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='d-block-shape-light'
+                            src='/assets/images/others/map-shape-3.png'
+                            alt='Shape'
+                        />
+                    </picture>
+                    <picture>
+                        <img
+                            className='d-none-shape-dark'
+                            src='/assets/images/others/3-Home-1.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
                 <li className='shape-2'>
-                    <img
-                        className='d-block-shape-light'
-                        src='/assets/images/others/map-shape-3.png'
-                        alt='Shape'
-                    />
-                    <img
-                        className='d-none-shape-dark'
-                        src='/assets/images/others/dark-map-shape-3.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='d-block-shape-light'
+                            src='/assets/images/others/map-shape-3.png'
+                            alt='Shape'
+                        />
+                    </picture>
+                    <picture>
+                        <img
+                            className='d-none-shape-dark'
+                            src='/assets/images/others/dark-map-shape-3.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
             </ul>
         </div>

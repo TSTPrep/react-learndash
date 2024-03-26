@@ -61,16 +61,20 @@ const Header = ({ header_style, no_top_bar, disable_full_width, disable_category
                             <div className='header-brand'>
                                 <div className='logo'>
                                     <Link href={'/'}>
-                                        <img
-                                            className='logo-light'
-                                            src='/assets/images/logo/logo-dark.png'
-                                            alt='logo'
-                                        />
-                                        <img
-                                            className='logo-dark'
-                                            src='/assets/images/logo/logo-white.png'
-                                            alt='logo'
-                                        />
+                                        <picture>
+                                            <img
+                                                className='logo-light'
+                                                src='/assets/images/logo/logo-dark.png'
+                                                alt='logo'
+                                            />
+                                        </picture>
+                                        <picture>
+                                            <img
+                                                className='logo-dark'
+                                                src='/assets/images/logo/logo-white.png'
+                                                alt='logo'
+                                            />
+                                        </picture>
                                     </Link>
                                 </div>
 

@@ -42,7 +42,9 @@ const EventArea = () => {
                                     <div className='inner'>
                                         <div className='thumbnail'>
                                             <Link href={`/event-details/${id}`}>
-                                                <img src={img} alt='Event Images' />
+                                                <picture>
+                                                    <img src={img} alt='Event Images' />
+                                                </picture>
                                             </Link>
                                         </div>
                                         <div className='content'>
@@ -86,7 +88,9 @@ const EventArea = () => {
                             y: mouseReverse(30).y,
                         }}
                     >
-                        <img src='/assets/images/banner/icon-2.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/banner/icon-2.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                     <motion.li
                         className='shape-2 scene'
@@ -95,7 +99,9 @@ const EventArea = () => {
                             y: mouseDirection(30).y,
                         }}
                     >
-                        <img src='/assets/images/banner/icon-1.png' alt='Shape' />
+                        <picture>
+                            <img src='/assets/images/banner/icon-1.png' alt='Shape' />
+                        </picture>
                     </motion.li>
                 </ul>
             </div>

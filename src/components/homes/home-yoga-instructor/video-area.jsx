@@ -12,10 +12,12 @@ const VideoArea = () => {
                         <div className='col-lg-9'>
                             <div className='video-gallery'>
                                 <div className='thumbnail'>
-                                    <img
-                                        src='/assets/images/others/video-02.jpg'
-                                        alt='Thumb'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/others/video-02.jpg'
+                                            alt='Thumb'
+                                        />
+                                    </picture>
                                     <button
                                         onClick={() => setIsVideoOpen(true)}
                                         className='video-play-btn video-popup-activation'
@@ -25,24 +27,30 @@ const VideoArea = () => {
                                 </div>
                                 <ul className='shape-group'>
                                     <li className='shape-1'>
-                                        <img
-                                            className='rotateit'
-                                            src='/assets/images/about/shape-10.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                className='rotateit'
+                                                src='/assets/images/about/shape-10.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </li>
                                     <li className='shape-2'>
-                                        <img
-                                            src='/assets/images/about/shape-29.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                src='/assets/images/about/shape-29.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </li>
                                     <li className='shape-3'>
-                                        <img
-                                            className='rotateit'
-                                            src='/assets/images/about/shape-31.png'
-                                            alt='Shape'
-                                        />
+                                        <picture>
+                                            <img
+                                                className='rotateit'
+                                                src='/assets/images/about/shape-31.png'
+                                                alt='Shape'
+                                            />
+                                        </picture>
                                     </li>
                                 </ul>
                             </div>

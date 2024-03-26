@@ -109,22 +109,26 @@ const AboutArea = () => {
                     </div>
                     <div className='col-lg-6'>
                         <div className='about-image-gallery'>
-                            <img
-                                className='main-img-1'
-                                data-sal-delay='100'
-                                data-sal='slide-up'
-                                data-sal-duration='800'
-                                src='/assets/images/about/about-04.webp'
-                                alt='About Image'
-                            />
-                            <img
-                                className='main-img-2'
-                                data-sal-delay='100'
-                                data-sal='slide-left'
-                                data-sal-duration='800'
-                                src='/assets/images/about/about-05.webp'
-                                alt='About Image'
-                            />
+                            <picture>
+                                <img
+                                    className='main-img-1'
+                                    data-sal-delay='100'
+                                    data-sal='slide-up'
+                                    data-sal-duration='800'
+                                    src='/assets/images/about/about-04.webp'
+                                    alt='About Image'
+                                />
+                            </picture>
+                            <picture>
+                                <img
+                                    className='main-img-2'
+                                    data-sal-delay='100'
+                                    data-sal='slide-left'
+                                    data-sal-duration='800'
+                                    src='/assets/images/about/about-05.webp'
+                                    alt='About Image'
+                                />
+                            </picture>
                             <ul className='shape-group'>
                                 <motion.li
                                     className='shape-1 scene'
@@ -136,10 +140,12 @@ const AboutArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-2 scene'
@@ -151,10 +157,12 @@ const AboutArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-39.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-39.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-3 scene'
@@ -166,10 +174,12 @@ const AboutArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-07.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-07.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <li
                                     className='shape-4'
@@ -186,11 +196,13 @@ const AboutArea = () => {
             </div>
             <ul className='shape-group'>
                 <li className='shape-5'>
-                    <img
-                        className='rotateit'
-                        src='/assets/images/about/shape-13.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='rotateit'
+                            src='/assets/images/about/shape-13.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
                 <li className='shape-6'>
                     <span></span>

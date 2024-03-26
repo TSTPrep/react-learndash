@@ -188,10 +188,12 @@ const CourseDetailsArea = ({ course }) => {
                                     <div className='course-tab-content'>
                                         <div className='course-instructor'>
                                             <div className='thumbnail'>
-                                                <img
-                                                    src={`/assets/images/team/team-02/${instructor_img}`}
-                                                    alt='team images'
-                                                />
+                                                <picture>
+                                                    <img
+                                                        src={`/assets/images/team/team-02/${instructor_img}`}
+                                                        alt='team images'
+                                                    />
+                                                </picture>
                                             </div>
                                             <div className='author-content'>
                                                 <h6 className='title'>{instructor}</h6>

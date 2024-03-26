@@ -8,10 +8,12 @@ const TeamFive = ({ instructor }) => {
                 <div className='thumbnail-wrap'>
                     <div className='thumbnail'>
                         <Link href={`/team-details/${instructor.id}`}>
-                            <img
-                                src={`/assets/images/team/team-02/${instructor.img}`}
-                                alt='team images'
-                            />
+                            <picture>
+                                <img
+                                    src={`/assets/images/team/team-02/${instructor.img}`}
+                                    alt='team images'
+                                />
+                            </picture>
                         </Link>
                     </div>
                     <ul className='team-share-info'>

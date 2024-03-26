@@ -100,7 +100,9 @@ const HeroArea = () => {
                     data-sal='slide-up'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/banner/kid-3.webp' alt='Girl Image' />
+                    <picture>
+                        <img src='/assets/images/banner/kid-3.webp' alt='Girl Image' />
+                    </picture>
                 </div>
                 <div
                     className='thumbnail thumbnail-2'
@@ -108,7 +110,9 @@ const HeroArea = () => {
                     data-sal='slide-down'
                     data-sal-duration='1000'
                 >
-                    <img src='/assets/images/banner/kid-4.webp' alt='Girl Image' />
+                    <picture>
+                        <img src='/assets/images/banner/kid-4.webp' alt='Girl Image' />
+                    </picture>
                 </div>
             </div>
             <ul className='shape-group'>
@@ -122,7 +126,9 @@ const HeroArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/banner/icon-3.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/banner/icon-3.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-2 scene'
@@ -134,7 +140,9 @@ const HeroArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/banner/icon-1.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/banner/icon-1.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-3 scene'
@@ -146,7 +154,9 @@ const HeroArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/banner/icon-5.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/banner/icon-5.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-4 scene'
@@ -158,7 +168,9 @@ const HeroArea = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/banner/icon-2.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/banner/icon-2.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-5 scene'
@@ -170,7 +182,9 @@ const HeroArea = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/banner/icon-4.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/banner/icon-4.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <li
                     className='shape-6'
@@ -178,11 +192,13 @@ const HeroArea = () => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img
-                        className='rotateit'
-                        src='/assets/images/about/shape-25.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='rotateit'
+                            src='/assets/images/about/shape-25.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
                 <li
                     className='shape-7'
@@ -190,11 +206,13 @@ const HeroArea = () => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img
-                        className='rotateit'
-                        src='/assets/images/about/shape-13.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='rotateit'
+                            src='/assets/images/about/shape-13.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
             </ul>
         </div>

@@ -74,7 +74,12 @@ const SingleCourseTwo = ({ course }) => {
                 <div className='inner'>
                     <div className='thumbnail'>
                         <Link href={`/course-details/${id}`}>
-                            <img src={`/assets/images/course/${img}`} alt='Course Meta' />
+                            <picture>
+                                <img
+                                    src={`/assets/images/course/${img}`}
+                                    alt='Course Meta'
+                                />
+                            </picture>
                         </Link>
                         <div className='time-top'>
                             <span className='duration'>

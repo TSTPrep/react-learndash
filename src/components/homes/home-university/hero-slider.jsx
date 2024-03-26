@@ -68,12 +68,14 @@ const HeroSlider = () => {
                     const { btn_text, id, sm_text, src, subtitle, title } = item;
                     return (
                         <SwiperSlide key={id}>
-                            <img
-                                data-transform-origin='center center'
-                                src={src}
-                                className='swiper-lazy'
-                                alt='image'
-                            />
+                            <picture>
+                                <img
+                                    data-transform-origin='center center'
+                                    src={src}
+                                    className='swiper-lazy'
+                                    alt='image'
+                                />
+                            </picture>
                             <div className='thumbnail-bg-content'>
                                 <div className='container edublink-animated-shape'>
                                     <div className='row'>
@@ -145,7 +147,9 @@ const HeroSlider = () => {
                         y: mouseReverse(25).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-10.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-10.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <motion.li
                     className='shape-2 scene'
@@ -157,10 +161,14 @@ const HeroSlider = () => {
                         y: mouseDirection(25).y,
                     }}
                 >
-                    <img src='/assets/images/others/shape-11.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-11.png' alt='Shape' />
+                    </picture>
                 </motion.li>
                 <li className='shape-3'>
-                    <img src='/assets/images/others/shape-25.png' alt='Shape' />
+                    <picture>
+                        <img src='/assets/images/others/shape-25.png' alt='Shape' />
+                    </picture>
                 </li>
             </ul>
         </div>

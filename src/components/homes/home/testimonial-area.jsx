@@ -119,7 +119,9 @@ export default function TestimonialArea() {
                                 <SwiperSlide key={i}>
                                     <div className='testimonial-grid'>
                                         <div className='thumbnail'>
-                                            <img src={testi.img} alt='Testimonial' />
+                                            <picture>
+                                                <img src={testi.img} alt='Testimonial' />
+                                            </picture>
                                             <span className='qoute-icon'>
                                                 <i className='icon-26'></i>
                                             </span>

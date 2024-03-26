@@ -37,10 +37,12 @@ const FaqArea = () => {
                                 data-sal='slide-right'
                                 data-sal-duration='800'
                             >
-                                <img
-                                    src='/assets/images/others/faq-5.webp'
-                                    alt='Faq Images'
-                                />
+                                <picture>
+                                    <img
+                                        src='/assets/images/others/faq-5.webp'
+                                        alt='Faq Images'
+                                    />
+                                </picture>
                             </div>
                             <ul className='shape-group'>
                                 <motion.li
@@ -53,10 +55,12 @@ const FaqArea = () => {
                                         y: mouseReverse(40).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/shape-35.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-35.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-2 scene'
@@ -68,16 +72,20 @@ const FaqArea = () => {
                                         y: mouseDirection(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/faq/shape-36.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-36.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <li className='shape-3'>
-                                    <img
-                                        src='/assets/images/faq/shape-34.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/faq/shape-34.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </li>
                             </ul>
                         </div>
@@ -150,10 +158,12 @@ const FaqArea = () => {
                                         y: mouseReverse(40).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-02.png'
-                                        alt='Shape Images'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-02.png'
+                                            alt='Shape Images'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <motion.li
                                     className='shape-2 scene'

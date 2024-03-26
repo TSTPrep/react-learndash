@@ -80,24 +80,28 @@ const HeaderTwo = ({ style_3, no_topBar = false }) => {
                             <div className='header-brand'>
                                 <div className='logo'>
                                     <Link href='/'>
-                                        <img
-                                            className='logo-light'
-                                            src={
-                                                style_3
-                                                    ? '/assets/images/logo/logo-dark.png'
-                                                    : '/assets/images/logo/logo-dark-2.png'
-                                            }
-                                            alt='Corporate Logo'
-                                        />
-                                        <img
-                                            className='logo-dark'
-                                            src={
-                                                style_3
-                                                    ? '/assets/images/logo/logo-white.png'
-                                                    : '/assets/images/logo/logo-light-2.png'
-                                            }
-                                            alt='Corporate Logo'
-                                        />
+                                        <picture>
+                                            <img
+                                                className='logo-light'
+                                                src={
+                                                    style_3
+                                                        ? '/assets/images/logo/logo-dark.png'
+                                                        : '/assets/images/logo/logo-dark-2.png'
+                                                }
+                                                alt='Corporate Logo'
+                                            />
+                                        </picture>
+                                        <picture>
+                                            <img
+                                                className='logo-dark'
+                                                src={
+                                                    style_3
+                                                        ? '/assets/images/logo/logo-white.png'
+                                                        : '/assets/images/logo/logo-light-2.png'
+                                                }
+                                                alt='Corporate Logo'
+                                            />
+                                        </picture>
                                     </Link>
                                 </div>
                             </div>

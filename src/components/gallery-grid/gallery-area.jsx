@@ -80,11 +80,13 @@ const GalleryArea = () => {
                                                 className='edu-popup-image edu-gallery-grid w-100'
                                             >
                                                 <div className='thumbnail'>
-                                                    <img
-                                                        className='w-100'
-                                                        src={item.img}
-                                                        alt='Gallery Image'
-                                                    />
+                                                    <picture>
+                                                        <img
+                                                            className='w-100'
+                                                            src={item.img}
+                                                            alt='Gallery Image'
+                                                        />
+                                                    </picture>
                                                 </div>
                                                 <div className='zoom-icon'>
                                                     <i className='icon-69'></i>

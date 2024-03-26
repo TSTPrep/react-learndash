@@ -7,10 +7,12 @@ const CourseTypeSeven = ({ data, classes }) => {
             <div className='inner'>
                 <div className='thumbnail'>
                     <Link href={`/course-details/${data.id}`}>
-                        <img
-                            src={`/assets/images/course/course-04/${data.img}`}
-                            alt='Course Meta'
-                        />
+                        <picture>
+                            <img
+                                src={`/assets/images/course/course-04/${data.img}`}
+                                alt='Course Meta'
+                            />
+                        </picture>
                     </Link>
                     <div className='course-price'>${data.course_price}</div>
                     <div className='read-more-btn'>
@@ -23,10 +25,12 @@ const CourseTypeSeven = ({ data, classes }) => {
                     </div>
                 </div>
                 <div className='instructor'>
-                    <img
-                        src={`/assets/images/course/instructor/${data.instructor_img}`}
-                        alt='images'
-                    />
+                    <picture>
+                        <img
+                            src={`/assets/images/course/instructor/${data.instructor_img}`}
+                            alt='images'
+                        />
+                    </picture>
                     <h6 className='instructor-name'>{data.instructor}</h6>
                 </div>
                 <div className='content'>

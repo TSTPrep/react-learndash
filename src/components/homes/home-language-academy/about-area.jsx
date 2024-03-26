@@ -36,14 +36,16 @@ const AboutArea = () => {
                 <div className='row g-5 align-items-center'>
                     <div className='col-lg-6'>
                         <div className='about-image-gallery'>
-                            <img
-                                className='main-img-1'
-                                data-sal-delay='100'
-                                data-sal='fade-in'
-                                data-sal-duration='800'
-                                src='/assets/images/about/about-19.webp'
-                                alt='About Image'
-                            />
+                            <picture>
+                                <img
+                                    className='main-img-1'
+                                    data-sal-delay='100'
+                                    data-sal='fade-in'
+                                    data-sal-duration='800'
+                                    src='/assets/images/about/about-19.webp'
+                                    alt='About Image'
+                                />
+                            </picture>
                             <div className='main-img-wrapper'>
                                 <div
                                     className='main-img-inner'
@@ -51,11 +53,13 @@ const AboutArea = () => {
                                     data-sal='fade-in'
                                     data-sal-duration='800'
                                 >
-                                    <img
-                                        className='main-img-2'
-                                        src='/assets/images/about/about-20.webp'
-                                        alt='About Image'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='main-img-2'
+                                            src='/assets/images/about/about-20.webp'
+                                            alt='About Image'
+                                        />
+                                    </picture>
                                 </div>
                             </div>
 
@@ -70,10 +74,12 @@ const AboutArea = () => {
                                         y: mouseReverse(30).y,
                                     }}
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-13.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-13.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </motion.li>
                                 <li
                                     className='shape-2'
@@ -81,11 +87,13 @@ const AboutArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='200'
                                 >
-                                    <img
-                                        className='rotateit'
-                                        src='/assets/images/faq/shape-04.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='rotateit'
+                                            src='/assets/images/faq/shape-04.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                             </ul>
                         </div>

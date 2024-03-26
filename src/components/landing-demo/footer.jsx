@@ -55,7 +55,9 @@ const Footer = () => {
                         y: mouseReverse(30).y,
                     }}
                 >
-                    <img src='/assets/images/counterup/shape-02.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/counterup/shape-02.png' alt='shape' />
+                    </picture>
                 </motion.li>
 
                 <li
@@ -64,11 +66,13 @@ const Footer = () => {
                     data-sal='fade'
                     data-sal-duration='1000'
                 >
-                    <img
-                        className='rotateit'
-                        src='/assets/images/about/shape-35.png'
-                        alt='shape'
-                    />
+                    <picture>
+                        <img
+                            className='rotateit'
+                            src='/assets/images/about/shape-35.png'
+                            alt='shape'
+                        />
+                    </picture>
                 </li>
 
                 <motion.li
@@ -81,7 +85,9 @@ const Footer = () => {
                         y: mouseDirection(30).y,
                     }}
                 >
-                    <img src='/assets/images/about/shape-07.png' alt='shape' />
+                    <picture>
+                        <img src='/assets/images/about/shape-07.png' alt='shape' />
+                    </picture>
                 </motion.li>
 
                 <motion.li

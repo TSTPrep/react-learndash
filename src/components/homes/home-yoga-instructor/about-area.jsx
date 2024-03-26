@@ -26,14 +26,16 @@ const AboutArea = () => {
                 <div className='row g-5 align-items-center'>
                     <div className='col-lg-6'>
                         <div className='about-image-gallery'>
-                            <img
-                                className='main-img-1'
-                                src='/assets/images/about/about-08.webp'
-                                data-sal-delay='150'
-                                data-sal='fade'
-                                data-sal-duration='800'
-                                alt='About Image'
-                            />
+                            <picture>
+                                <img
+                                    className='main-img-1'
+                                    src='/assets/images/about/about-08.webp'
+                                    data-sal-delay='150'
+                                    data-sal='fade'
+                                    data-sal-duration='800'
+                                    alt='About Image'
+                                />
+                            </picture>
                             <ul className='shape-group'>
                                 <li
                                     className='shape-1'
@@ -41,11 +43,13 @@ const AboutArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='200'
                                 >
-                                    <img
-                                        className='rotateit'
-                                        src='/assets/images/about/shape-09.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            className='rotateit'
+                                            src='/assets/images/about/shape-09.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                                 <li
                                     className='shape-2'
@@ -53,10 +57,12 @@ const AboutArea = () => {
                                     data-sal='fade'
                                     data-sal-duration='200'
                                 >
-                                    <img
-                                        src='/assets/images/about/shape-10.png'
-                                        alt='Shape'
-                                    />
+                                    <picture>
+                                        <img
+                                            src='/assets/images/about/shape-10.png'
+                                            alt='Shape'
+                                        />
+                                    </picture>
                                 </li>
                             </ul>
                         </div>
@@ -97,16 +103,20 @@ const AboutArea = () => {
                     data-sal='fade'
                     data-sal-duration='200'
                 >
-                    <img
-                        className='d-block-shape-light'
-                        src='/assets/images/about/shape-20.png'
-                        alt='Shape'
-                    />
-                    <img
-                        className='d-none-shape-dark'
-                        src='/assets/images/about/dark-shape-20.png'
-                        alt='Shape'
-                    />
+                    <picture>
+                        <img
+                            className='d-block-shape-light'
+                            src='/assets/images/about/shape-20.png'
+                            alt='Shape'
+                        />
+                    </picture>
+                    <picture>
+                        <img
+                            className='d-none-shape-dark'
+                            src='/assets/images/about/dark-shape-20.png'
+                            alt='Shape'
+                        />
+                    </picture>
                 </li>
             </ul>
         </div>

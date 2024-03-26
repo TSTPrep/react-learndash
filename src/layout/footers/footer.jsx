@@ -61,32 +61,38 @@ const Footer = ({ style_2, dark_bg, home_4 }) => {
                                         {!dark_bg && (
                                             <>
                                                 {!style_2 && (
+                                                    <picture>
+                                                        <img
+                                                            className='logo-light'
+                                                            src={logoLight}
+                                                            alt='Corporate Logo'
+                                                        />
+                                                    </picture>
+                                                )}
+                                                <picture>
                                                     <img
-                                                        className='logo-light'
-                                                        src={logoLight}
+                                                        className='logo-dark'
+                                                        src={logoDark}
                                                         alt='Corporate Logo'
                                                     />
-                                                )}
-                                                <img
-                                                    className='logo-dark'
-                                                    src={logoDark}
-                                                    alt='Corporate Logo'
-                                                />
+                                                </picture>
                                             </>
                                         )}
                                     </Link>
 
                                     <Link href={'/'}>
                                         {dark_bg && (
-                                            <img
-                                                className='logo-light'
-                                                src={
-                                                    home_4
-                                                        ? '/assets/images/logo/logo-white.png'
-                                                        : '/assets/images/logo/logo-light-2.png'
-                                                }
-                                                alt='Corporate Logo'
-                                            />
+                                            <picture>
+                                                <img
+                                                    className='logo-light'
+                                                    src={
+                                                        home_4
+                                                            ? '/assets/images/logo/logo-white.png'
+                                                            : '/assets/images/logo/logo-light-2.png'
+                                                    }
+                                                    alt='Corporate Logo'
+                                                />
+                                            </picture>
                                         )}
                                     </Link>
                                 </div>
