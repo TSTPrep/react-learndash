@@ -5,8 +5,10 @@ import wishlistSlice from './features/wishlist-slice';
 import eventSlice from './features/event-slice';
 import filterSlice from './features/filter-slice';
 import authSlice from './features/auth-slice';
+import { api } from './features/api-slice';
 
 const rootReducer = combineReducers({
+    api: api.reducer,
     auth: authSlice,
     courses: courseSlice,
     cart: cartSlice,
