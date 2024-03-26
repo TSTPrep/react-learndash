@@ -12,14 +12,15 @@ const gallery_items = [
     { img: '/assets/images/gallery/gallery-09.jpg', category: 'Development' },
     { img: '/assets/images/gallery/gallery-03.jpg', category: 'Health' },
     { img: '/assets/images/gallery/gallery-06.jpg', category: 'Health' },
-    { img: '/assets/images/gallery/gallery-08.jpg', category: 'Health' }
-]
+    { img: '/assets/images/gallery/gallery-08.jpg', category: 'Health' },
+];
 
-const uniqueItems = gallery_items.filter( (arr, index, self) =>
-    index === self.findIndex( ( i ) => ( i.img === arr.img && i.State === arr.State ) )
-)
+const uniqueItems = gallery_items.filter(
+    (arr, index, self) =>
+        index === self.findIndex(i => i.img === arr.img && i.State === arr.State)
+);
 
-const uniq_categories = ['All', ...new Set( gallery_items.map( item => item.category ) ) ]
+const uniq_categories = ['All', ...new Set(gallery_items.map(item => item.category))];
 
 const GalleryArea = () => {
     const [items, setItems] = useState(uniqueItems);
@@ -30,46 +31,63 @@ const GalleryArea = () => {
     // image open state
     const [open, setOpen] = useState(false);
     // images
-    const images = items.map(item => item.img)
+    const images = items.map(item => item.img);
     // handleCategory
-    const handleCategory = (category) => {
-        setCategory(category)
+    const handleCategory = category => {
+        setCategory(category);
         if (category === 'All') {
-            setItems(uniqueItems)
+            setItems(uniqueItems);
         } else {
-            setItems(gallery_items.filter(item => item.category === category))
+            setItems(gallery_items.filter(item => item.category === category));
         }
-    }
+    };
     // handleImagePopup
-    const handleImagePopup = (index) => {
-        setPhotoIndex(index)
-        setOpen(true)
-    }
+    const handleImagePopup = index => {
+        setPhotoIndex(index);
+        setOpen(true);
+    };
 
     return (
         <>
-            <div className="edu-gallery-area edu-section-gap">
-                <div className="container">
-                    <div className="isotope-wrapper">
-                        <div className="isotop-button button-transparent isotop-filter">
+            <div className='edu-gallery-area edu-section-gap'>
+                <div className='container'>
+                    <div className='isotope-wrapper'>
+                        <div className='isotop-button button-transparent isotop-filter'>
                             {uniq_categories.map((c, i) => (
-                                <button key={i} onClick={() => handleCategory(c)}
-                                className={`${category === c ? 'is-checked' : ''}`}>
-                                    <span className="filter-text">{c}</span>
+                                <button
+                                    key={i}
+                                    onClick={() => handleCategory(c)}
+                                    className={`${category === c ? 'is-checked' : ''}`}
+                                >
+                                    <span className='filter-text'>{c}</span>
                                 </button>
                             ))}
                         </div>
-                        <div className="isotope-list gallery-grid-wrap">
-                            <div id="animated-thumbnials" className="edublink-react-gallery-grid">
-                                <div className="row g-5">
+                        <div className='isotope-list gallery-grid-wrap'>
+                            <div
+                                id='animated-thumbnials'
+                                className='edublink-react-gallery-grid'
+                            >
+                                <div className='row g-5'>
                                     {items.map((item, i) => (
-                                        <div key={i} className="col-lg-4 col-md-6" style={{ cursor: 'pointer' }}>
-                                            <div onClick={()=> handleImagePopup(i)} className="edu-popup-image edu-gallery-grid w-100">
-                                                <div className="thumbnail">
-                                                    <img className='w-100' src={item.img} alt="Gallery Image" />
+                                        <div
+                                            key={i}
+                                            className='col-lg-4 col-md-6'
+                                            style={{ cursor: 'pointer' }}
+                                        >
+                                            <div
+                                                onClick={() => handleImagePopup(i)}
+                                                className='edu-popup-image edu-gallery-grid w-100'
+                                            >
+                                                <div className='thumbnail'>
+                                                    <img
+                                                        className='w-100'
+                                                        src={item.img}
+                                                        alt='Gallery Image'
+                                                    />
                                                 </div>
-                                                <div className="zoom-icon">
-                                                    <i className="icon-69"></i>
+                                                <div className='zoom-icon'>
+                                                    <i className='icon-69'></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,11 +100,16 @@ const GalleryArea = () => {
             </div>
 
             {/* image light box start */}
-            <ImageLightBox images={images} open={open} setOpen={setOpen}
-                photoIndex={photoIndex} setPhotoIndex={setPhotoIndex} />
+            <ImageLightBox
+                images={images}
+                open={open}
+                setOpen={setOpen}
+                photoIndex={photoIndex}
+                setPhotoIndex={setPhotoIndex}
+            />
             {/* image light box end */}
         </>
-    )
-}
+    );
+};
 
 export default GalleryArea;

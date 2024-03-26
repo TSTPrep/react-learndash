@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const useSticky = () => {
     const [sticky, setSticky] = useState(false);
     const stickyHeader = () => {
         if (window.scrollY > 80) {
-            setSticky(true)
+            setSticky(true);
         } else {
-            setSticky(false)
+            setSticky(false);
         }
-    }
-  
+    };
+
     useEffect(() => {
-        window.addEventListener('scroll', stickyHeader)
+        window.addEventListener('scroll', stickyHeader);
     }, []);
 
     return {
-        sticky
-    }
-}
+        sticky,
+    };
+};
 
 export default useSticky;

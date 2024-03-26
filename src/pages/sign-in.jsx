@@ -8,5 +8,5 @@ export default function SignIn() {
             <SEO pageTitle={'Sign In'} />
             <SignInMain />
         </Wrapper>
-    )
+    );
 }

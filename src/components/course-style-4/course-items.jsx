@@ -1,17 +1,15 @@
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
     add_count_page,
     add_force_page,
-    add_item_offset
-} from "../../redux/features/filter-slice";
-import Pagination from "../../ui/pagination";
+    add_item_offset,
+} from '../../redux/features/filter-slice';
+import Pagination from '../../ui/pagination';
 import CourseTypeFive from '../course/course-type-five';
 
 const CourseItems = ({ itemsPerPage, items, course_style, setShowing }) => {
-    const { page_count, item_offset, forcePage } = useSelector(
-        (state) => state.filter
-    );
+    const { page_count, item_offset, forcePage } = useSelector(state => state.filter);
     const [currentItems, setCurrentItems] = useState(null);
     const [pageCount, setPageCount] = useState(page_count);
     const [itemOffset, setItemOffset] = useState(item_offset);
@@ -40,7 +38,7 @@ const CourseItems = ({ itemsPerPage, items, course_style, setShowing }) => {
     }, [item_offset, page_count]);
 
     // handlePageClick
-    const handlePageClick = (event) => {
+    const handlePageClick = event => {
         const newOffset = (event.selected * itemsPerPage) % items.length;
         setItemOffset(newOffset);
         dispatch(add_force_page(event.selected));
@@ -48,11 +46,10 @@ const CourseItems = ({ itemsPerPage, items, course_style, setShowing }) => {
 
     return (
         <>
-            {currentItems && currentItems.map((course, i) => {
-                return (
-                    <CourseTypeFive key={i} data={course} />
-                )
-            })}
+            {currentItems &&
+                currentItems.map((course, i) => {
+                    return <CourseTypeFive key={i} data={course} />;
+                })}
 
             <Pagination
                 handlePageClick={handlePageClick}
@@ -60,7 +57,7 @@ const CourseItems = ({ itemsPerPage, items, course_style, setShowing }) => {
                 focusPage={forcePage}
             />
         </>
-    )
-}
+    );
+};
 
 export default CourseItems;

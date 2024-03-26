@@ -8,7 +8,7 @@ const Cart = () => {
             <SEO pageTitle={'Cart'} />
             <CartMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default Cart;

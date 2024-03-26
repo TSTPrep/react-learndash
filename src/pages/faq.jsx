@@ -8,5 +8,5 @@ export default function Faq() {
             <SEO pageTitle={'Faq'} />
             <FaqMain />
         </Wrapper>
-    )
+    );
 }

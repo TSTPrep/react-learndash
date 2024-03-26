@@ -8,7 +8,7 @@ const HomeFour = () => {
             <SEO pageTitle={'Online Academy'} />
             <HomeOnlineAcademy />
         </Wrapper>
-    )
+    );
 };
 
 export default HomeFour;

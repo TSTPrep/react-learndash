@@ -6,7 +6,7 @@ export default function TermsCondition() {
     return (
         <Wrapper>
             <SEO pageTitle={'Terms Condition'} />
-            <TermsConditionMain/>
+            <TermsConditionMain />
         </Wrapper>
-    )
+    );
 }

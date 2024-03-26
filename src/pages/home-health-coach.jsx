@@ -8,7 +8,7 @@ const HomeHealthCoach = () => {
             <SEO pageTitle={'Health Coach'} />
             <HealthCoachContent />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default HomeHealthCoach;

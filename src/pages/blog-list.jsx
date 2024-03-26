@@ -8,7 +8,7 @@ const BlogList = () => {
             <SEO pageTitle={'Blog'} />
             <BlogListMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default BlogList;

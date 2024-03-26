@@ -3,8 +3,8 @@ import { getLocalStorage, setLocalStorage } from '../../utils/localstorage';
 
 const initialState = {
     allUsers: [],
-    user: {}
-}
+    user: {},
+};
 
 export const authSlice = createSlice({
     name: 'auth',
@@ -25,10 +25,10 @@ export const authSlice = createSlice({
         },
         get_user: (state, { payload }) => {
             state.user = getLocalStorage('user');
-        }
-    }
-})
+        },
+    },
+});
 
-export const { user_info, add_user, sign_out,get_user } = authSlice.actions;
+export const { user_info, add_user, sign_out, get_user } = authSlice.actions;
 
 export default authSlice.reducer;

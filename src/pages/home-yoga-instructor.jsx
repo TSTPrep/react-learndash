@@ -8,7 +8,7 @@ const HomeSix = () => {
             <SEO pageTitle={'Yoga Instructor'} />
             <HomeYoga />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default HomeSix;

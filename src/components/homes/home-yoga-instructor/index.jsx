@@ -13,21 +13,21 @@ import WhyChose from './why-chose';
 const index = () => {
     return (
         <div className='sticky-header'>
-            <div id="main-wrapper" className="main-wrapper">
-                <Header/>
-                <HeroArea/>
-                <AboutArea/>
-                <CourseArea/>
-                <CounterArea/>
-                <WhyChose/>
-                <TeamArea/>
-                <VideoArea/>
-                <TestimonialArea/>
-                <InstagramArea/>
-                <FooterFour/>
+            <div id='main-wrapper' className='main-wrapper'>
+                <Header />
+                <HeroArea />
+                <AboutArea />
+                <CourseArea />
+                <CounterArea />
+                <WhyChose />
+                <TeamArea />
+                <VideoArea />
+                <TestimonialArea />
+                <InstagramArea />
+                <FooterFour />
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default index;

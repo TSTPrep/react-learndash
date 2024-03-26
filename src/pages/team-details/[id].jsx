@@ -8,33 +8,33 @@ import TeamDetailMain from '../../components/teams/team-details';
 const DynamicTeamDetails = () => {
     const router = useRouter();
     const { id } = router.query;
-    const team = instructors_data.find(item => Number(item.id) === Number(id))
+    const team = instructors_data.find(item => Number(item.id) === Number(id));
     return (
         <Wrapper>
             <SEO pageTitle={'Team Details'} />
             <TeamDetailMain team={team} />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default DynamicTeamDetails;
 
 export async function getStaticPaths() {
-    const paths = instructors_data.map((instructor) => {
+    const paths = instructors_data.map(instructor => {
         return {
-            params:{
-                id:`${instructor.id}`
-            }
-        }
-    })
+            params: {
+                id: `${instructor.id}`,
+            },
+        };
+    });
     return {
-      paths,
-      fallback: false,
-    }
-  }
+        paths,
+        fallback: false,
+    };
+}
 
 export async function getStaticProps(context) {
     return {
-        props: {}
-    }
+        props: {},
+    };
 }

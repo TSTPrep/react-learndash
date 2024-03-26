@@ -8,7 +8,7 @@ const HomeTwo = () => {
             <SEO pageTitle={'Distant Learning'} />
             <HomeDistantLearning />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default HomeTwo;

@@ -15,23 +15,23 @@ import AdBanner from '../home-university/ad-banner';
 const index = () => {
     return (
         <div className='sticky-header'>
-            <div id="main-wrapper" className="main-wrapper">
+            <div id='main-wrapper' className='main-wrapper'>
                 <HeaderTwo style_3={true} />
-                <HeroArea/>
-                <Categories/>
-                <Courses/>
-                <BrandArea/>
-                <TeamArea/>
-                <CounterArea/>
-                <FaqArea/>
+                <HeroArea />
+                <Categories />
+                <Courses />
+                <BrandArea />
+                <TeamArea />
+                <CounterArea />
+                <FaqArea />
                 <EventArea event_2={true} />
-                <CtaArea/>
-                <BlogArea/>
+                <CtaArea />
+                <BlogArea />
                 <AdBanner home_4={true} />
                 <Footer dark_bg={true} home_4={true} />
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default index;

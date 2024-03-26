@@ -8,5 +8,5 @@ export default function GalleryGrid() {
             <SEO pageTitle={'Gallery Grid'} />
             <GalleryGridMain />
         </Wrapper>
-    )
+    );
 }

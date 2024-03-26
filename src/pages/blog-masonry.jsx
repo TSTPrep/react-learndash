@@ -8,7 +8,7 @@ const BlogMasonry = () => {
             <SEO pageTitle={'Blog Masonry'} />
             <BlogMasonryMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default BlogMasonry;

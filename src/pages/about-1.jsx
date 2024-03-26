@@ -8,7 +8,7 @@ const AboutOne = () => {
             <SEO pageTitle={'About One'} />
             <AboutOneMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default AboutOne;

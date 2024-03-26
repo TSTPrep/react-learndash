@@ -8,7 +8,7 @@ const EventList = () => {
             <SEO pageTitle={'Event List'} />
             <EventListMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default EventList;

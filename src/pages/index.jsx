@@ -8,5 +8,5 @@ export default function Home() {
             <SEO pageTitle={'Home Main'} />
             <HomeMain />
         </Wrapper>
-    )
+    );
 }

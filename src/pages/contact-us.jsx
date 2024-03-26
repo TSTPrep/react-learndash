@@ -8,7 +8,7 @@ const ContactUs = () => {
             <SEO pageTitle={'Contact Us'} />
             <ContactUsMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default ContactUs;

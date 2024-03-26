@@ -8,7 +8,7 @@ const EventGrid = () => {
             <SEO pageTitle={'Event Grid'} />
             <EventGridMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default EventGrid;

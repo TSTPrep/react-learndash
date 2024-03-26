@@ -3,7 +3,7 @@ import { Wrapper } from '../layout';
 import CourseDetailsTwoMain from '../components/course-details-2';
 import { course_data } from '../data';
 
-const course = course_data[0]
+const course = course_data[0];
 
 const CourseDetailsTwo = () => {
     return (
@@ -11,7 +11,7 @@ const CourseDetailsTwo = () => {
             <SEO pageTitle={'Course Details 2'} />
             <CourseDetailsTwoMain course={course} />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default CourseDetailsTwo;

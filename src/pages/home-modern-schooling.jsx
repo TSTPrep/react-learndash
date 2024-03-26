@@ -8,7 +8,7 @@ const HomeModernSchooling = () => {
             <SEO pageTitle={'Modern Schooling'} />
             <ModernSchooling />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default HomeModernSchooling;

@@ -13,28 +13,27 @@ import InstagramArea from './instagrams';
 import TeamArea from './team-area';
 import TestimonialArea from './testimonial-area';
 
-
 const index = () => {
     return (
         <div className='sticky-header'>
-            <div id="main-wrapper" className="main-wrapper">
-                <Header/>
-                <HeroArea/>
-                <CategoryArea/>
-                <AboutArea/>
-                <BrandArea/>
-                <CoursesArea/>
-                <TestimonialArea/>
-                <CounterArea/>
-                <TeamArea/>
-                <FaqArea/>
-                <AdBanner/>
-                <BlogArea/>
-                <InstagramArea/>
-                <FooterTwo/>
+            <div id='main-wrapper' className='main-wrapper'>
+                <Header />
+                <HeroArea />
+                <CategoryArea />
+                <AboutArea />
+                <BrandArea />
+                <CoursesArea />
+                <TestimonialArea />
+                <CounterArea />
+                <TeamArea />
+                <FaqArea />
+                <AdBanner />
+                <BlogArea />
+                <InstagramArea />
+                <FooterTwo />
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default index;

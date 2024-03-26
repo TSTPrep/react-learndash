@@ -16,24 +16,24 @@ import TopCategories from './top-categories';
 const index = () => {
     return (
         <div className='sticky-header'>
-            <div id="main-wrapper" className="main-wrapper">
-                <Header/>
-                <HeroArea/>
-                <CategoryArea/>
-                <TopCategories/>
-                <AboutArea/>
-                <CourseArea/>
-                <CounterUpArea/>
-                <TestimonialArea/>
-                <CtaArea/>
-                <TeamArea/>
-                <AdBanner/>
-                <BrandArea/>
-                <BlogArea/>
-                <Footer/>
+            <div id='main-wrapper' className='main-wrapper'>
+                <Header />
+                <HeroArea />
+                <CategoryArea />
+                <TopCategories />
+                <AboutArea />
+                <CourseArea />
+                <CounterUpArea />
+                <TestimonialArea />
+                <CtaArea />
+                <TeamArea />
+                <AdBanner />
+                <BrandArea />
+                <BlogArea />
+                <Footer />
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default index;

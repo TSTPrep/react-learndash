@@ -13,24 +13,25 @@ const AllEvents = ({ itemsPerPage, items }) => {
         setPageCount(Math.ceil(items.length / itemsPerPage));
     }, [itemOffset, itemsPerPage, items]);
     // handlePageClick
-    const handlePageClick = (event) => {
+    const handlePageClick = event => {
         const newOffset = (event.selected * itemsPerPage) % items.length;
         setItemOffset(newOffset);
     };
     return (
         <>
-            {currentItems && currentItems.map((item, i) => {
-                return (
-                    <div key={i} className="col-lg-4 col-md-6">
-                        <div className="edu-event event-style-1">
-                            <EventItem item={item} />
+            {currentItems &&
+                currentItems.map((item, i) => {
+                    return (
+                        <div key={i} className='col-lg-4 col-md-6'>
+                            <div className='edu-event event-style-1'>
+                                <EventItem item={item} />
+                            </div>
                         </div>
-                    </div>
-                )
-            })}
+                    );
+                })}
             <Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
         </>
-    )
-}
+    );
+};
 
 export default AllEvents;

@@ -8,7 +8,7 @@ const LandingDemo = () => {
             <SEO pageTitle={'Landing Demo'} />
             <HomeLanding />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default LandingDemo;

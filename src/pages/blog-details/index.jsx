@@ -11,7 +11,7 @@ const BlogDetails = () => {
             <SEO pageTitle={'Blog Details'} />
             <BlogDetailsMain blog={blog} />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default BlogDetails;

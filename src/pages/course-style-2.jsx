@@ -8,7 +8,7 @@ const CourseStyleTwo = () => {
             <SEO pageTitle={'Course Style 2'} />
             <CourseStyleTwoMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default CourseStyleTwo;

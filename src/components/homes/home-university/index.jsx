@@ -16,24 +16,24 @@ import VideoArea from './video-area';
 const index = () => {
     return (
         <div className='sticky-header'>
-            <div id="main-wrapper" className="main-wrapper">
+            <div id='main-wrapper' className='main-wrapper'>
                 <HeaderTwo />
-                <HeroSlider/>
-                <CategoryArea/>
-                <AboutArea/>
+                <HeroSlider />
+                <CategoryArea />
+                <AboutArea />
                 <CounterArea home_3={true} />
-                <CoursesArea/>
-                <CollegeCampus/>
-                <Testimonial/>
-                <VideoArea/>
-                <Cta/>
-                <EventArea/>
-                <BrandArea/>
-                <AdBanner/>
+                <CoursesArea />
+                <CollegeCampus />
+                <Testimonial />
+                <VideoArea />
+                <Cta />
+                <EventArea />
+                <BrandArea />
+                <AdBanner />
                 <Footer dark_bg={true} />
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default index;

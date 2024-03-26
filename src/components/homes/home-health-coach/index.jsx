@@ -13,8 +13,8 @@ import CTA from './cta';
 const index = () => {
     return (
         <div className='sticky-header'>
-            <div id="main-wrapper" className="main-wrapper">
-                <Header no_top_bar={true}/>
+            <div id='main-wrapper' className='main-wrapper'>
+                <Header no_top_bar={true} />
                 {/* <Slider /> */}
                 <Service />
                 <About />
@@ -27,7 +27,7 @@ const index = () => {
                 <Footer />
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default index;

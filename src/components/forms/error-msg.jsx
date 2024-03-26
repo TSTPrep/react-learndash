@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ErrorMsg = ({error}) => {
+const ErrorMsg = ({ error }) => {
     return (
         <>
-            <p style={{color:'red'}}>{error}</p> 
+            <p style={{ color: 'red' }}>{error}</p>
         </>
-    )
-}
+    );
+};
 
 export default ErrorMsg;

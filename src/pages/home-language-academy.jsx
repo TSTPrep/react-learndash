@@ -8,7 +8,7 @@ const HomeLanguageAcademy = () => {
             <SEO pageTitle={'Language Academy'} />
             <LanguageAcademy />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default HomeLanguageAcademy;

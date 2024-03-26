@@ -7,50 +7,54 @@ const counter_data = [
         count: 29.3,
         text: 'K',
         title: 'Student Enrolled',
-        decimal: 1
+        decimal: 1,
     },
     {
         color: 'secondary-color',
         count: 32.4,
         text: 'K',
         title: 'Class Completed',
-        decimal: 1
+        decimal: 1,
     },
     {
         color: 'extra02-color',
         count: 100,
         text: '%',
-        title: 'Satisfaction Rate'
+        title: 'Satisfaction Rate',
     },
     {
         color: 'extra05-color',
         count: 354,
         text: '%',
-        title: 'Top Instructors'
-    }
-]
+        title: 'Top Instructors',
+    },
+];
 
 const CounterArea = () => {
     return (
-        <div className="counterup-area-12">
-            <div className="container">
-                <div className="row g-5">
+        <div className='counterup-area-12'>
+            <div className='container'>
+                <div className='row g-5'>
                     {counter_data.map((c, i) => (
-                        <div key={i} className="col-lg-3 col-sm-6">
-                            <div className="edu-counterup counterup-style-12">
+                        <div key={i} className='col-lg-3 col-sm-6'>
+                            <div className='edu-counterup counterup-style-12'>
                                 <h2 className={`counter-item count-number ${c.color}`}>
-                                    <span className="odometer">
-                                        <Counter number={parseFloat(c.count)} text={c.text} decimal={c.decimal} />
+                                    <span className='odometer'>
+                                        <Counter
+                                            number={parseFloat(c.count)}
+                                            text={c.text}
+                                            decimal={c.decimal}
+                                        />
                                     </span>
                                 </h2>
-                                <h6 className="title">{c.title}</h6>
+                                <h6 className='title'>{c.title}</h6>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default CounterArea;

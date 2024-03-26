@@ -8,7 +8,7 @@ const Checkout = () => {
             <SEO pageTitle={'Checkout'} />
             <CheckoutMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default Checkout;

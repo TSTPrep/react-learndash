@@ -9,24 +9,26 @@ import BrandArea from '../about-1/brand-area';
 import CounterArea from './counter-area';
 import WhyChose from './why-chose';
 
-
 const index = () => {
     return (
         <div className='sticky-header'>
-            <div id="main-wrapper" className="main-wrapper">
+            <div id='main-wrapper' className='main-wrapper'>
                 <Header no_top_bar={true} />
-                <Breadcrumb title={'A Large Range of Course Learning Paths'} current_page="About Us 2" />
-                <WhyChose/>
-                <VideoArea about_p_2={true}/>
-                <BrandArea about_p_2={true}/>
-                <Testimonial about_p_2={true}/>
-                <CounterArea/>
+                <Breadcrumb
+                    title={'A Large Range of Course Learning Paths'}
+                    current_page='About Us 2'
+                />
+                <WhyChose />
+                <VideoArea about_p_2={true} />
+                <BrandArea about_p_2={true} />
+                <Testimonial about_p_2={true} />
+                <CounterArea />
                 <TeamArea about_p_2={true} />
-                <AdBanner/>
+                <AdBanner />
                 <Footer style_2={'footer-dark bg-image footer-style-2'} />
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default index;

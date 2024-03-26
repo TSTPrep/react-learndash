@@ -3,7 +3,7 @@ import { Wrapper } from '../../layout';
 import TeamDetailMain from '../../components/teams/team-details';
 import { instructors_data } from '../../data';
 
-const team = instructors_data[0]
+const team = instructors_data[0];
 
 const TeamDetail = () => {
     return (
@@ -11,7 +11,7 @@ const TeamDetail = () => {
             <SEO pageTitle={'Team Details'} />
             <TeamDetailMain team={team} />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default TeamDetail;

@@ -18,5 +18,5 @@ export default function Wrapper({ children }) {
             <ScrollToTop />
             <ToastContainer />
         </>
-    )
+    );
 }

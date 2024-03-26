@@ -8,5 +8,5 @@ export default function PurchaseGuide() {
             <SEO pageTitle={'Purchase Guide'} />
             <PurchaseGuideMain />
         </Wrapper>
-    )
+    );
 }

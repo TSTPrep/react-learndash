@@ -8,7 +8,7 @@ const HomeSeven = () => {
             <SEO pageTitle={'Kindergarten'} />
             <HomeKindergarten />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default HomeSeven;

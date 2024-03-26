@@ -8,5 +8,5 @@ export default function GalleryMasonry() {
             <SEO pageTitle={'Gallery Masonry'} />
             <GalleryMasonryMain />
         </Wrapper>
-    )
+    );
 }

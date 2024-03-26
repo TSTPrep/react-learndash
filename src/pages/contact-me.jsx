@@ -6,9 +6,9 @@ const ContactMe = () => {
     return (
         <Wrapper>
             <SEO pageTitle={'Contact Me'} />
-            <ContactMeMain/>
+            <ContactMeMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default ContactMe;

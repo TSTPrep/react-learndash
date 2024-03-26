@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 function useScrollToTop() {
     const [stick, setStick] = useState(false);
     const onClickHandler = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     useEffect(() => {
@@ -16,9 +16,9 @@ function useScrollToTop() {
             }
         };
 
-        window.addEventListener("scroll", scrollHandler);
+        window.addEventListener('scroll', scrollHandler);
         return () => {
-            window.removeEventListener("scroll", scrollHandler);
+            window.removeEventListener('scroll', scrollHandler);
         };
     }, [stick]);
 

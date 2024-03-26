@@ -8,7 +8,7 @@ const HomeFive = () => {
             <SEO pageTitle={'Kitchen Coach'} />
             <HomeKitchen />
         </Wrapper>
-    )
+    );
 };
 
 export default HomeFive;

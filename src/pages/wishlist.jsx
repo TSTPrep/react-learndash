@@ -6,9 +6,9 @@ const Wishlist = () => {
     return (
         <Wrapper>
             <SEO pageTitle={'Wishlist'} />
-            <WishlistMain/>
+            <WishlistMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default Wishlist;

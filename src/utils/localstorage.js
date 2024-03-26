@@ -1,7 +1,7 @@
 export const setLocalStorage = (name, items) => {
     localStorage.setItem(name, JSON.stringify(items));
-}
-export const getLocalStorage = (name) => {
+};
+export const getLocalStorage = name => {
     const data = localStorage.getItem(name);
     if (data) {
         return JSON.parse(data);
@@ -9,4 +9,4 @@ export const getLocalStorage = (name) => {
         localStorage.setItem(name, JSON.stringify([]));
         return [];
     }
-}
+};

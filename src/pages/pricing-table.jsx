@@ -8,5 +8,5 @@ export default function PricingTable() {
             <SEO pageTitle={'Pricing Table'} />
             <PricingTableMain />
         </Wrapper>
-    )
+    );
 }

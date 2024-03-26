@@ -12,7 +12,7 @@ import Footer from './footer';
 export default function HomeLanding() {
     return (
         <div className='sticky-header'>
-            <div id="main-wrapper" className="main-wrapper">
+            <div id='main-wrapper' className='main-wrapper'>
                 <Header />
                 <HeroArea />
                 <CounterUpArea />
@@ -25,5 +25,5 @@ export default function HomeLanding() {
                 <Footer />
             </div>
         </div>
-    )
+    );
 }

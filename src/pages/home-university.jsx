@@ -8,7 +8,7 @@ const HomeThree = () => {
             <SEO pageTitle={'University'} />
             <HomeUniversity />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default HomeThree;

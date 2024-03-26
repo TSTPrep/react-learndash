@@ -8,33 +8,33 @@ import BlogDetailsMain from '../../components/blog-details';
 const DynamicBlogDetails = () => {
     const router = useRouter();
     const { id } = router.query;
-    const blog = blog_data.find(item => Number(item.id) === Number(id))
+    const blog = blog_data.find(item => Number(item.id) === Number(id));
     return (
         <Wrapper>
             <SEO pageTitle={'Blog Details'} />
             <BlogDetailsMain blog={blog} />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default DynamicBlogDetails;
 
 export async function getStaticPaths() {
-    const paths = blog_data.map((blog) => {
+    const paths = blog_data.map(blog => {
         return {
-            params:{
-                id:`${blog.id}`
-            }
-        }
-    })
+            params: {
+                id: `${blog.id}`,
+            },
+        };
+    });
     return {
-      paths,
-      fallback: false,
-    }
-  }
+        paths,
+        fallback: false,
+    };
+}
 
 export async function getStaticProps(context) {
     return {
-        props: {}
-    }
+        props: {},
+    };
 }

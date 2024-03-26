@@ -8,7 +8,7 @@ const BlogStandard = () => {
             <SEO pageTitle={'Blog Standard'} />
             <BlogMain />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default BlogStandard;

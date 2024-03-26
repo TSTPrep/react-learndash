@@ -8,5 +8,5 @@ export default function PrivacyPolicy() {
             <SEO pageTitle={'Privacy Policy'} />
             <PrivacyPolicyMain />
         </Wrapper>
-    )
+    );
 }

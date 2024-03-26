@@ -12,7 +12,7 @@ const CourseDetails = () => {
             <SEO pageTitle={'Course Details'} />
             <CourseDetailsMain course={course} />
         </Wrapper>
-    )
-}
+    );
+};
 
 export default CourseDetails;

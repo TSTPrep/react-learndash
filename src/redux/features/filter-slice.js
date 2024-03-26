@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export const filterSlice = createSlice({
-    name: "filter",
+    name: 'filter',
     initialState: {
         categories: [],
         instructors: [],
@@ -10,15 +10,15 @@ export const filterSlice = createSlice({
         price: 0,
         page_count: 0,
         item_offset: 0,
-        forcePage: null
+        forcePage: null,
     },
     reducers: {
         add_category: (state, { payload }) => {
-            if (payload.changeType === "remove") {
+            if (payload.changeType === 'remove') {
                 state.categories = state.categories.filter(
-                    (category) => category !== payload.item
+                    category => category !== payload.item
                 );
-            } else if (payload.changeType === "added") {
+            } else if (payload.changeType === 'added') {
                 state.categories.push(payload.item);
             }
         },
@@ -28,7 +28,7 @@ export const filterSlice = createSlice({
                 state.instructors.push(payload.instructor);
             } else {
                 state.instructors = state.instructors.filter(
-                    (instructor) => instructor !== payload.instructor
+                    instructor => instructor !== payload.instructor
                 );
             }
         },
@@ -37,9 +37,7 @@ export const filterSlice = createSlice({
             if (!isExist) {
                 state.levels.push(payload.level);
             } else {
-                state.levels = state.levels.filter(
-                    (level) => level !== payload.level
-                );
+                state.levels = state.levels.filter(level => level !== payload.level);
             }
         },
         add_language: (state, { payload }) => {
@@ -48,7 +46,7 @@ export const filterSlice = createSlice({
                 state.languages.push(payload.language);
             } else {
                 state.languages = state.languages.filter(
-                    (language) => language !== payload.language
+                    language => language !== payload.language
                 );
             }
         },
@@ -70,8 +68,8 @@ export const filterSlice = createSlice({
             state.languages = [];
             state.levels = [];
             state.price = payload;
-        }
-    }
+        },
+    },
 });
 
 export const {
@@ -83,7 +81,7 @@ export const {
     reset_filter,
     add_count_page,
     add_item_offset,
-    add_force_page
+    add_force_page,
 } = filterSlice.actions;
 
 export default filterSlice.reducer;
