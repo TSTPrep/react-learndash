@@ -1,170 +1,170 @@
 
-// .content-box {
-//   background: #eaeaea;
-//   padding: 100px 100px;
-//   margin: -5px 0px 25px -15px;
-// }
+.content-box {
+  background: #eaeaea;
+  padding: 100px 100px;
+  margin: -5px 0px 25px -15px;
+}
 
 
-// .incorrect, .delete {
-//   text-decoration: line-through;
-//   border-bottom: 1px solid #c38181;
-//   color: #d5bbbb !important;
-//   padding: 0 3px;
-// }
+.incorrect, .delete {
+  text-decoration: line-through;
+  border-bottom: 1px solid #c38181;
+  color: #d5bbbb !important;
+  padding: 0 3px;
+}
 
-// .garbled{
-//   // text-decoration: underline;
-//   // text-decoration-style: wavy !important;
-//   // text-decoration-thickness: 1px;
-//   text-decoration-line: grammar-error;
-//   color: #d5baba;
-// }
+.garbled{
+  // text-decoration: underline;
+  // text-decoration-style: wavy !important;
+  // text-decoration-thickness: 1px;
+  text-decoration-line: grammar-error;
+  color: #d5baba;
+}
 
-// .corrected {
-//   border-bottom: 1px solid #9ec59e;
-//   padding-left: 3px;
-//   font-weight: 600;
-// }
+.corrected {
+  border-bottom: 1px solid #9ec59e;
+  padding-left: 3px;
+  font-weight: 600;
+}
 
-// .space {
-//   background: pink;
-//   border: 1px solid pink;
-//   padding-left: 3px;
-// }
+.space {
+  background: pink;
+  border: 1px solid pink;
+  padding-left: 3px;
+}
 
-// .addition {
-//   color: #ff6700;
-//   background: #ffd7b5;
-//   border: 1px solid #ff6700;
-//   padding: 0 3px;
-// }
+.addition {
+  color: #ff6700;
+  background: #ffd7b5;
+  border: 1px solid #ff6700;
+  padding: 0 3px;
+}
 
-// .hovertextp {
-//   position: relative;
-//   display: inline-block;
+.hovertextp {
+  position: relative;
+  display: inline-block;
 
-//   .hovertext {
-//     &:before {
-//       content: "Feedback: " attr(data-hover);
-//       visibility: hidden;
-//       background-color: rgba(0, 0, 0, 0.8);
-//       color: #fff;
-//       text-align: center;
-//       border-radius: 6px;
-//       padding: 5px 0; /* Position the tooltip */
-//       position: absolute;
-//       display: block;
-//       z-index: 9999;
-//       top: auto; /* Reset the top property */
-//       overflow: visible;
-//       width: max-content;
-//       max-width: 200px;
-//     }
+  .hovertext {
+    &:before {
+      content: "Feedback: " attr(data-hover);
+      visibility: hidden;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0; /* Position the tooltip */
+      position: absolute;
+      display: block;
+      z-index: 9999;
+      top: auto; /* Reset the top property */
+      overflow: visible;
+      width: max-content;
+      max-width: 200px;
+    }
 
-//     &:hover:before {
-//       opacity: 1;
-//       visibility: visible;
-//     }
-//   }
-// }
-
-
-// .nopaque {
-//   opacity: 0.2;
-// }
-
-// .opaque {
-//   opacity: 1.0;
-//   background: #fff;
-// }
+    &:hover:before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
 
 
-// .waf-menu.waf-menu {
+.nopaque {
+  opacity: 0.2;
+}
 
-//   li {
-//     padding-top: 10px;
-
-//     &:after {
-//       content: '';
-//     }
-
-//     &:hover {
-//       background-color: #f0f0f0;
-//     }
-
-//     li {
-//       padding-top: 0;
-//       margin-top: 0;
-//     }
-//   }
-
-//   a {
-//     display: block;
-//     cursor: pointer;
-//     padding: 5px;
-//   }
-
-//   ul {
-//     display: none;
-//     list-style-type: none;
-//     padding: 0 0 15px;
-//     margin: 0;
-
-//     ul {
-//       padding: 0 0 5px;
-//     }
-
-//     &.active {
-//       display: block;
-//     }
-//   }
-// }
+.opaque {
+  opacity: 1.0;
+  background: #fff;
+}
 
 
-// .waf-textarea {
-//   textarea {
-//     background: #f5f4f4;
-//   }
-// }
+.waf-menu.waf-menu {
 
-// /*----------- clear theme elements for Writing AI evaluation -------------*/
+  li {
+    padding-top: 10px;
 
-// .header-mainmenu,
-// .edu-breadcrumb-area,
-// .nav-tabs,
-// .edu-course-widget,
-// .edu-footer,
-// h3.heading-title{  
+    &:after {
+      content: '';
+    }
 
-// 	display: none;
-// }
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    li {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  a {
+    display: block;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  ul {
+    display: none;
+    list-style-type: none;
+    padding: 0 0 15px;
+    margin: 0;
+
+    ul {
+      padding: 0 0 5px;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
 
 
-// .col-lg-8{
-// 	width: 100%
-// }
+.waf-textarea {
+  textarea {
+    background: #f5f4f4;
+  }
+}
 
-// .course-details-content{
-// 	max-width: 900px;
-// 	margin: 0 auto;
-// 	border: 1px solid #eaeaea;
-//     	border-radius: 5px;
-//     	padding: 0 50px 50px 50px;
-// 	box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
-// }
+/*----------- clear theme elements for Writing AI evaluation -------------*/
 
-// .waf-textarea textarea{
-// 	border: 1px solid #eaeaea !important;
-//     	border-radius: 5px;
-// 	height: 300px;
-// 	background-color: #fff ;
-// }
+.header-mainmenu,
+.edu-breadcrumb-area,
+.nav-tabs,
+.edu-course-widget,
+.edu-footer,
+h3.heading-title{  
 
-// button{
-// 	margin-top: 30px;
-// }
+	display: none;
+}
 
-// label{
-// 	padding-left: 25px;
-// }
+
+.col-lg-8{
+	width: 100%
+}
+
+.course-details-content{
+	max-width: 900px;
+	margin: 0 auto;
+	border: 1px solid #eaeaea;
+    	border-radius: 5px;
+    	padding: 0 50px 50px 50px;
+	box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
+}
+
+.waf-textarea textarea{
+	border: 1px solid #eaeaea !important;
+    	border-radius: 5px;
+	height: 300px;
+	background-color: #fff ;
+}
+
+button{
+	margin-top: 30px;
+}
+
+label{
+	padding-left: 25px;
+}
