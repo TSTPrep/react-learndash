@@ -20,6 +20,8 @@ const DynamicCourseDetails = ({ course }) => {
 export default DynamicCourseDetails;
 
 export async function getStaticPaths() {
+    return { paths: [], fallback: 'blocking' };
+
     const courses = await getAllCourses();
 
     const paths = courses?.nodes?.map(node => {

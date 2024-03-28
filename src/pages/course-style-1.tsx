@@ -12,7 +12,7 @@ const CourseStyleOne = ({ courses }) => {
     return (
         <Wrapper>
             <SEO pageTitle={'1Course Style 1'} />
-            <CourseStyleOneMain courses={courses.nodes} />
+            {courses ? <CourseStyleOneMain courses={courses.nodes} /> : 'No courses'}
         </Wrapper>
     );
 };
@@ -20,10 +20,10 @@ const CourseStyleOne = ({ courses }) => {
 export default CourseStyleOne;
 
 // This gets called on every request
-export async function getStaticProps() {
-    // Fetch data from external API
-    const courses = await getAllCourses();
+// export async function getStaticProps() {
+//     // Fetch data from external API
+//     const courses = await getAllCourses();
 
-    // Pass data to the page via props
-    return { props: { courses } };
-}
+//     // Pass data to the page via props
+//     return { props: { courses } };
+// }
