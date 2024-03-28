@@ -22,7 +22,7 @@ export const store = configureStore({
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({
             serializableCheck: false,
-        }),
+        }).concat(api.middleware),
 });
 
 export type AppState = ReturnType<typeof store.getState>;

@@ -34,7 +34,7 @@ export const wishlistSlice = createSlice({
             setLocalStorage('wishlist_items', state.wishlist);
         },
         get_wishlist_products: state => {
-            state.wishlist = getLocalStorage('wishlist_items');
+            state.wishlist = getLocalStorage('wishlist_items') ?? [];
         },
     },
 });

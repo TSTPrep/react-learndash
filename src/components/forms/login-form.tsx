@@ -1,29 +1,52 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import useFirebase from '../../hooks/use-firebase';
 import { loginSchema } from '../../utils/validation-schema';
 import ErrorMsg from './error-msg';
 import { useState } from 'react';
+import { useLoginMutation } from '../../redux/features/api-slice';
+import { signIn } from '../../redux/features/auth-slice';
+import { useDispatch } from 'react-redux';
 
 const LoginForm = () => {
     const [showPass, setShowPass] = useState(false);
+    const [formError, setFormError] = useState(false);
     // use firebase
-    const { loginWithEmailPassword, resetPassword } = useFirebase();
+    const [login] = useLoginMutation();
+    const dispatch = useDispatch();
     // use formik
-    const { handleChange, handleSubmit, handleBlur, errors, values, touched } = useFormik(
-        {
-            initialValues: { email: '', password: '' },
-            validationSchema: loginSchema,
-            onSubmit: (values, { resetForm }) => {
-                loginWithEmailPassword(values.email, values.password);
-                resetForm();
-            },
-        }
-    );
+    const {
+        handleChange,
+        handleSubmit,
+        handleBlur,
+        errors,
+        values,
+        touched,
+        isSubmitting,
+    } = useFormik({
+        initialValues: { email: '', password: '' },
+        validationSchema: loginSchema,
+        onSubmit: async (values, { resetForm }) => {
+            setFormError(false);
+            const res = await login({
+                username: values.email,
+                password: values.password,
+            });
+
+            if ('error' in res) {
+                setFormError(true);
+                return;
+            }
+
+            console.log(res);
+            dispatch(signIn(res.data.authToken));
+
+            resetForm();
+        },
+    });
 
     // handleResetPass
-    const handleResetPass = email => {
-        resetPassword(email);
+    const handleResetPass = (email: string) => {
+        // resetPassword(email);
     };
     return (
         <form onSubmit={handleSubmit}>
@@ -69,9 +92,14 @@ const LoginForm = () => {
                     Lost your password?
                 </a>
             </div>
+            {formError && <ErrorMsg error='Invalid email or password' />}
 
             <div className='form-group'>
-                <button type='submit' className='edu-btn btn-medium'>
+                <button
+                    type='submit'
+                    className='edu-btn btn-medium'
+                    disabled={isSubmitting}
+                >
                     Sign in <i className='icon-4'></i>
                 </button>
             </div>

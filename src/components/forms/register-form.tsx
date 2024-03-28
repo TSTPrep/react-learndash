@@ -1,22 +1,26 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import useFirebase from '../../hooks/use-firebase';
 import { registerSchema } from '../../utils/validation-schema';
 import ErrorMsg from './error-msg';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRegisterMutation } from '../../redux/features/api-slice';
 
 const RegisterForm = () => {
     const [showPass, setShowPass] = useState(false);
     // register With Email Password
-    const { registerWithEmailPassword } = useFirebase();
+    const [register] = useRegisterMutation();
     // use formik
     const { handleChange, handleSubmit, handleBlur, errors, values, touched } = useFormik(
         {
             initialValues: { name: '', email: '', password: '', terms: false },
             validationSchema: registerSchema,
-            onSubmit: (values, { resetForm }) => {
-                registerWithEmailPassword(values.email, values.password, values.name);
+            onSubmit: async (values, { resetForm }) => {
+                await register({
+                    email: values.email,
+                    username: values.name,
+                    password: values.password,
+                });
                 resetForm();
             },
         }

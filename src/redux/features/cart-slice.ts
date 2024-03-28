@@ -63,7 +63,7 @@ export const cartSlice = createSlice({
         },
 
         get_cart_courses: state => {
-            state.cartCourses = getLocalStorage('cart_items');
+            state.cartCourses = getLocalStorage('cart_items') ?? [];
         },
     },
 });
