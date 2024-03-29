@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 import '../../utils/jquery';
+import Sentence, { SentenceData } from './writing-evaluation/Sentence';
+import { useEvaluateMutation } from '../../redux/features/api-slice';
+import { Evaluation } from '../../redux/features/api.types';
+
+// TODO: move this in a scss file
+const html2 =
+    '<style>body{\n    font-family: Arial, sans-serif;\n    font-size: 15px;\n    }\n\n    .content-box{\n    background: white;\n    padding: 100px 100px;\n    }\n\n\n    h2{\n    font-weight: 700;\n    font-size: 18px;\n    }\n\n    .incorrect,\n    .deletion{\n    text-decoration: line-through;\n    border-bottom: 2px solid #c38181;\n    color: #d5bbbb !important;\n    padding: 0 3px;\n    display: inline;\n    }\n\n    .correct{\n    border-bottom: 2px solid #9ec59e;\n    padding: 0 3px;\n    font-weight: 600;\n    display: inline;\n    }\n\n    .addition{\n    color: #ff6700;\n    background: #ffd7b5;\n    border: 1px solid #ff6700;\n    padding: 0 3px;\n    display: inline;\n    }\n\n    .nochange{\n    display: inline;\n    padding: 0 3px;\n    }\n\n</style>';
 
 const WritingEvaluationForm = () => {
     const [essay, setEssay] = useState('');
     const [task, setTask] = useState('');
 
     const [loading, setLoading] = useState(false);
-    const [response, setResponse] = useState(null);
+    const [response, setResponse] = useState<Evaluation.EvaluateResponse | null>(null);
     const [error, setError] = useState(null);
+
+    const [evaluate] = useEvaluateMutation();
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -15,29 +24,16 @@ const WritingEvaluationForm = () => {
         setLoading(true);
 
         const demo = false;
+        const response = await evaluate({
+            essay,
+            task,
+            demo,
+            connection_id: 1,
+        });
 
-        const response = await fetch(
-            'https://TSTPrep-tstprep-writing.hf.space/get_passage_html',
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: 'Bearer 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',
-                },
-                body: JSON.stringify({
-                    essay,
-                    task,
-                    demo,
-                }),
-            }
-        );
-        if (!response.ok) throw new Error(response.statusText);
+        if ('error' in response) throw new Error(response.error[0]);
 
-        const item = await response.json();
-
-        console.log(item);
-
-        setResponse(item.passage_html + item.indicator_html);
+        setResponse(response.data);
         setLoading(false);
     };
 
@@ -91,10 +87,16 @@ const WritingEvaluationForm = () => {
             {loading && <p>Loading...</p>}
 
             {response && (
-                <div
-                    dangerouslySetInnerHTML={{ __html: response }}
-                    onClick={e => toggleSubmenu(e)}
-                />
+                <>
+                    <div
+                        // TODO: remove this div
+                        dangerouslySetInnerHTML={{ __html: html2 }}
+                        onClick={e => toggleSubmenu(e)}
+                    />
+                    {response.operations.map((d, i) => (
+                        <Sentence key={i} data={d} index={i} />
+                    ))}
+                </>
             )}
 
             {error && <p>{error}</p>}
