@@ -1,20 +1,6 @@
-export type SentenceFragmentType = 'nochange' | 'addition' | 'deletion' | 'replacement';
-export type SingleFragmentType = 'nochange' | 'addition' | 'deletion';
-export type DoubleFragmentType = 'replacement';
+import { Evaluation } from '../../../redux/features/api.types';
 
-export type SentenceFragmentData =
-    | {
-          op: SingleFragmentType;
-          word: string;
-          replace?: undefined;
-      }
-    | {
-          op: DoubleFragmentType;
-          word: string;
-          replace: string;
-      };
-
-type SentenceFragmentProps = SentenceFragmentData;
+type SentenceFragmentProps = Evaluation.SentenceFragmentData;
 
 export default function SentenceFragment({ op, word, replace }: SentenceFragmentProps) {
     if (!replace) {

@@ -1,6 +1,7 @@
-import SentenceFragment, { SentenceFragmentData } from './SentenceFragment';
+import { Evaluation } from '../../../redux/features/api.types';
+import SentenceFragment from './SentenceFragment';
 
-export type SentenceData = SentenceFragmentData[];
+export type SentenceData = Evaluation.SentenceData;
 
 type SentenceProps = {
     index: number;
