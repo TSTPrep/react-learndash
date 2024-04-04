@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import '../../utils/jquery';
 import Sentence from './writing-evaluation/Sentence';
-import { useEvaluateMutation } from '../../redux/features/api-slice';
+import { useEvaluateMutation, useFeedbackMutation } from '../../redux/features/api-slice';
 import { Evaluation } from '../../redux/features/api.types';
 import Timer from './writing-evaluation/Timer';
 
@@ -9,12 +9,16 @@ const WritingEvaluationForm = () => {
     const [essay, setEssay] = useState('');
     const [task, setTask] = useState('');
 
-    const [response, setResponse] = useState<Evaluation.EvaluateResponse | null>(null);
+    const [evaluation, setEvaluation] = useState<Evaluation.EvaluateResponse | null>(
+        null
+    );
+    const [feedback, setFeedback] = useState<Evaluation.FeedbackResponse | null>(null);
 
     const [evaluate, { isLoading, isError, error, isUninitialized }] =
         useEvaluateMutation();
+    const [getFeedback, { isLoading: isFeedbackLoading }] = useFeedbackMutation();
 
-    const handleSubmit = async e => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const demo = false;
@@ -27,7 +31,18 @@ const WritingEvaluationForm = () => {
 
         if ('error' in response) throw new Error(response.error[0]);
 
-        setResponse(response.data);
+        setEvaluation(response.data);
+
+        const response2 = await getFeedback({
+            task,
+            demo,
+            connection_id: 1,
+            result_json: response.data.result_json,
+        });
+
+        if ('error' in response2) throw new Error(response2.error[0]);
+
+        setFeedback(response2.data);
     };
 
     return (
@@ -40,7 +55,7 @@ const WritingEvaluationForm = () => {
                             name='essay'
                             // value={essay}
                             // value="Recently there has been a debate as to the PEDs. More specifically, in regard to the passages, the author puts forth the idea that this drug should be prohibited."
-                            placeholder='Paste your TOEFL integrated writing task here'
+                            placeholder='Paste or write your essay here'
                             onBlur={e => setEssay(e.target.value)}
                             data-gramm='false'
                             data-gramm_editor='false'
@@ -59,7 +74,7 @@ const WritingEvaluationForm = () => {
                             name='task'
                             // value={task}
                             // value="Everyone wants to get in better shape, but it usually takes a tremendous amount of time and effort. "
-                            placeholder='Paste or write your essay here'
+                            placeholder='Paste your TOEFL integrated writing task here'
                             onBlur={e => setTask(e.target.value)}
                             data-gramm='false'
                             data-gramm_editor='false'
@@ -104,8 +119,43 @@ const WritingEvaluationForm = () => {
             ) : isError ? (
                 <p>{error[0]}</p>
             ) : (
-                response &&
-                response.operations.map((d, i) => <Sentence key={i} data={d} index={i} />)
+                <>
+                    <p>
+                        {evaluation &&
+                            evaluation.operations.map((d, i) => (
+                                <Sentence key={i} data={d} index={i} />
+                            ))}
+                    </p>
+                    {isFeedbackLoading ? (
+                        <>
+                            <p id='elapsedTime' style={{ marginBottom: 0 }}>
+                                Elapsed time: <Timer /> seconds
+                            </p>
+                            <p id='waitingTime' style={{ marginBottom: 0 }}>
+                                Waiting on feedback
+                            </p>
+                        </>
+                    ) : (
+                        feedback && (
+                            <>
+                                <h5>Grammar</h5>
+                                <p>{feedback.feedback.grammar}</p>
+                                <h5>Spelling</h5>
+                                <p>{feedback.feedback.spelling}</p>
+                                <h5>Punctuation</h5>
+                                <p>{feedback.feedback.punctuation}</p>
+                                <h5>Style</h5>
+                                <p>{feedback.feedback.style}</p>
+                                <h5>Vocabulary</h5>
+                                <p>{feedback.feedback.vocabulary}</p>
+                                <h5>Clarity & Coherence</h5>
+                                <p>{feedback.feedback.clarity_coherence}</p>
+                                <h5>Next steps</h5>
+                                <p>{feedback.feedback.next_steps}</p>
+                            </>
+                        )
+                    )}
+                </>
             )}
         </div>
     );
