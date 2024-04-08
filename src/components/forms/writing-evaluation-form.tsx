@@ -16,7 +16,10 @@ const WritingEvaluationForm = () => {
 
     const [evaluate, { isLoading, isError, error, isUninitialized }] =
         useEvaluateMutation();
-    const [getFeedback, { isLoading: isFeedbackLoading }] = useFeedbackMutation();
+    const [
+        getFeedback,
+        { isLoading: isFeedbackLoading, isError: isFeedbackError, error: feedbackError },
+    ] = useFeedbackMutation();
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -29,7 +32,7 @@ const WritingEvaluationForm = () => {
             connection_id: 1,
         });
 
-        if ('error' in response) throw new Error(response.error[0]);
+        if ('error' in response) return;
 
         setEvaluation(response.data);
 
@@ -40,7 +43,7 @@ const WritingEvaluationForm = () => {
             result_json: response.data.result_json,
         });
 
-        if ('error' in response2) throw new Error(response2.error[0]);
+        if ('error' in response2) return;
 
         setFeedback(response2.data);
     };
@@ -135,25 +138,16 @@ const WritingEvaluationForm = () => {
                                 Waiting on feedback
                             </p>
                         </>
+                    ) : isFeedbackError ? (
+                        <p>{feedbackError[0]}</p>
                     ) : (
-                        feedback && (
-                            <>
-                                <h5>Grammar</h5>
-                                <p>{feedback.feedback.grammar}</p>
-                                <h5>Spelling</h5>
-                                <p>{feedback.feedback.spelling}</p>
-                                <h5>Punctuation</h5>
-                                <p>{feedback.feedback.punctuation}</p>
-                                <h5>Style</h5>
-                                <p>{feedback.feedback.style}</p>
-                                <h5>Vocabulary</h5>
-                                <p>{feedback.feedback.vocabulary}</p>
-                                <h5>Clarity & Coherence</h5>
-                                <p>{feedback.feedback.clarity_coherence}</p>
-                                <h5>Next steps</h5>
-                                <p>{feedback.feedback.next_steps}</p>
-                            </>
-                        )
+                        feedback &&
+                        Object.entries(feedback.feedback).map(([title, content]) => (
+                            <div key={title}>
+                                <h5>{title}</h5>
+                                <p>{content}</p>
+                            </div>
+                        ))
                     )}
                 </>
             )}
