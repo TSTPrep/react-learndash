@@ -3,7 +3,7 @@ import { Wrapper } from '../../layout';
 import SEO from '../../components/seo';
 import WritingEvaluationForm from '../../components/forms/writing-evaluation-form';
 
-const WaiOne = () => {
+const WaiTwo = () => {
     return (
         <Wrapper>
             <SEO pageTitle={'Course Details'} />
@@ -23,7 +23,7 @@ const WaiOne = () => {
                                             TST Prep&apos;s Writing Evaluation Demo
                                             v1.0.6b
                                         </h5>
-                                        <WritingEvaluationForm connection_id={1} />
+                                        <WritingEvaluationForm connection_id={2} />
                                     </div>
                                 </div>
                             </div>
@@ -35,4 +35,4 @@ const WaiOne = () => {
     );
 };
 
-export default WaiOne;
+export default WaiTwo;
