@@ -5,7 +5,11 @@ import { useEvaluateMutation, useFeedbackMutation } from '../../redux/features/a
 import { Evaluation } from '../../redux/features/api.types';
 import Timer from './writing-evaluation/Timer';
 
-const WritingEvaluationForm = () => {
+type WritingEvaluationFormProps = {
+    connection_id: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+};
+
+const WritingEvaluationForm = ({ connection_id }: WritingEvaluationFormProps) => {
     const [essay, setEssay] = useState('');
     const [task, setTask] = useState('');
 
@@ -29,7 +33,7 @@ const WritingEvaluationForm = () => {
             essay,
             task,
             demo,
-            connection_id: 1,
+            connection_id,
         });
 
         if ('error' in response) return;

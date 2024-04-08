@@ -109,7 +109,7 @@ const CourseDetailsArea = ({ course }) => {
                                             </ul>
                                             <p>{course_desc_3}</p>
 
-                                            <WritingEvaluationForm />
+                                            <WritingEvaluationForm connection_id={1} />
                                         </div>
                                     </div>
                                 </div>
