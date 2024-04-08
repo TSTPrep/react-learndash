@@ -45,15 +45,7 @@ export namespace Evaluation {
     };
 
     export type FeedbackResponse = {
-        feedback: {
-            grammar: string;
-            spelling: string;
-            punctuation: string;
-            style: string;
-            vocabulary: string;
-            clarity_coherence: string;
-            next_steps: string;
-        };
+        feedback: Record<string, string>;
     };
 }
 
