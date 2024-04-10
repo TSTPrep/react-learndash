@@ -1,6 +1,5 @@
 import React, { FormEvent, useState } from 'react';
 import '../../utils/jquery';
-import Sentence from '../writing-evaluation/Sentence';
 import {
     useEvaluateMutation,
     useEvaluationTitleQuery,
@@ -10,6 +9,16 @@ import { Evaluation } from '../../redux/features/api.types';
 import Timer from '../writing-evaluation/Timer';
 import EvaluationResponse from '../writing-evaluation/EvaluationResponse';
 import FeedbackResponse from '../writing-evaluation/FeedbackResponse';
+
+function randomString(length: number): string {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
 
 type FormProps = {
     loading: boolean;
@@ -136,6 +145,29 @@ const WritingEvaluation = ({ connection_id }: WritingEvaluationProps) => {
         setFeedback(response2.data);
     };
 
+    const handleDownload = () => {
+        const filename = 'eval_' + randomString(6) + '.json';
+        const json = JSON.stringify(
+            {
+                evaluation: evaluation,
+                feedback: feedback,
+                preset: titleData.preset,
+                connection_id,
+            },
+            null,
+            4
+        );
+        const blob = new Blob([json], { type: 'application/json' });
+        const href = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = href;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(href);
+    };
+
     if (!titleData) {
         return <>Loading</>;
     }
@@ -151,25 +183,26 @@ const WritingEvaluation = ({ connection_id }: WritingEvaluationProps) => {
                     <p>{error[0]}</p>
                 ) : (
                     <>
-                        <EvaluationResponse evaluation={evaluation} />
-                        <div className='feedback'>
-                            {isFeedbackLoading ? (
+                        {evaluation && <EvaluationResponse evaluation={evaluation} />}
+                        {isFeedbackLoading ? (
+                            <>
+                                <p id='elapsedTime' style={{ marginBottom: 0 }}>
+                                    Elapsed time: <Timer /> seconds
+                                </p>
+                                <p id='waitingTime' style={{ marginBottom: 0 }}>
+                                    Waiting on feedback
+                                </p>
+                            </>
+                        ) : isFeedbackError ? (
+                            <p>{feedbackError[0]}</p>
+                        ) : (
+                            feedback && (
                                 <>
-                                    <p id='elapsedTime' style={{ marginBottom: 0 }}>
-                                        Elapsed time: <Timer /> seconds
-                                    </p>
-                                    <p id='waitingTime' style={{ marginBottom: 0 }}>
-                                        Waiting on feedback
-                                    </p>
-                                </>
-                            ) : isFeedbackError ? (
-                                <p>{feedbackError[0]}</p>
-                            ) : (
-                                feedback && (
                                     <FeedbackResponse feedback={feedback.feedback} />
-                                )
-                            )}
-                        </div>
+                                    <button onClick={handleDownload}>Download</button>
+                                </>
+                            )
+                        )}
                     </>
                 )}
             </div>

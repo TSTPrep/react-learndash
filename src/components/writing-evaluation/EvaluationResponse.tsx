@@ -17,10 +17,9 @@ export default function EvaluationResponse({ evaluation }: EvaluationResponsePro
                 <button onClick={() => setViewType('corrected')}>Corrected Essay</button>
             </div>
             <p>
-                {evaluation &&
-                    evaluation.operations.map((d, i) => (
-                        <Sentence key={i} data={d} index={i} viewType={viewType} />
-                    ))}
+                {evaluation.operations.map((d, i) => (
+                    <Sentence key={i} data={d} index={i} viewType={viewType} />
+                ))}
             </p>
         </>
     );
