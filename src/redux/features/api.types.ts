@@ -25,6 +25,15 @@ export namespace Evaluation {
         }[];
     };
 
+    export type TitleRequest = {
+        connection_id: number;
+    };
+
+    export type TitleResponse = {
+        title: string;
+        preset: string;
+    };
+
     export type EvaluateRequest = {
         essay: string;
         task: string;

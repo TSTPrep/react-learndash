@@ -3,7 +3,7 @@ import CourseDetailsSidebar from '../common/sidebar/course-details-sidebar';
 import CommentFormCourse from '../forms/comment-form-course';
 import SingleComment from './single-comment';
 import SingleProgressbar from './single-progressbar';
-import WritingEvaluationForm from '../forms/writing-evaluation-form';
+import WritingEvaluation from '../forms/writing-evaluation-form';
 
 const CourseDetailsArea = ({ course }) => {
     const {
@@ -109,7 +109,7 @@ const CourseDetailsArea = ({ course }) => {
                                             </ul>
                                             <p>{course_desc_3}</p>
 
-                                            <WritingEvaluationForm connection_id={1} />
+                                            <WritingEvaluation connection_id={1} />
                                         </div>
                                     </div>
                                 </div>
