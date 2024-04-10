@@ -141,7 +141,7 @@
     background-color: #fff;
 }
 
-button {
+.edu-btn {
     margin-top: 30px;
 }
 
@@ -186,5 +186,44 @@ label {
     .nochange {
         display: inline;
         padding: 0 3px 0 0;
+    }
+
+    .feedback {
+        .tab-wrapper {
+            display: flex;
+            margin: 0;
+        }
+
+        .tabs {
+            flex-grow: 0;
+            min-width: 210px;
+            width: 330px;
+            border-right: 1px solid #ddd;
+        }
+
+        .tab-link {
+            display: block;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab-link.active,
+        .tab-link:hover {
+            background-color: #ccc;
+        }
+
+        .tab-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .tab:not(.active) {
+            display: none;
+        }
     }
 }

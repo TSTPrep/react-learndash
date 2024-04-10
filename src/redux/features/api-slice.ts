@@ -61,6 +61,9 @@ type EvaluationQuery<QueryArg, ResultType> = BaseEndpointDefinition<
 >['queryFn'];
 
 function evaluationQuery(
+    url: 'get_title'
+): EvaluationQuery<Evaluation.TitleRequest, Evaluation.TitleResponse>;
+function evaluationQuery(
     url: 'correct_sent'
 ): EvaluationQuery<Evaluation.EvaluateRequest, Evaluation.EvaluateResponse>;
 function evaluationQuery(
@@ -86,6 +89,11 @@ function evaluationQuery(url: string) {
 export const api = createApi({
     baseQuery,
     endpoints: builder => ({
+        evaluationTitle: builder.query<Evaluation.TitleResponse, Evaluation.TitleRequest>(
+            {
+                queryFn: evaluationQuery('get_title'),
+            }
+        ),
         evaluate: builder.mutation<
             Evaluation.EvaluateResponse,
             Evaluation.EvaluateRequest
@@ -115,6 +123,7 @@ export const api = createApi({
 });
 
 export const {
+    useEvaluationTitleQuery,
     useEvaluateMutation,
     useFeedbackMutation,
     useLoginMutation,

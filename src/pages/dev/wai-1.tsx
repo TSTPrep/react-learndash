@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper } from '../../layout';
 import SEO from '../../components/seo';
-import WritingEvaluationForm from '../../components/forms/writing-evaluation-form';
+import WritingEvaluation from '../../components/forms/writing-evaluation-form';
 
 const WaiOne = () => {
     return (
@@ -19,11 +19,7 @@ const WaiOne = () => {
                             >
                                 <div className='course-tab-content'>
                                     <div className='course-overview'>
-                                        <h5 className='title'>
-                                            TST Prep&apos;s Writing Evaluation Demo
-                                            v1.0.6b
-                                        </h5>
-                                        <WritingEvaluationForm connection_id={1} />
+                                        <WritingEvaluation connection_id={1} />
                                     </div>
                                 </div>
                             </div>
