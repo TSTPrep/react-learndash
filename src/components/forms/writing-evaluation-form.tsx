@@ -136,7 +136,7 @@ const WritingEvaluation = ({ connection_id }: WritingEvaluationProps) => {
         const response2 = await getFeedback({
             task,
             demo,
-            connection_id: 1,
+            connection_id: connection_id,
             result_json: response.data.result_json,
         });
 
