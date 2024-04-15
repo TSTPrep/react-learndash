@@ -44,19 +44,21 @@ label {
         color: #d5bbbb !important;
         padding: 0 3px 0 0;
         display: inline;
+        background: #c3818108;
     }
     .correct {
         border-bottom: 2px solid #9ec59e;
         padding: 0 3px 0 0;
         font-weight: 600;
         display: inline;
+        background: #9ec59e0d;
     }
     .addition {
-        color: #ff6700;
-        background: #ffd7b5;
-        border: 1px solid #ff6700;
+        border-bottom: 2px solid #edbe11;
         padding: 0 3px 0 0;
         display: inline;
+        font-weight: 600;
+        Background: #edbe110f;
     }
     .nochange {
         display: inline;
