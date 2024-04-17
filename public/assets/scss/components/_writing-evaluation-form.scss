@@ -39,9 +39,7 @@ label {
 
     .incorrect,
     .deletion {
-        text-decoration: line-through;
         border-bottom: 2px solid #d7b7b7;
-        color: #d5bbbb !important;
         padding: 0 3px 0 0;
         display: inline;
         background: #c3818108;
@@ -49,7 +47,6 @@ label {
     .correct {
         border-bottom: 2px solid #9ec59e;
         padding: 0 3px 0 0;
-        font-weight: 600;
         display: inline;
         background: #9ec59e0d;
     }
@@ -57,12 +54,38 @@ label {
         border-bottom: 2px solid #edbe11;
         padding: 0 3px 0 0;
         display: inline;
-        font-weight: 600;
-        Background: #edbe110f;
+        background: #edbe110f;
     }
     .nochange {
         display: inline;
         padding: 0 3px 0 0;
+    }
+
+    .view-inline {
+        .incorrect,
+        .deletion {
+            text-decoration: line-through;
+            color: #d5bbbb;
+        }
+
+        .correct,
+        .addition {
+            font-weight: 600;
+        }
+    }
+
+    .view-student,
+    .view-corrected {
+        .incorrect,
+        .deletion {
+            text-decoration: none;
+            color: var(--color-body);
+        }
+
+        .correct,
+        .addition {
+            font-weight: 400;
+        }
     }
 
     .feedback {
