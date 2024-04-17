@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper } from '../../layout';
 import SEO from '../../components/seo';
-import WritingEvaluation from '../../components/forms/writing-evaluation-form';
+import WritingEvaluation from '../../components/forms/writing-evaluation-form-p';
 
 const WaiTen = () => {
     return (

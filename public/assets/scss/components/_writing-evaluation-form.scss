@@ -126,4 +126,22 @@ label {
             display: none;
         }
     }
+
+    .popper-tooltip {
+        background: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: left;
+        position: relative;
+        visibility: hidden;
+        border: 1px solid black;
+
+        &[data-show='true'] {
+            visibility: visible;
+        }
+
+        &[data-popper-reference-hidden='true'] {
+            visibility: hidden;
+        }
+    }
 }
