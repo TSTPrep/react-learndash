@@ -50,19 +50,19 @@ label {
 
     .incorrect,
     .deletion {
-        border-bottom: 2px solid #d7b7b7;
+        border-bottom: 1px solid #ff585980;
         padding: 0 3px 0 0;
         display: inline;
-        background: #c3818108;
+        background: #ff585905;
     }
     .correct {
-        border-bottom: 2px solid #9ec59e;
+        border-bottom: 1px solid #00b18980;
         padding: 0 3px 0 0;
         display: inline;
-        background: #9ec59e0d;
+        background: #00b18905;
     }
     .addition {
-        border-bottom: 2px solid #edbe11;
+        border-bottom: 1px solid #edbe11;
         padding: 0 3px 0 0;
         display: inline;
         background: #edbe110f;
