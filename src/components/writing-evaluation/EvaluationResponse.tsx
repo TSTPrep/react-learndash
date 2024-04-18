@@ -11,10 +11,10 @@ export default function EvaluationResponse({ evaluation }: EvaluationResponsePro
 
     return (
         <>
-            <div>
-                <button onClick={() => setViewType('student')}>Student Essay</button>
-                <button onClick={() => setViewType('inline')}>Inline Corrections</button>
-                <button onClick={() => setViewType('corrected')}>Corrected Essay</button>
+            <div class="custom-toggle-view">
+                <button class="edu-btn sml-btn" onClick={() => setViewType('student')}>Student Essay</button>
+                <button class="edu-btn sml-btn" onClick={() => setViewType('inline')}>Inline Corrections</button>
+                <button class="edu-btn sml-btn" onClick={() => setViewType('corrected')}>Corrected Essay</button>
             </div>
             <p className={`view-${viewType}`}>
                 {evaluation.operations.map((d, i) => (
