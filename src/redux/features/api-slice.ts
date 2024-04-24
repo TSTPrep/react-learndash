@@ -15,13 +15,14 @@ const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
 type BaseQuery = BaseQueryFn<
     {
         query: keyof typeof queries;
-        variables: Record<string, any>;
+        queryName?: string;
+        variables?: Record<string, any>;
     },
     unknown,
     string[]
 >;
 
-const baseQuery: BaseQuery = async ({ query, variables }) => {
+const baseQuery: BaseQuery = async ({ query, queryName, variables = {} }) => {
     try {
         const token = getLocalStorage<string>('token');
         const headers = {
@@ -42,7 +43,7 @@ const baseQuery: BaseQuery = async ({ query, variables }) => {
             }),
         });
         const json = await res.json();
-        const data = json.data[query];
+        const data = json.data[queryName ?? query];
         if (data !== null) {
             return { data };
         }
@@ -119,6 +120,14 @@ export const api = createApi({
                 variables,
             }),
         }),
+        roles: builder.query<string[], void>({
+            query: () => ({
+                query: 'roles',
+                queryName: 'viewer',
+            }),
+            transformResponse: (data: { roles: { nodes: { name: string }[] } }) =>
+                data.roles.nodes.map(role => role.name),
+        }),
     }),
 });
 
@@ -128,4 +137,5 @@ export const {
     useFeedbackMutation,
     useLoginMutation,
     useRegisterMutation,
+    useRolesQuery,
 } = api;

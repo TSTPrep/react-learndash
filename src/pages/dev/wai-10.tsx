@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Wrapper } from '../../layout';
 import SEO from '../../components/seo';
 import WritingEvaluation from '../../components/forms/writing-evaluation-form-p';
+import { useAuthorization } from '../../hooks/use-authorization';
+import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 
 const WaiTen = () => {
+    const { isLoading, isAdmin } = useAuthorization();
+    const router = useRouter();
+
+    useLayoutEffect(() => {
+        if (!isLoading && !isAdmin) {
+            router.push('/sign-in');
+        }
+    }, [isLoading, isAdmin, router]);
+
+    if (isLoading) {
+        return <></>;
+    }
+
     return (
         <Wrapper>
             <SEO pageTitle={'Course Details'} />
@@ -31,4 +47,4 @@ const WaiTen = () => {
     );
 };
 
-export default WaiTen;
+export default dynamic(() => Promise.resolve(WaiTen), { ssr: false });

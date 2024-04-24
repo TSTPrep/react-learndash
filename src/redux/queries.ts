@@ -26,6 +26,17 @@ const queries = {
             }
         }
     `,
+    roles: `
+        query UserRoles {
+            viewer {
+                roles {
+                    nodes {
+                        name
+                    }
+                }
+            }
+        }
+    `,
 };
 
 export default queries;
