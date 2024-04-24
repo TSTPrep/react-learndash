@@ -24,15 +24,20 @@ label {
     padding-left: 25px;
 }
 
-.sml-btn{
-  height: 40px !important;
-  line-height: 43px !important;
-  margin-right: 15px;
-  margin-top: 0px;
+.sml-btn {
+    height: 40px !important;
+    line-height: 43px !important;
+    margin-right: 15px;
+    margin-top: 0px;
 }
 
-.custom-toggle-view{
-  margin-bottom: 20px;
+.custom-toggle-view {
+    margin-bottom: 20px;
+
+    button.inactive {
+        filter: saturate(0.3);
+        pointer-events: none;
+    }
 }
 
 /* ----------------------------- */

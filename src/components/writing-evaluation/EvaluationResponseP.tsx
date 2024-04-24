@@ -17,7 +17,7 @@ export default function EvaluationResponse({ evaluation }: EvaluationResponsePro
 
     const showTooltip = (element: HTMLElement, text: string) => {
         setReferenceElement(element);
-        popperElement.textContent = 'Correct: ' + text;
+        popperElement.textContent = text;
         popperElement.setAttribute('data-show', true);
     };
 

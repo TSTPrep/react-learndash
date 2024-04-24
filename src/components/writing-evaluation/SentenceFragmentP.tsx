@@ -15,6 +15,38 @@ export default function SentenceFragment({
     mouseEnter,
     mouseLeave,
 }: SentenceFragmentProps) {
+    if (viewType === 'student') {
+        if (op === 'deletion') {
+            return (
+                <span
+                    onMouseEnter={e =>
+                        mouseEnter(e.target as HTMLElement, 'Delete this word')
+                    }
+                    onMouseLeave={() => mouseLeave()}
+                    className='deletion'
+                >
+                    {word}
+                </span>
+            );
+        }
+
+        if (op === 'replacement') {
+            return (
+                <>
+                    <span
+                        onMouseEnter={e =>
+                            mouseEnter(e.target as HTMLElement, 'Correct: ' + replace)
+                        }
+                        onMouseLeave={() => mouseLeave()}
+                        className='incorrect'
+                    >
+                        {word}
+                    </span>
+                </>
+            );
+        }
+    }
+
     if (!replace) {
         if (viewType === 'student' && op === 'addition') {
             return null;
@@ -25,20 +57,6 @@ export default function SentenceFragment({
         }
 
         return <span className={op}>{word}</span>;
-    }
-
-    if (viewType === 'student') {
-        return (
-            <>
-                <span
-                    onMouseEnter={e => mouseEnter(e.target as HTMLElement, replace)}
-                    onMouseLeave={() => mouseLeave()}
-                    className='incorrect'
-                >
-                    {word}
-                </span>
-            </>
-        );
     }
 
     if (viewType === 'corrected') {
