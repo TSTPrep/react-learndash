@@ -8,6 +8,13 @@ const queries = {
                 }
             ) {
                 authToken
+                user {
+                    roles {
+                        nodes {
+                            name
+                        }
+                    }
+                }
             }
         }
     `,

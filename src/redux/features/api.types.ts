@@ -58,6 +58,8 @@ export namespace Evaluation {
     };
 }
 
+export type Role = 'administrator' | 'tester';
+
 export type LoginRequest = {
     username: string;
     password: string;
@@ -65,6 +67,7 @@ export type LoginRequest = {
 
 export type LoginResponse = {
     authToken: string;
+    roles: Role[];
 };
 
 export type RegisterRequest = {

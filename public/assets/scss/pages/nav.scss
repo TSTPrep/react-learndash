@@ -1,0 +1,26 @@
+.wai-nav-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.wai-nav-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    max-width: 600px;
+    margin: 40px auto 0;
+
+    .wai-nav-btn {
+        line-height: unset;
+        height: unset;
+        margin: unset;
+        padding: 10px 0;
+
+        &.disabled {
+            filter: saturate(30%);
+            pointer-events: none;
+        }
+    }
+}

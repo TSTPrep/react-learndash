@@ -73,63 +73,62 @@ STYLESHEET INDEXING
 /*=======================================================================
 1. Default Styles
 =========================================================================*/
-@import "default/variable";
-@import "default/shortcode";
-@import "default/reset";
-@import "default/typography";
-@import "default/form";
-@import "default/common";
-@import "default/animations";
+@import 'default/variable';
+@import 'default/shortcode';
+@import 'default/reset';
+@import 'default/typography';
+@import 'default/form';
+@import 'default/common';
+@import 'default/animations';
 
 /*=======================================================================
 2. Elements Styles
 =========================================================================*/
-@import "elements/accordion";
-@import "elements/backtotop";
-@import "elements/breadcrumb";
-@import "elements/button";
-@import "elements/countdown";
-@import "elements/course-widget";
-@import "elements/pagination";
-@import "default/sal";
-@import "elements/section-title";
-@import "elements/swiper";
-@import "elements/social-share";
-@import "elements/theme-switcher";
+@import 'elements/accordion';
+@import 'elements/backtotop';
+@import 'elements/breadcrumb';
+@import 'elements/button';
+@import 'elements/countdown';
+@import 'elements/course-widget';
+@import 'elements/pagination';
+@import 'default/sal';
+@import 'elements/section-title';
+@import 'elements/swiper';
+@import 'elements/social-share';
+@import 'elements/theme-switcher';
 
 /*=======================================================================
 3. Template Styles
 =========================================================================*/
-@import "template/about";
-@import "template/brand";
-@import "template/call_to_action";
-@import "template/campus";
-@import "template/categorie";
-@import "template/contact";
-@import "template/counterup";
-@import "template/course";
-@import "template/course_details";
-@import "template/event";
-@import "template/faq";
-@import "template/features";
-@import "template/gallery";
-@import "template/hero_banner";
-@import "template/instagram";
-@import "template/pricing";
-@import "template/privacy_policy";
-@import "template/product_details";
-@import "template/shop";
-@import "template/splash";
-@import "template/team";
-@import "template/testimonial";
-@import "template/video";
-@import "template/why_choose";
-@import "template/404";
-@import "template/modern_schooling/main";
-@import "template/health_coach/main";
-@import "template/language_academy/main";
-@import "template/remote_training/main";
-
+@import 'template/about';
+@import 'template/brand';
+@import 'template/call_to_action';
+@import 'template/campus';
+@import 'template/categorie';
+@import 'template/contact';
+@import 'template/counterup';
+@import 'template/course';
+@import 'template/course_details';
+@import 'template/event';
+@import 'template/faq';
+@import 'template/features';
+@import 'template/gallery';
+@import 'template/hero_banner';
+@import 'template/instagram';
+@import 'template/pricing';
+@import 'template/privacy_policy';
+@import 'template/product_details';
+@import 'template/shop';
+@import 'template/splash';
+@import 'template/team';
+@import 'template/testimonial';
+@import 'template/video';
+@import 'template/why_choose';
+@import 'template/404';
+@import 'template/modern_schooling/main';
+@import 'template/health_coach/main';
+@import 'template/language_academy/main';
+@import 'template/remote_training/main';
 
 /*=======================================================================
 4.Blocks Styles
@@ -140,23 +139,23 @@ STYLESHEET INDEXING
 @import 'header/header-action';
 @import 'header/mobilemenu';
 @import 'header/search-popup';
-@import "footer/footer";
+@import 'footer/footer';
 
 /*=======================================================================
 5.Blog Styles
 =========================================================================*/
-@import "blog/blog";
-@import "blog/blog-details";
-@import "blog/comments";
-@import "blog/widget";
+@import 'blog/blog';
+@import 'blog/blog-details';
+@import 'blog/comments';
+@import 'blog/widget';
 
 /*=======================================================================
 6. Spacing/Dark
 =========================================================================*/
-@import "default/spacing";
-@import "default/react_specific";
-@import "default/dark";
-@import "default/rtl";
+@import 'default/spacing';
+@import 'default/react_specific';
+@import 'default/dark';
+@import 'default/rtl';
 
-
-@import "components/writing-evaluation-form";
+@import 'components/writing-evaluation-form';
+@import 'pages/nav';

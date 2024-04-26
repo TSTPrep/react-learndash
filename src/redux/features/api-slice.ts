@@ -6,6 +6,7 @@ import {
     LoginResponse,
     RegisterRequest,
     RegisterResponse,
+    Role,
 } from './api.types';
 import { getLocalStorage } from '../../utils/localstorage';
 import { BaseEndpointDefinition } from '@reduxjs/toolkit/dist/query/endpointDefinitions';
@@ -89,6 +90,7 @@ function evaluationQuery(url: string) {
 
 export const api = createApi({
     baseQuery,
+    tagTypes: ['Token'],
     endpoints: builder => ({
         evaluationTitle: builder.query<Evaluation.TitleResponse, Evaluation.TitleRequest>(
             {
@@ -113,20 +115,30 @@ export const api = createApi({
                 query: 'login',
                 variables,
             }),
+            transformResponse: (data: {
+                authToken: string;
+                user: { roles: { nodes: { name: Role }[] } };
+            }) => ({
+                authToken: data.authToken,
+                roles: data.user.roles.nodes.map(role => role.name),
+            }),
+            invalidatesTags: ['Token'],
         }),
         register: builder.mutation<RegisterResponse, RegisterRequest>({
             query: variables => ({
                 query: 'register',
                 variables,
             }),
+            invalidatesTags: ['Token'],
         }),
-        roles: builder.query<string[], void>({
+        roles: builder.query<Role[], void>({
             query: () => ({
                 query: 'roles',
                 queryName: 'viewer',
             }),
-            transformResponse: (data: { roles: { nodes: { name: string }[] } }) =>
+            transformResponse: (data: { roles: { nodes: { name: Role }[] } }) =>
                 data.roles.nodes.map(role => role.name),
+            providesTags: ['Token'],
         }),
     }),
 });

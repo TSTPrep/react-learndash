@@ -18,6 +18,11 @@
 
 .edu-btn {
     margin-top: 30px;
+
+    &[disabled] {
+        filter: saturate(30%);
+        pointer-events: none;
+    }
 }
 
 label {
@@ -46,11 +51,6 @@ label {
     textarea[disabled] {
         background-color: rgb(240, 240, 240);
         cursor: not-allowed;
-    }
-
-    button[disabled] {
-        filter: saturate(30%);
-        pointer-events: none;
     }
 
     .incorrect,

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useLoginMutation } from '../../redux/features/api-slice';
 import { signIn } from '../../redux/features/auth-slice';
 import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
 
 const LoginForm = () => {
     const [showPass, setShowPass] = useState(false);
@@ -13,6 +14,9 @@ const LoginForm = () => {
     // use firebase
     const [login] = useLoginMutation();
     const dispatch = useDispatch();
+
+    const router = useRouter();
+
     // use formik
     const {
         handleChange,
@@ -41,6 +45,11 @@ const LoginForm = () => {
             dispatch(signIn(res.data.authToken));
 
             resetForm();
+            if (res.data.roles.includes('administrator')) {
+                router.push('/nav/admin');
+                return;
+            }
+            router.push('/nav/underdev');
         },
     });
 
@@ -56,7 +65,6 @@ const LoginForm = () => {
                     value={values.email}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    type='email'
                     name='email'
                     placeholder='Email or username'
                 />
