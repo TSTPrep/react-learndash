@@ -165,17 +165,20 @@ label {
         .popper-indicator {
             margin: 0;
             font-weight: 500;
+            font-size: 12px;
         }
 
         .popper-body {
             border-bottom: 1px solid;
+            font-size: 12px;
+            padding-bottom: 4px;
         }
 
         .popper-feedback {
             margin: 0;
             line-height: 14px;
             font-size: 12px;
-            padding-top: 10px;
+            padding-top: 7px;
         }
 
         .popper-indication {
