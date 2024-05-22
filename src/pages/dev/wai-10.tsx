@@ -5,7 +5,7 @@ import Authorize from '../../components/authorize';
 
 const WaiTen = () => {
     return (
-        <Authorize roles={['administrator']}>
+        <Authorize roles={['administrator', 'tester', 'beta-user']}>
             <Wrapper>
                 <SEO pageTitle={'Course Details'} />
                 <div id='main-wrapper' className='main-wrapper'>

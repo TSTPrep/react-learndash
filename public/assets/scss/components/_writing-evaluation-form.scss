@@ -151,6 +151,8 @@ label {
         position: relative;
         visibility: hidden;
         border: 1px solid black;
+        z-index: 999;
+        max-width: 400px;
 
         &[data-show='true'] {
             visibility: visible;
@@ -158,6 +160,14 @@ label {
 
         &[data-popper-reference-hidden='true'] {
             visibility: hidden;
+        }
+
+        .popper-indicator {
+            margin: 0;
+        }
+
+        .popper-feedback {
+            margin: 0;
         }
     }
 }

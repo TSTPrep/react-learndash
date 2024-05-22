@@ -1,18 +1,32 @@
 export namespace Evaluation {
-    export type SingleFragmentType = 'nochange' | 'addition' | 'deletion';
-    export type DoubleFragmentType = 'replacement';
+    export type CorrectFragmentData = {
+        op: 'nochange';
+        word: string;
+        replace?: undefined;
+        indicator?: undefined;
+        feedback?: undefined;
+    };
+
+    export type SingleFragmentData = {
+        op: 'addition' | 'deletion';
+        word: string;
+        replace?: undefined;
+        indicator: string;
+        feedback: string;
+    };
+
+    export type DoubleFragmentData = {
+        op: 'replacement';
+        word: string;
+        replace: string;
+        indicator: string;
+        feedback: string;
+    };
 
     export type SentenceFragmentData =
-        | {
-              op: SingleFragmentType;
-              word: string;
-              replace?: undefined;
-          }
-        | {
-              op: DoubleFragmentType;
-              word: string;
-              replace: string;
-          };
+        | CorrectFragmentData
+        | SingleFragmentData
+        | DoubleFragmentData;
 
     export type SentenceData = SentenceFragmentData[];
 
@@ -58,7 +72,7 @@ export namespace Evaluation {
     };
 }
 
-export type Role = 'administrator' | 'tester';
+export type Role = 'administrator' | 'tester' | 'beta-user';
 
 export type LoginRequest = {
     username: string;

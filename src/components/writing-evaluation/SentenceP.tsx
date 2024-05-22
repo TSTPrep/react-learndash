@@ -1,4 +1,5 @@
 import { Evaluation } from '../../redux/features/api.types';
+import { PopperState } from './EvaluationResponseP';
 import SentenceFragment from './SentenceFragmentP';
 
 export type SentenceData = Evaluation.SentenceData;
@@ -8,7 +9,7 @@ type SentenceProps = {
     index: number;
     data: SentenceData;
     viewType: SentenceViewType;
-    mouseEnter: (element: HTMLElement, text: string) => void;
+    mouseEnter: (element: HTMLElement, state: PopperState) => void;
     mouseLeave: () => void;
 };
 
@@ -27,7 +28,7 @@ export default function Sentence({
                     viewType={viewType}
                     mouseEnter={mouseEnter}
                     mouseLeave={mouseLeave}
-                    {...d}
+                    data={d}
                 />
             ))}
         </span>

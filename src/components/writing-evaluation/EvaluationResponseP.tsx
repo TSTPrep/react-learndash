@@ -3,6 +3,14 @@ import { Evaluation } from '../../redux/features/api.types';
 import Sentence, { SentenceViewType } from './SentenceP';
 import { usePopper } from 'react-popper';
 
+export type PopperState = {
+    indicator: string;
+    mistake: string;
+    indication: string;
+    correction?: string;
+    feedback: string;
+};
+
 type EvaluationResponseProps = {
     evaluation: Evaluation.EvaluateResponse;
 };
@@ -15,9 +23,11 @@ export default function EvaluationResponse({ evaluation }: EvaluationResponsePro
         placement: 'top',
     });
 
-    const showTooltip = (element: HTMLElement, text: string) => {
+    const [popperState, setPopperState] = useState<PopperState>();
+
+    const showTooltip = (element: HTMLElement, state: PopperState) => {
         setReferenceElement(element);
-        popperElement.textContent = text;
+        setPopperState(state);
         popperElement.setAttribute('data-show', true);
     };
 
@@ -28,10 +38,31 @@ export default function EvaluationResponse({ evaluation }: EvaluationResponsePro
 
     return (
         <>
-            <div>
-                <button onClick={() => setViewType('student')}>Student Essay</button>
-                <button onClick={() => setViewType('inline')}>Inline Corrections</button>
-                <button onClick={() => setViewType('corrected')}>Corrected Essay</button>
+            <div className='custom-toggle-view'>
+                <button
+                    className={
+                        'edu-btn sml-btn' + (viewType !== 'student' ? '' : ' inactive')
+                    }
+                    onClick={() => setViewType('student')}
+                >
+                    Student Essay
+                </button>
+                <button
+                    className={
+                        'edu-btn sml-btn' + (viewType !== 'inline' ? '' : ' inactive')
+                    }
+                    onClick={() => setViewType('inline')}
+                >
+                    Inline Corrections
+                </button>
+                <button
+                    className={
+                        'edu-btn sml-btn' + (viewType !== 'corrected' ? '' : ' inactive')
+                    }
+                    onClick={() => setViewType('corrected')}
+                >
+                    Corrected Essay
+                </button>
             </div>
             <p className={`view-${viewType}`}>
                 {evaluation.operations.map((d, i) => (
@@ -51,7 +82,20 @@ export default function EvaluationResponse({ evaluation }: EvaluationResponsePro
                 style={styles.popper}
                 {...attributes.popper}
             >
-                Popper element
+                <p className='popper-indicator'>{popperState?.indicator}</p>
+                <div className='popper-body'>
+                    <span className='popper-indication'>{popperState?.indication}: </span>
+                    <span className='popper-mistake'>{popperState?.mistake}</span>
+                    {popperState?.correction && (
+                        <>
+                            {' --> '}
+                            <span className='popper-correction'>
+                                {popperState?.correction}
+                            </span>
+                        </>
+                    )}
+                </div>
+                <p className='popper-feedback'>{popperState?.feedback}</p>
             </div>
         </>
     );
