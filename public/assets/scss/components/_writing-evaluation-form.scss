@@ -164,34 +164,30 @@ label {
 
         .popper-indicator {
             margin: 0;
+            font-weight: 500;
+        }
+
+        .popper-body {
+            border-bottom: 1px solid;
         }
 
         .popper-feedback {
             margin: 0;
-        }
-
-        span.popper-indication,
-            p.popper-indicator{
-            font-weight: 500;
-        }
-        
-        div.popper-body{
-            border-bottom: 1px solid;
-        }
-
-        p.popper-feedback{
             line-height: 14px;
             font-size: 12px;
             padding-top: 10px;
         }
 
-        .popper-mistake{
+        .popper-indication {
+            font-weight: 500;
+        }
+
+        .popper-word {
             color: #d98686;
         }
-        
-        .popper-correction{
+
+        .popper-replace {
             color: #00b189;
         }
-        
     }
 }

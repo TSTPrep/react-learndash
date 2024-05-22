@@ -3,13 +3,7 @@ import { Evaluation } from '../../redux/features/api.types';
 import Sentence, { SentenceViewType } from './SentenceP';
 import { usePopper } from 'react-popper';
 
-export type PopperState = {
-    indicator: string;
-    mistake: string;
-    indication: string;
-    correction?: string;
-    feedback: string;
-};
+export type PopperState = Evaluation.SingleFragmentData | Evaluation.DoubleFragmentData;
 
 type EvaluationResponseProps = {
     evaluation: Evaluation.EvaluateResponse;
@@ -77,21 +71,23 @@ export default function EvaluationResponse({ evaluation }: EvaluationResponsePro
                 ))}
             </p>
             <div
-                className='popper-tooltip'
+                className={
+                    'popper-tooltip' + (popperState ? ' popper-' + popperState.op : '')
+                }
                 ref={setPopperElement}
                 style={styles.popper}
                 {...attributes.popper}
             >
                 <p className='popper-indicator'>{popperState?.indicator}</p>
                 <div className='popper-body'>
-                    <span className='popper-indication'>{popperState?.indication}: </span>
-                    <span className='popper-mistake'>{popperState?.mistake}</span>
-                    {popperState?.correction && (
+                    <span className='popper-indication'>
+                        {getIndication(popperState?.op)}
+                    </span>
+                    <span className='popper-word'>{popperState?.word}</span>
+                    {popperState?.replace && (
                         <>
                             {' --> '}
-                            <span className='popper-correction'>
-                                {popperState?.correction}
-                            </span>
+                            <span className='popper-replace'>{popperState?.replace}</span>
                         </>
                     )}
                 </div>
@@ -99,4 +95,20 @@ export default function EvaluationResponse({ evaluation }: EvaluationResponsePro
             </div>
         </>
     );
+}
+
+function getIndication(op?: PopperState['op']) {
+    if (op === 'addition') {
+        return 'Add: ';
+    }
+
+    if (op === 'deletion') {
+        return 'Delete: ';
+    }
+
+    if (op === 'replacement') {
+        return 'Replace: ';
+    }
+
+    return null;
 }

@@ -26,16 +26,9 @@ export default function SentenceFragment({
 
         return (
             <span
-                onMouseEnter={e =>
-                    mouseEnter(e.target as HTMLElement, {
-                        indicator: data.indicator,
-                        feedback: data.feedback,
-                        mistake: data.word,
-                        indication: 'Add',
-                    })
-                }
+                onMouseEnter={e => mouseEnter(e.target as HTMLElement, data)}
                 onMouseLeave={() => mouseLeave()}
-                className='addition'
+                className={data.op}
             >
                 {data.word}
             </span>
@@ -49,16 +42,9 @@ export default function SentenceFragment({
 
         return (
             <span
-                onMouseEnter={e =>
-                    mouseEnter(e.target as HTMLElement, {
-                        indicator: data.indicator,
-                        feedback: data.feedback,
-                        mistake: data.word,
-                        indication: 'Delete',
-                    })
-                }
+                onMouseEnter={e => mouseEnter(e.target as HTMLElement, data)}
                 onMouseLeave={() => mouseLeave()}
-                className='deletion'
+                className={data.op}
             >
                 {data.word}
             </span>
@@ -68,17 +54,9 @@ export default function SentenceFragment({
     if (viewType === 'inline') {
         return (
             <span
-                onMouseEnter={e =>
-                    mouseEnter(e.target as HTMLElement, {
-                        indicator: data.indicator,
-                        feedback: data.feedback,
-                        mistake: data.word,
-                        correction: data.replace,
-                        indication: 'Replace',
-                    })
-                }
+                onMouseEnter={e => mouseEnter(e.target as HTMLElement, data)}
                 onMouseLeave={() => mouseLeave()}
-                className='replacement'
+                className={data.op}
             >
                 <span className='incorrect'>{data.word}</span>
                 <span className='correct'>{data.replace}</span>
@@ -88,15 +66,7 @@ export default function SentenceFragment({
 
     return (
         <span
-            onMouseEnter={e =>
-                mouseEnter(e.target as HTMLElement, {
-                    indicator: data.indicator,
-                    feedback: data.feedback,
-                    mistake: data.word,
-                    correction: data.replace,
-                    indication: 'Replace',
-                })
-            }
+            onMouseEnter={e => mouseEnter(e.target as HTMLElement, data)}
             onMouseLeave={() => mouseLeave()}
             className={viewType === 'student' ? 'incorrect' : 'correct'}
         >
