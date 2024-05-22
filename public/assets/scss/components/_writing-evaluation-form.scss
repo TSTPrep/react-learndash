@@ -169,5 +169,18 @@ label {
         .popper-feedback {
             margin: 0;
         }
+
+        span.popper-indication,
+            p.popper-indicator{
+            font-weight: 500;
+        }
+        
+        p.popper-indication{
+            text-decoration: underline;
+        }
+        
+        div.popper-body{
+            border-bottom: 1px solid;
+        }
     }
 }
