@@ -45,11 +45,7 @@ const LoginForm = () => {
             dispatch(signIn(res.data.authToken));
 
             resetForm();
-            if (res.data.roles.includes('administrator')) {
-                router.push('/nav/admin');
-                return;
-            }
-            router.push('/nav/underdev');
+            router.push('/nav');
         },
     });
 

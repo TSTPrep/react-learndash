@@ -7,7 +7,13 @@ import { useRouter } from 'next/router';
 type AuthorizeProps = {
     /** The roles that are allowed */
     roles: Role[];
-    children: React.ReactNode;
+    children?: React.ReactNode;
+    /**
+     * Component that is displayed if the user is authorized.
+     * Takes the roles for more fine-grained control than `children`.
+     * Takes precedence over `children`.
+     */
+    Component?: React.JSXElementConstructor<{ roles: Role[] }>;
     /** The component to display on loading */
     loading?: React.ReactNode;
     /** Where to redirect if not authenticated */
@@ -19,6 +25,7 @@ type AuthorizeProps = {
 const Authorize = ({
     roles,
     children,
+    Component,
     loading,
     redirect = '/sign-in',
     redirectNotAuthorized = '',
@@ -42,6 +49,10 @@ const Authorize = ({
             router.replace(redirectNotAuthorized(userRoles));
         }
         return <></>;
+    }
+
+    if (Component) {
+        return <Component roles={userRoles} />;
     }
 
     return <>{children}</>;
