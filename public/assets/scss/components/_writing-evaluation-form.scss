@@ -175,12 +175,14 @@ label {
             font-weight: 500;
         }
         
-        p.popper-indication{
-            text-decoration: underline;
-        }
-        
         div.popper-body{
             border-bottom: 1px solid;
+        }
+
+        p.popper-feedback{
+            line-height: 14px;
+            font-size: 12px;
+            padding-top: 10px;
         }
     }
 }
