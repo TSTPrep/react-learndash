@@ -1,16 +1,14 @@
+import { Merge } from '../../utils/helpers';
+
 export namespace Evaluation {
     export type CorrectFragmentData = {
         op: 'nochange';
         word: string;
-        replace?: undefined;
-        indicator?: undefined;
-        feedback?: undefined;
     };
 
     export type SingleFragmentData = {
         op: 'addition' | 'deletion';
         word: string;
-        replace?: undefined;
         indicator: string;
         feedback: string;
     };
@@ -23,10 +21,9 @@ export namespace Evaluation {
         feedback: string;
     };
 
-    export type SentenceFragmentData =
-        | CorrectFragmentData
-        | SingleFragmentData
-        | DoubleFragmentData;
+    export type SentenceFragmentData = Merge<
+        [CorrectFragmentData, SingleFragmentData, DoubleFragmentData]
+    >;
 
     export type SentenceData = SentenceFragmentData[];
 
