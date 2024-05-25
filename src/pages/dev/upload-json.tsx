@@ -2,7 +2,7 @@ import React, { ChangeEvent, useState } from 'react';
 import { Wrapper } from '../../layout';
 import SEO from '../../components/seo';
 import { Evaluation } from '../../redux/features/api.types';
-import EvaluationResponse from '../../components/writing-evaluation/EvaluationResponse';
+import EvaluationResponse from '../../components/writing-evaluation/EvaluationResponseP';
 import FeedbackResponse from '../../components/writing-evaluation/FeedbackResponse';
 
 type ResultJson = {
