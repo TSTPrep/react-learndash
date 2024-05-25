@@ -2,8 +2,11 @@ import { useState } from 'react';
 import { Evaluation } from '../../redux/features/api.types';
 import Sentence, { SentenceViewType } from './SentenceP';
 import { usePopper } from 'react-popper';
+import { Merge } from '../../utils/helpers';
 
-export type PopperState = Evaluation.SingleFragmentData | Evaluation.DoubleFragmentData;
+export type PopperState = Merge<
+    [Evaluation.SingleFragmentData, Evaluation.DoubleFragmentData]
+>;
 
 type EvaluationResponseProps = {
     evaluation: Evaluation.EvaluateResponse;
