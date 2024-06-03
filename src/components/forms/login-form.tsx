@@ -61,6 +61,7 @@ const LoginForm = () => {
                     value={values.email}
                     onChange={handleChange}
                     onBlur={handleBlur}
+                    type='text'
                     name='email'
                     placeholder='Email or username'
                 />
