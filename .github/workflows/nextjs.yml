@@ -76,6 +76,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
+          WORDPRESS_API_URL: ${{ vars.WORDPRESS_API_URL }}
           NEXT_PUBLIC_WORDPRESS_API_URL: ${{ vars.WORDPRESS_API_URL }}
           NEXT_PUBLIC_HF_URL: ${{ vars.HF_URL }}
           NEXT_PUBLIC_HF_SECRET_KEY: ${{ secrets.HF_SECRET_KEY }}
