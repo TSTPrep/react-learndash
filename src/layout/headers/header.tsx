@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image'
 import { useSelector } from 'react-redux';
 import MainMenu from '../headers/component/main-menu';
 import HeaderTopRight from '../headers/component/header-top-right';
@@ -74,17 +75,21 @@ const Header = ({
                                 <div className='logo'>
                                     <Link href={'/'}>
                                         <picture>
-                                            <img
+                                            <Image
                                                 className='logo-light'
                                                 src='/assets/images/logo/logo-dark.png'
                                                 alt='logo'
+                                                width={100}
+                                                height={100}
                                             />
                                         </picture>
                                         <picture>
-                                            <img
+                                            <Image
                                                 className='logo-dark'
                                                 src='/assets/images/logo/logo-white.png'
                                                 alt='logo'
+                                                width={100}
+                                                height={100}
                                             />
                                         </picture>
                                     </Link>
