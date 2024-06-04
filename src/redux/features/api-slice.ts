@@ -13,6 +13,10 @@ import { BaseEndpointDefinition } from '@reduxjs/toolkit/dist/query/endpointDefi
 
 const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL + '/wp/graphql';
 
+console.log(process.env);
+console.log(process);
+
+
 type BaseQuery = BaseQueryFn<
     {
         query: keyof typeof queries;
