@@ -78,7 +78,7 @@ jobs:
         env:
           ASSET_PREFIX: ${{ vars.ASSET_PREFIX }}
           WORDPRESS_API_URL: ${{ vars.WORDPRESS_API_URL }}
-          NEXT_PUBLIC_WORDPRESS_API_URL: ${{ vars.WORDPRESS_API_URL }}
+          NEXT_PUBLIC_WORDPRESS_API_URL: ${{ vars.NEXT_PUBLIC_WORDPRESS_API_URL }}
           NEXT_PUBLIC_HF_URL: ${{ vars.HF_URL }}
           NEXT_PUBLIC_HF_SECRET_KEY: ${{ secrets.HF_SECRET_KEY }}
       - name: Upload artifact
