@@ -1,8 +1,8 @@
 // Define the API endpoint
-const baseUrl = 'https://platform.tstprep.com/wp-json/';
+const baseUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL + '/wp-json/';
 const baseLD = baseUrl + 'ldlms/v2/';
 
-const graphqlUrl = 'https://tstprep.platform.test/wp/graphql';
+const graphqlUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL + '/wp/graphql';
 
 export const getCourseDataRest = async id => {
     const response = await fetch(baseLD + `sfwd-courses/${id}`);

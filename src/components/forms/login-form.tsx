@@ -41,7 +41,6 @@ const LoginForm = () => {
                 return;
             }
 
-            console.log(res);
             dispatch(signIn(res.data.authToken));
 
             resetForm();

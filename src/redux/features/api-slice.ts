@@ -11,7 +11,7 @@ import {
 import { getLocalStorage } from '../../utils/localstorage';
 import { BaseEndpointDefinition } from '@reduxjs/toolkit/dist/query/endpointDefinitions';
 
-const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL + '/wp/graphql';
 
 type BaseQuery = BaseQueryFn<
     {
@@ -73,11 +73,11 @@ function evaluationQuery(
 ): EvaluationQuery<Evaluation.FeedbackRequest, Evaluation.FeedbackResponse>;
 function evaluationQuery(url: string) {
     return async (data: any) => {
-        const response = await fetch(`https://TSTPrep-tstprep-writing.hf.space/${url}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_HF_URL}/${url}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: 'Bearer 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',
+                Authorization: `Bearer ${process.env.NEXT_PUBLIC_HF_SECRET_KEY}`,
             },
             body: JSON.stringify(data),
         });
